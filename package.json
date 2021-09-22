@@ -1,0 +1,37 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "description": "my portfolio",
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "editorconfig-cli": "^0.3.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-libsquoosh": "^1.0.10",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.0.1",
+    "postcss": "^8.3.6",
+    "postcss-csso": "^5.0.1",
+    "sass": "^1.39.2"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "test": "npm run editorconfig",
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ]
+}
