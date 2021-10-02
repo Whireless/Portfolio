@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches: '*'
 
@@ -16,7 +16,7 @@ jobs:
       with:
         node-version: '12.18'
 
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
       name: Checkout
 
     - name: Install dependencies
