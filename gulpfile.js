@@ -17,9 +17,8 @@ const sync = require('browser-sync').create();
 const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('docs'));
+    .pipe(gulp.dest('build'));
 }
-
 exports.html = html;
 
 // Styles
@@ -35,10 +34,9 @@ const styles = () => {
     ]))
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest('docs/css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(sync.stream());
 }
-
 exports.styles = styles;
 
 // Scripts
@@ -47,9 +45,8 @@ const scripts = () => {
   return gulp.src('source/js/scripts.js')
     .pipe(terser())
     .pipe(rename('scripts.min.js'))
-    .pipe(gulp.dest('docs/js'))
+    .pipe(gulp.dest('build/js'))
 }
-
 exports.scripts = scripts;
 
 // Images
@@ -57,32 +54,29 @@ exports.scripts = scripts;
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,svg}')
     .pipe(squoosh())
-    .pipe(gulp.dest('docs/img'))
+    .pipe(gulp.dest('build/img'))
 }
-
 exports.optimizeImages = optimizeImages;
 
 // Copy
 
 const copy = (done) => {
   gulp.src([
-    // 'source/fonts/*.{woff2,woff}',
+    // 'source/fonts/*.{woff2,woff}', // Копирование шрифтов
     'source/img/**/*.ico',
   ], {
     base: 'source'
   })
-    .pipe(gulp.dest('docs'))
+    .pipe(gulp.dest('build'))
   done();
 }
-
 exports.copy = copy;
 
 // Clean
 
 const clean = () => {
-  return del('docs');
+  return del('build');
 }
-
 exports.clean = clean;
 
 // Server
@@ -90,7 +84,7 @@ exports.clean = clean;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'docs'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -98,7 +92,6 @@ const server = (done) => {
   });
   done();
 }
-
 exports.server = server;
 
 // Reload
@@ -128,7 +121,6 @@ const build = gulp.series(
     scripts
   )
 );
-
 exports.build = build;
 
 // Default
