@@ -1,10 +1,11 @@
-body {
+html, body {
   min-width: 320px;
   font-family: "Source Code Pro", monospace;
   font-size: 16px;
   line-height: 26px;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 @media (min-width: $tabletWidth) {

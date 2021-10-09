@@ -1,12 +1,9 @@
-.main-nav {
-  background-color: $whiteColor; //(Для меню вне потока)
-  border-bottom: 2px solid $greyColor2;
-}
-
 .main-nav__nav-head {
   display: flex;
   justify-content: space-between;
+  background-color: $whiteColor;
   padding: 10px 0;
+  border-bottom: 2px solid $greyColor2;
 
   p {
     margin: 0 auto;
@@ -38,13 +35,16 @@
 }
 
 .main-nav__nav-list {
+  position: relative;
   width: 100%;
   list-style: none;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: $whiteColor;
   margin: 0;
   padding: 0 0 5px 0;
+  border-bottom: 2px solid $greyColor2;
 
   a {
     width: 100%;
@@ -87,6 +87,10 @@
   .main-nav__nav-open {
     display: none;
   }
+
+  .main-nav__nav-head {
+    border: none;
+  }
 }
 
 .main-nav--close {
@@ -117,9 +121,16 @@
 }
 
 @media (max-width: 659px) {
+  .main-nav--open {
+    .main-nav__nav-list {
+      top: 0;
+      transition: 0.5s;
+    }
+  }
   .main-nav--close {
     .main-nav__nav-list {
-      display: none;
+      top: -100%;
+      transition: top 0.5s;
     }
   }
 }
@@ -127,6 +138,7 @@
 @media (min-width: $tabletWidth) {
   .main-nav {
     padding: 0 25px;
+    border-bottom: 2px solid $greyColor2;
   }
 
   .main-nav__nav-head {
@@ -138,6 +150,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 15px 0;
+    border: none;
 
     a {
       width: 110px;
@@ -177,10 +190,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .main-nav {
-    background-color: $blackColor;
-  }
-
   .main-nav--open,
   .main-nav--close {
     .main-nav__nav-open,
@@ -192,7 +201,13 @@
     }
   }
 
+  .main-nav__nav-head {
+    background-color: $blackColor;
+  }
+
   .main-nav__nav-list {
+    background-color: $blackColor;
+
     a {
       color: $whiteColor;
 
@@ -205,6 +220,10 @@
   }
 
   @media (min-width: $tabletWidth) {
+    .main-nav {
+      background-color: $blackColor;
+    }
+
     .main-nav__nav-list {
       a {
         border: 1px solid $whiteColor;
