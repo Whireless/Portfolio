@@ -123,20 +123,20 @@
 @media (max-width: 659px) {
   .main-nav--open {
     .main-nav__nav-list {
-      top: 0;
       transition: 0.5s;
     }
   }
   .main-nav--close {
     .main-nav__nav-list {
-      top: -100%;
-      transition: top 0.5s;
+      transform: translateX(100%);
+      transition: 0.5s;
     }
   }
 }
 
 @media (min-width: $tabletWidth) {
   .main-nav {
+    background-color: $whiteColor;
     padding: 0 25px;
     border-bottom: 2px solid $greyColor2;
   }
