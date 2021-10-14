@@ -1,6 +1,6 @@
 # Portfolio
 
-Сurrent version - "0.6.4"
+Сurrent version - "0.6.5"
 
 1) Исправлены баги и анимации меню на всех платформах.
 
