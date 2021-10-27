@@ -63,7 +63,7 @@ exports.optimizeImages = optimizeImages;
 const copy = (done) => {
   gulp.src([
     // 'source/fonts/*.{woff2,woff}', // Копирование шрифтов
-    'source/img/**/*.ico',
+    'source/*.ico',
   ], {
     base: 'source'
   })

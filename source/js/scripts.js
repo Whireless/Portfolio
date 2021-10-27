@@ -1,7 +1,7 @@
 // Главное меню
 const mainNav = document.querySelector('.main-nav');
 const navBtn = document.querySelector('.main-nav__nav-button');
-const navElem = document.querySelector('.main-nav__nav-item a');
+const navElem = document.querySelectorAll('.main-nav__nav-item a');
 const openTitle = document.querySelector('.main-nav__title-text-open');
 const closeTitle = document.querySelector('.main-nav__title-text-close');
 
@@ -33,9 +33,11 @@ navBtn.addEventListener('click', function() {
   }
 });
 
-navElem.addEventListener('click', function() {
-  if(mainNav.classList.contains('main-nav--open')) {
-    mainNav.classList.remove('main-nav--open')
-    mainNav.classList.add('main-nav--close')
-  }
+navElem.forEach(a => {
+  a.addEventListener('click', function() {
+    if(mainNav.classList.contains('main-nav--open')) {
+       mainNav.classList.remove('main-nav--open')
+       mainNav.classList.add('main-nav--close')
+    }
+  })
 });
