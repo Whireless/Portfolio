@@ -1,6 +1,6 @@
 # Portfolio
 
-Сurrent version - "0.7.3"
+Сurrent version - "0.7.3.1"
 
 1) Небольшая реструктуризация вёрстки
 
