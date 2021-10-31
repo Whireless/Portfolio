@@ -10,10 +10,30 @@
   text-align: center;
 
   h2 {
-    margin: 0;
+    font-weight: 500;
+    letter-spacing: 2px;
+    position: relative;
+    display: table;
+    width: 200px;
+    margin: 40px auto;
+    padding: 10px;
+    border: 1px solid $borderColor;
+    border-radius: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      border: 1px solid $borderColor;
+      border-radius: 10px;
+    }
   }
 
   p {
+    font-weight: 300;
     margin-top: 20px;
     margin-bottom: 0;
   }
@@ -36,6 +56,7 @@
   align-items: center;
 
   p {
+    font-weight: 300;
     margin-top: 15px;
     margin-bottom: 0;
     color: $greyColor2;
@@ -49,22 +70,6 @@
 @media (min-width: $tabletWidth) {
   .skills {
     padding: $tabletInt 0;
-  }
-
-  .skills__skills-info {
-    h2 {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 5px;
-        right: 30%;
-        width: 24px;
-        height: 24px;
-        background: url("../img/icons/skills.svg") no-repeat;
-      }
-    }
   }
 
   .skills__skills-list {
@@ -87,8 +92,10 @@
 
   .skills__skills-info {
     h2 {
-      &::before {
-        right: 35%;
+      border: 2px solid $borderColor;
+
+      &::after {
+        border: 2px solid $borderColor;
       }
     }
 

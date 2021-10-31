@@ -3,8 +3,27 @@
   padding: $mobileInt 0;
 
   h2 {
+    font-weight: 500;
+    letter-spacing: 2px;
     text-align: center;
-    margin: 0;
+    position: relative;
+    display: table;
+    width: 200px;
+    margin: 40px auto;
+    padding: 10px;
+    border: 1px solid $borderColor;
+    border-radius: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      border: 1px solid $borderColor;
+      border-radius: 10px;
+    }
   }
 }
 
@@ -54,20 +73,6 @@
 @media (min-width: $tabletWidth) {
   .portfolio {
     padding: $tabletInt 0;
-
-    h2 {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 5px;
-        right: 30%;
-        width: 24px;
-        height: 24px;
-        background: url("../img/icons/portfolio.svg") no-repeat;
-      }
-    }
   }
 
   .portfolio__project-item {
@@ -94,8 +99,10 @@
     padding: $desktopInt 0;
 
     h2 {
-      &::before {
-        right: 35%;
+      border: 2px solid $borderColor;
+
+      &::after {
+        border: 2px solid $borderColor;
       }
     }
   }
@@ -126,7 +133,7 @@
 
 @media (prefers-color-scheme: dark) {
   .portfolio {
-    background: $gradient;
+    background-color: $greyColor3;
   }
 
   .portfolio__project-item {
