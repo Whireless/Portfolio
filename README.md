@@ -1,6 +1,6 @@
 # Portfolio
 
-My Portfolio / Моё портфолио
+My Portfolio / Моё портфолио.
 
 <br>
 

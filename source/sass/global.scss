@@ -7,17 +7,13 @@ html, body {
   padding: 0;
   scroll-behavior: smooth;
   transition: 1s;
-}
 
-@media (min-width: $tabletWidth) {
-  body {
+  @media (min-width: $tabletWidth) {
     font-size: 17px;
     line-height: 30px;
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  body {
+  @media (prefers-color-scheme: dark) {
     color: $whiteColor;
   }
 }

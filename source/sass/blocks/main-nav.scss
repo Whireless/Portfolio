@@ -28,7 +28,7 @@
   width: 30px;
   height: 30px;
   background-color: inherit;
-  margin-right: 25px;
+  margin-right: 28px;
   padding: 0;
   border: none;
   cursor: pointer;
@@ -86,7 +86,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 5;
 
   .main-nav__nav-close {
     fill: $greyColor2;
@@ -125,7 +125,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 5;
 
   .main-nav__nav-open {
     fill: $greyColor2;

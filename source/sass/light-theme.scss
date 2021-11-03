@@ -1,17 +1,17 @@
-.dark-theme {
-  color: $whiteColor;
+.light-theme {
+  color: $blackColor;
   transition: 1s;
 
   .main-header {
-    background: $blackColor;
+    background: $whiteColor;
   }
 
   .main-header__theme-toggle {
-    background: url("../img/light-theme.svg") no-repeat;
+    background: url("../img/dark-theme.svg") no-repeat;
     z-index: 4;
 
     &::before {
-      color: $whiteColor;
+      color: $blackColor;
     }
   }
 
@@ -21,44 +21,44 @@
     .main-nav__nav-close {
       &:hover,
       &:focus {
-        fill: $whiteColor;
+        fill: $blackColor;
       }
     }
   }
 
   .main-nav__nav-head {
-    background-color: $blackColor;
+    background-color: $whiteColor;
   }
 
   .main-nav__nav-list {
-    background-color: $blackColor;
+    background-color: $whiteColor;
 
     a {
-      color: $whiteColor;
+      color: $blackColor;
 
       &:hover,
       &:focus {
-        color: $blackColor;
-        background-color: $whiteColor;
+        color: $whiteColor;
+        background-color: $blackColor;
       }
     }
   }
 
   .about-me {
-    background-color: $greyColor3;
+    background-color: $greyColor1;
   }
 
   .skills {
-    background-color: $blackColor;
+    background-color: $whiteColor;
   }
 
   .portfolio {
-    background-color: $greyColor3;
+    background-color: $greyColor1;
   }
 
   .portfolio__project-item {
     a {
-      color: $whiteColor;
+      color: $blackColor;
 
       &:hover,
       &:focus {
@@ -68,37 +68,37 @@
   }
 
   .main-footer {
-    background-color: $blackColor;
+    background-color: $whiteColor;
   }
 
   .main-footer__contact-item {
     svg {
       &:hover,
       &:focus {
-        fill: $whiteColor;
+        fill: $blackColor;
       }
     }
   }
 
   @media (min-width: $tabletWidth) {
     .main-nav {
-      background-color: $blackColor;
+      background-color: $whiteColor;
     }
 
     .main-nav__nav-list {
       a {
-        border: 1px solid $whiteColor;
+        border: 1px solid $blackColor;
       }
     }
 
     .portfolio__project-item {
       a {
-        border: 1px solid $whiteColor;
+        border: 1px solid $blackColor;
 
         &:hover,
         &:focus {
-          color: $blackColor;
-          background-color: $whiteColor;
+          color: $whiteColor;
+          background-color: $blackColor;
         }
       }
     }
@@ -109,7 +109,7 @@
       svg {
         &:hover,
         &:focus {
-          fill: $whiteColor;
+          fill: $blackColor;
         }
       }
     }

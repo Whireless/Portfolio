@@ -41,6 +41,18 @@ navElem.forEach(a => {
 
 // Тёмная тема
 
+if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  page.classList.add('dark-theme')
+} else {
+  page.classList.add('light-theme')
+};
+
 themeButton.onclick = function() {
-  page.classList.toggle('dark-theme');
+  if(page.classList.contains('light-theme')) {
+    page.classList.remove('light-theme')
+    page.classList.add('dark-theme')
+  } else if(page.classList.contains('dark-theme')) {
+    page.classList.remove('dark-theme')
+    page.classList.add('light-theme')
+  };
 };

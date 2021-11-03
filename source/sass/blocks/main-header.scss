@@ -13,13 +13,13 @@
   position: absolute;
   top: 40px;
   right: 10px;
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   background: url("../img/dark-theme.svg") no-repeat;
   padding: 0;
   border: none;
   cursor: pointer;
-  z-index: 5;
+  z-index: 4;
 }
 
 .main-header__me-info {
@@ -78,6 +78,14 @@
   .main-header__theme-toggle {
     top: 70px;
     left: 55%;
+    width: 24px;
+    height: 25px;
+    transition: 0.5s;
+
+    &:hover {
+      border-bottom: 1px solid $borderColor;
+      transition: 0.5s;
+    }
   }
 
   .main-header__me-info {
@@ -105,9 +113,12 @@
 
   .main-header__theme-toggle {
     background: url("../img/light-theme.svg") no-repeat;
+    z-index: 4;
+    transition: 0.5s;
 
     &::before {
       color: $whiteColor;
+      transition: 0.5s;
     }
   }
 }
