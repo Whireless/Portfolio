@@ -1,0 +1,116 @@
+.dark-theme {
+  color: $whiteColor;
+  transition: 1s;
+
+  .main-header {
+    background: $blackColor;
+  }
+
+  .main-header__theme-toggle {
+    background: url("../img/light-theme.svg") no-repeat;
+
+    &::before {
+      color: $whiteColor;
+    }
+  }
+
+  .main-nav--open,
+  .main-nav--close {
+    .main-nav__nav-open,
+    .main-nav__nav-close {
+      &:hover,
+      &:focus {
+        fill: $whiteColor;
+      }
+    }
+  }
+
+  .main-nav__nav-head {
+    background-color: $blackColor;
+  }
+
+  .main-nav__nav-list {
+    background-color: $blackColor;
+
+    a {
+      color: $whiteColor;
+
+      &:hover,
+      &:focus {
+        color: $blackColor;
+        background-color: $whiteColor;
+      }
+    }
+  }
+
+  .about-me {
+    background-color: $greyColor3;
+  }
+
+  .skills {
+    background-color: $blackColor;
+  }
+
+  .portfolio {
+    background-color: $greyColor3;
+  }
+
+  .portfolio__project-item {
+    a {
+      color: $whiteColor;
+
+      &:hover,
+      &:focus {
+        color: $greyColor2;
+      }
+    }
+  }
+
+  .main-footer {
+    background-color: $blackColor;
+  }
+
+  .main-footer__contact-item {
+    svg {
+      &:hover,
+      &:focus {
+        fill: $whiteColor;
+      }
+    }
+  }
+
+  @media (min-width: $tabletWidth) {
+    .main-nav {
+      background-color: $blackColor;
+    }
+
+    .main-nav__nav-list {
+      a {
+        border: 1px solid $whiteColor;
+      }
+    }
+
+    .portfolio__project-item {
+      a {
+        border: 1px solid $whiteColor;
+
+        &:hover,
+        &:focus {
+          color: $blackColor;
+          background-color: $whiteColor;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    .skills__skills-item {
+      svg {
+        &:hover,
+        &:focus {
+          fill: $whiteColor;
+        }
+      }
+    }
+  }
+}

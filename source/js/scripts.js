@@ -1,20 +1,19 @@
+'use strict';
+
+const page = document.querySelector('.main-body');
+const mainNav = document.querySelector('.main-nav'),
+      navBtn = document.querySelector('.main-nav__nav-button'),
+      navElem = document.querySelectorAll('.main-nav__nav-item a'),
+      openTitle = document.querySelector('.main-nav__title-text-open'),
+      closeTitle = document.querySelector('.main-nav__title-text-close');
+const themeButton = document.querySelector('.main-header__theme-toggle');
+
 // Главное меню
-const mainNav = document.querySelector('.main-nav');
-const navBtn = document.querySelector('.main-nav__nav-button');
-const navElem = document.querySelectorAll('.main-nav__nav-item a');
-const openTitle = document.querySelector('.main-nav__title-text-open');
-const closeTitle = document.querySelector('.main-nav__title-text-close');
 
-mainNav.classList.add('main-nav--close')
-
-navBtn.addEventListener('click', function() {
-  if(mainNav.classList.contains('main-nav--close')) {
-    mainNav.classList.remove('main-nav--close')
-    mainNav.classList.add('main-nav--open')
-  } else {
-    mainNav.classList.remove('main-nav--open')
-    mainNav.classList.add('main-nav--close')
-  }
+mainNav.classList.add('main-nav--close');
+navBtn.onclick = function() {
+  mainNav.classList.toggle('main-nav--close');
+  mainNav.classList.toggle('main-nav--open');
 
   if(openTitle.classList.contains('main-nav__title-text-open--open')) {
     openTitle.classList.remove('main-nav__title-text-open--open')
@@ -31,13 +30,17 @@ navBtn.addEventListener('click', function() {
     closeTitle.classList.remove('main-nav__title-text-close--close')
     closeTitle.classList.add('main-nav__title-text-close--open')
   }
-});
+};
 
 navElem.forEach(a => {
-  a.addEventListener('click', function() {
-    if(mainNav.classList.contains('main-nav--open')) {
-       mainNav.classList.remove('main-nav--open')
-       mainNav.classList.add('main-nav--close')
-    }
-  })
+  a.onclick = function() {
+    mainNav.classList.toggle('main-nav--open')
+    mainNav.classList.toggle('main-nav--close')
+  };
 });
+
+// Тёмная тема
+
+themeButton.onclick = function() {
+  page.classList.toggle('dark-theme');
+};

@@ -165,7 +165,10 @@
       transition: 0.5s;
     }
   }
+
   .main-nav--close {
+    height: 0;
+
     .main-nav__nav-list {
       transform: translateX(100%);
       transition: 0.5s;

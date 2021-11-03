@@ -3,9 +3,22 @@
 }
 
 .main-header__home-block {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+}
+
+.main-header__theme-toggle {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background: url("../img/dark-theme.svg") no-repeat;
+  padding: 0;
+  border: none;
+  cursor: pointer;
 }
 
 .main-header__me-info {
@@ -33,6 +46,21 @@
   .main-header__home-block {
     margin-top: 62px;
   }
+
+  .main-header__theme-toggle {
+    top: 55px;
+    right: 50px;
+
+    &::before {
+      letter-spacing: 1px;
+      position: absolute;
+      top: 1px;
+      left: -170px;
+      display: inline;
+      content: "Измени меня =>";
+      width: 170px;
+    }
+  }
 }
 
 @media (min-width: $desktopWidth) {
@@ -44,6 +72,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 82px;
+  }
+
+  .main-header__theme-toggle {
+    top: 70px;
+    left: 55%;
   }
 
   .main-header__me-info {
@@ -67,5 +100,13 @@
 @media (prefers-color-scheme: dark) {
   .main-header {
     background: $blackColor;
+  }
+
+  .main-header__theme-toggle {
+    background: url("../img/light-theme.svg") no-repeat;
+
+    &::before {
+      color: $whiteColor;
+    }
   }
 }
