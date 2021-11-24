@@ -11,17 +11,6 @@
   }
 }
 
-.main-nav__title-text-open,
-.main-nav__title-text-close {
-  &--open {
-    display: inline;
-  }
-
-  &--close {
-    display: none;
-  }
-}
-
 .main-nav__nav-button {
   position: relative;
   display: block;

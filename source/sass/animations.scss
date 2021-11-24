@@ -1,3 +1,5 @@
+// Анимация вращения для скиллов
+
 @keyframes sphere {
   from {
     transform: rotate(-0deg);
@@ -14,7 +16,7 @@
   }
 }
 
-// Анимации для мобильного меню
+// Анимация для мобильного меню
 
 @keyframes topOpen {
   0% {
@@ -100,3 +102,39 @@
   }
 }
 
+// Анимация для кнопки 'В начало'
+
+@keyframes btnUp-see {
+  0% {
+    display: none;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    display: block;
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes btnUp-noSee {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  95% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    transform: translateX(-999999%);
+    opacity: 0;
+  }
+}

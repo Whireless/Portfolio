@@ -1,11 +1,6 @@
 .main-footer {
   position: relative;
   padding: $mobileInt 0 20px 0;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .main-footer__contact-info {
@@ -68,15 +63,28 @@
   position: fixed;
   right: 40px;
   bottom: 40px;
-  display: none;
-  width: 80px;
-  height: 30px;
+  background-color: $borderColor;
+  width: 45px;
+  height: 45px;
   padding: 0;
   border: none;
+  border-radius: 50%;
   cursor: pointer;
+  animation: ease 0.5s btnUp-noSee forwards;
+  transition: 0.5s;
 
   &--active {
-    display: block;
+    animation: ease 0.5s btnUp-see forwards;
+  }
+
+  &:hover {
+    background-color: $blackColor;
+    transition: 0.5s;
+
+    svg {
+      transition: 0.5s;
+      fill: $whiteColor;
+    }
   }
 }
 
@@ -88,7 +96,8 @@
   .main-footer__button-up {
     right: 60px;
     bottom: 60px;
-    width: 100px;
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -119,7 +128,6 @@
   .main-footer__button-up {
     right: 100px;
     bottom: 80px;
-    width: 120px;
   }
 }
 
@@ -133,6 +141,22 @@
       &:hover,
       &:focus {
         fill: $whiteColor;
+      }
+    }
+  }
+
+  .main-footer__button-up {
+    svg {
+      fill: $whiteColor;
+    }
+
+    &:hover {
+      background-color: $whiteColor;
+      transition: 0.5s;
+
+      svg {
+        fill: $blackColor;
+        transition: 0.5s;
       }
     }
   }

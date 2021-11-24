@@ -80,6 +80,22 @@
     }
   }
 
+  .main-footer__button-up {
+    svg {
+      fill: $whiteColor;
+    }
+
+    &:hover {
+      background-color: $whiteColor;
+      transition: 0.5s;
+
+      svg {
+        fill: $blackColor;
+        transition: 0.5s;
+      }
+    }
+  }
+
   @media (min-width: $tabletWidth) {
     .main-nav {
       background-color: $blackColor;
