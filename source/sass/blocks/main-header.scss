@@ -2,16 +2,31 @@
   padding: 0 0 $mobileInt 0;
 }
 
-.main-header__home-block {
+.main-header__me-info {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+  padding-top: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 75px;
+    right: 10px;
+    width: 75px;
+    height: 75px;
+    background: url("../img/my-photo.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    z-index: 3;
+  }
 }
 
 .main-header__theme-toggle {
   position: absolute;
-  top: 40px;
+  top: 25px;
   right: 10px;
   width: 26px;
   height: 26px;
@@ -20,10 +35,6 @@
   border: none;
   cursor: pointer;
   z-index: 4;
-}
-
-.main-header__me-info {
-  margin-top: 20px;
 }
 
 .main-header__me-name {
@@ -35,22 +46,25 @@
   }
 }
 
-.main-header__me-photo {
-  margin-top: 20px;
-}
-
 @media (min-width: $tabletWidth) {
   .main-header {
     padding: 0 0 $tabletInt 0;
   }
 
-  .main-header__home-block {
-    margin-top: 62px;
+  .main-header__me-info {
+    margin-top: 65px;
+
+    &::before {
+      top: 50px;
+      right: 38%;
+      width: 115px;
+      height: 115px;
+    }
   }
 
   .main-header__theme-toggle {
-    top: 55px;
-    right: 50px;
+    top: 105px;
+    right: -20px;
 
     &::before {
       letter-spacing: 1px;
@@ -58,8 +72,19 @@
       top: 1px;
       left: -170px;
       display: inline;
-      content: "Измени меня =>";
+      content: "Нажми меня =>";
       width: 170px;
+    }
+  }
+}
+
+@media (min-width: $pre-desktopWidth) {
+  .main-header__me-info {
+    &::before {
+      top: 30px;
+      right: 42%;
+      width: 150px;
+      height: 150px;
     }
   }
 }
@@ -69,10 +94,20 @@
     padding: 0 0 $desktopInt 0;
   }
 
-  .main-header__home-block {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .main-header__me-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: 82px;
+    padding-top: 35px;
+
+    &::before {
+      position: fixed;
+      width: 90px;
+      height: 90px;
+      top: 100px;
+      left: 15px;
+    }
   }
 
   .main-header__theme-toggle {
@@ -88,21 +123,8 @@
     }
   }
 
-  .main-header__me-info {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 35px;
-  }
-
   .main-header__me-name {
-    margin: 0;
-  }
-
-  .main-header__me-photo {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    margin-top: 35px;
+    margin: 0 0 0 20px;
   }
 }
 
