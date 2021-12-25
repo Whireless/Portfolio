@@ -14,9 +14,11 @@ navBtn.onclick = function() {
   mainNav.classList.toggle('main-nav--open');
 
   if (mainNav.classList.contains('main-nav--open')) {
-    openMe.textContent = 'Закрой меня :)';
+    openMe.textContent = 'закрой меня :)';
+    page.style.overflow = 'hidden';
   } else {
-    openMe.textContent = 'Открой меня :)';
+    openMe.textContent = 'открой меня :)';
+    page.style.overflow = 'visible';
   }
 };
 
