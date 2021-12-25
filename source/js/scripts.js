@@ -18,7 +18,7 @@ navBtn.onclick = function() {
     page.style.overflow = 'hidden';
   } else {
     openMe.textContent = 'открой меня :)';
-    page.style.overflow = 'visible';
+    page.removeAttribute('style')
   }
 };
 
@@ -26,6 +26,7 @@ navElem.forEach(a => {
   a.onclick = function() {
     mainNav.classList.toggle('main-nav--open')
     mainNav.classList.toggle('main-nav--close')
+    page.removeAttribute('style')
   };
 });
 
