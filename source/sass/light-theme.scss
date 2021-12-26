@@ -15,17 +15,6 @@
     }
   }
 
-  .main-nav--open,
-  .main-nav--close {
-    .main-nav__nav-open,
-    .main-nav__nav-close {
-      &:hover,
-      &:focus {
-        fill: $blackColor;
-      }
-    }
-  }
-
   .main-nav__nav-head {
     background-color: $whiteColor;
   }
