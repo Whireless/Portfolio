@@ -40,10 +40,10 @@
 .main-header__me-name {
   letter-spacing: 1px;
   margin-top: 0;
+}
 
-  & + p {
-    margin: 0;
-  }
+.main-header__me-description {
+  margin: 0;
 }
 
 @media (min-width: $tabletWidth) {

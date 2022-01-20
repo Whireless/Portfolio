@@ -1,30 +1,30 @@
 .portfolio {
   background-color: $greyColor1;
   padding: $mobileInt 0;
+}
 
-  h2 {
-    text-transform: lowercase;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-align: center;
-    position: relative;
-    display: table;
-    width: 200px;
-    margin: 40px auto;
-    padding: 10px;
+.portfolio__title {
+  text-transform: lowercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  display: table;
+  width: 200px;
+  margin: 40px auto;
+  padding: 10px;
+  border: 1px solid $borderColor;
+  border-radius: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
     border: 1px solid $borderColor;
     border-radius: 10px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 6px;
-      left: 6px;
-      width: calc(100% - 4px);
-      height: calc(100% - 4px);
-      border: 1px solid $borderColor;
-      border-radius: 10px;
-    }
   }
 }
 
@@ -107,13 +107,13 @@
 @media (min-width: $desktopWidth) {
   .portfolio {
     padding: $desktopInt 0;
+  }
 
-    h2 {
+  .portfolio__title {
+    border: 2px solid $borderColor;
+
+    &::after {
       border: 2px solid $borderColor;
-
-      &::after {
-        border: 2px solid $borderColor;
-      }
     }
   }
 

@@ -8,36 +8,36 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+}
 
-  h2 {
-    text-transform: lowercase;
-    font-weight: 500;
-    letter-spacing: 2px;
-    position: relative;
-    display: table;
-    width: 200px;
-    margin: 40px auto;
-    padding: 10px;
+.skills__title {
+  text-transform: lowercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  position: relative;
+  display: table;
+  width: 200px;
+  margin: 40px auto;
+  padding: 10px;
+  border: 1px solid $borderColor;
+  border-radius: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
     border: 1px solid $borderColor;
     border-radius: 10px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 6px;
-      left: 6px;
-      width: calc(100% - 4px);
-      height: calc(100% - 4px);
-      border: 1px solid $borderColor;
-      border-radius: 10px;
-    }
   }
+}
 
-  p {
-    font-weight: 300;
-    margin-top: 20px;
-    margin-bottom: 0;
-  }
+.skills__description {
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .skills__skills-list {
@@ -91,18 +91,16 @@
     padding: $desktopInt 0;
   }
 
-  .skills__skills-info {
-    h2 {
+  .skills__title {
+    border: 2px solid $borderColor;
+
+    &::after {
       border: 2px solid $borderColor;
-
-      &::after {
-        border: 2px solid $borderColor;
-      }
     }
+  }
 
-    p {
-      margin-top: 30px;
-    }
+  .skills__description {
+    margin-top: 30px;
   }
 
   .skills__skills-list {
