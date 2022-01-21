@@ -45,13 +45,26 @@
     background-color: $greyColor3;
   }
 
-  .portfolio__project-item {
-    a {
+  .portfolio__project-link {
+    &:hover,
+    &:focus {
       color: $whiteColor;
+    }
+  }
 
-      &:hover,
-      &:focus {
-        color: $greyColor2;
+  .portfolio__button-preview {
+    background-color: $blackColor;
+
+    &::before {
+      color: $whiteColor;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $whiteColor;
+
+      &::before {
+        color: $blackColor;
       }
     }
   }
@@ -96,15 +109,15 @@
       }
     }
 
-    .portfolio__project-item {
-      a {
-        border: 1px solid $whiteColor;
+    .portfolio__project-link {
+      color: $whiteColor;
+      background-color: $blackColor;
+      border: 1px solid $whiteColor;
 
-        &:hover,
-        &:focus {
-          color: $blackColor;
-          background-color: $whiteColor;
-        }
+      &:hover,
+      &:focus {
+        color: $blackColor;
+        background-color: $whiteColor;
       }
     }
   }

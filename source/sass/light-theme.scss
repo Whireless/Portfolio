@@ -45,14 +45,12 @@
     background-color: $greyColor1;
   }
 
-  .portfolio__project-item {
-    a {
-      color: $blackColor;
+  .portfolio__project-link {
+    color: $greyColor2;
 
-      &:hover,
-      &:focus {
-        color: $greyColor2;
-      }
+    &:hover,
+    &:focus {
+      color: $blackColor;
     }
   }
 
@@ -80,15 +78,15 @@
       }
     }
 
-    .portfolio__project-item {
-      a {
-        border: 1px solid $blackColor;
+    .portfolio__project-link {
+      color: $blackColor;
+      background-color: $whiteColor;
+      border: 1px solid $blackColor;
 
-        &:hover,
-        &:focus {
-          color: $whiteColor;
-          background-color: $blackColor;
-        }
+      &:hover,
+      &:focus {
+        color: $whiteColor;
+        background-color: $blackColor;
       }
     }
   }
