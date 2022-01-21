@@ -1,10 +1,10 @@
 const page = document.querySelector('.main-body');
-const mainNav = document.querySelector('.main-nav'),
-      navBtn = document.querySelector('.main-nav__nav-button'),
-      navElem = document.querySelectorAll('.main-nav__nav-item a'),
-      openMe = document.querySelector('.main-nav__title');
-const themeButton = document.querySelector('.main-header__theme-toggle');
-let buttonUp = document.querySelector('.main-footer__button-up');
+const mainNav = page.querySelector('.main-nav'),
+      navBtn = mainNav.querySelector('.main-nav__nav-button'),
+      navElem = mainNav.querySelectorAll('.main-nav__nav-item a'),
+      openMe = mainNav.querySelector('.main-nav__title');
+const themeButton = page.querySelector('.main-header__theme-toggle');
+const buttonUp = page.querySelector('.main-footer__button-up');
 
 // Главное меню
 
