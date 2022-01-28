@@ -13,12 +13,9 @@ const projectImg = page.querySelector('.portfolio__project-image'),
       projectLink = page.querySelector('.portfolio__project-link'),
       photoBtn = page.querySelectorAll('.portfolio__button-preview');
 
-
 // Главное меню
 
-mainNav.classList.add('main-nav--close');
-navBtn.onclick = function() {
-  mainNav.classList.toggle('main-nav--close');
+navBtn.onclick = function () {
   mainNav.classList.toggle('main-nav--open');
 
   if (mainNav.classList.contains('main-nav--open')) {
@@ -31,22 +28,21 @@ navBtn.onclick = function() {
 };
 
 navElem.forEach(a => {
-  a.onclick = function() {
+  a.onclick = () => {
     mainNav.classList.toggle('main-nav--open')
-    mainNav.classList.toggle('main-nav--close')
     page.removeAttribute('style')
   };
 });
 
 // Тёмная тема
 
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
   page.classList.add('dark-theme')
 } else {
   page.classList.add('light-theme')
 };
 
-themeButton.onclick = function() {
+themeButton.onclick = function () {
   if (page.classList.contains('light-theme')) {
     page.classList.remove('light-theme')
     page.classList.add('dark-theme')

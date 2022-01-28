@@ -10,7 +10,7 @@ html, body {
   scroll-behavior: smooth;
   transition: 1s;
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tabletW) {
     font-size: 17px;
     line-height: 30px;
   }

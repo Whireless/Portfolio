@@ -98,7 +98,7 @@
     }
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tabletW) {
     .main-nav {
       background-color: $blackColor;
     }
@@ -122,7 +122,7 @@
     }
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktopW) {
     .skills__skills-item {
       svg {
         &:hover,

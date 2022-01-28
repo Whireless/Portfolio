@@ -42,13 +42,13 @@
   }
 }
 
-@media (min-width: $tabletWidth) {
+@media (min-width: $tabletW) {
   .about-me {
     padding: $tabletInt 0;
   }
 }
 
-@media (min-width: $desktopWidth) {
+@media (min-width: $desktopW) {
   .about-me {
     padding: $desktopInt 0;
   }

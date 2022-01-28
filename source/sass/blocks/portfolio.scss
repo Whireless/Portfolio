@@ -120,7 +120,7 @@
   }
 }
 
-@media (min-width: $tabletWidth) {
+@media (min-width: $tabletW) {
   .portfolio {
     padding: $tabletInt 0;
   }
@@ -182,14 +182,14 @@
   }
 }
 
-@media (min-width: $pre-desktopWidth) {
+@media (min-width: $pre-desktopW) {
   .portfolio__button-preview {
     width: 145px;
     height: 100px;
   }
 }
 
-@media (min-width: $desktopWidth) {
+@media (min-width: $desktopW) {
   .portfolio {
     padding: $desktopInt 0;
   }
@@ -242,7 +242,7 @@
     }
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tabletW) {
     .portfolio__project-link {
       color: $whiteColor;
       background-color: $blackColor;

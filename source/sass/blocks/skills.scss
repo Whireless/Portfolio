@@ -68,7 +68,7 @@
   }
 }
 
-@media (min-width: $tabletWidth) {
+@media (min-width: $tabletW) {
   .skills {
     padding: $tabletInt 0;
   }
@@ -86,7 +86,7 @@
   }
 }
 
-@media (min-width: $desktopWidth) {
+@media (min-width: $desktopW) {
   .skills {
     padding: $desktopInt 0;
   }
@@ -134,7 +134,7 @@
     background-color: $blackColor;
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktopW) {
     .skills__skills-item {
       svg {
         &:hover,

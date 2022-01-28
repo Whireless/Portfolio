@@ -1,3 +1,49 @@
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  .main-nav__nav-button {
+    span {
+      &:nth-of-type(1) {
+        animation: ease 0.5s topClose forwards;
+      }
+
+      &:nth-of-type(2) {
+        animation: ease 0.5s mdlClose forwards;
+      }
+
+      &:nth-of-type(3) {
+        animation: ease 0.5s btmClose forwards;
+      }
+    }
+  }
+
+  &--open {
+    .main-nav__nav-button {
+      span {
+        &:nth-of-type(1) {
+          animation: ease 0.5s topOpen forwards;
+        }
+
+        &:nth-of-type(2) {
+          animation: ease 0.5s mdlOpen forwards;
+        }
+
+        &:nth-of-type(3) {
+          animation: ease 0.5s btmOpen forwards;
+        }
+      }
+    }
+
+    .main-nav__nav-head {
+      border: none;
+    }
+  }
+}
+
 .main-nav__nav-head {
   display: flex;
   justify-content: space-between;
@@ -70,82 +116,31 @@
   }
 }
 
-.main-nav--open {
-  position: fixed;     //(Для меню вне потока)
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-
-  .main-nav__nav-button {
-    span {
-      &:nth-of-type(1) {
-        animation: ease 0.5s topOpen forwards;
-      }
-
-      &:nth-of-type(2) {
-        animation: ease 0.5s mdlOpen forwards;
-      }
-
-      &:nth-of-type(3) {
-        animation: ease 0.5s btmOpen forwards;
-      }
-    }
-  }
-
-  .main-nav__nav-head {
-    border: none;
-  }
-}
-
-.main-nav--close {
-  position: fixed;     //(Для меню вне потока)
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-
-  .main-nav__nav-button {
-    span {
-      &:nth-of-type(1) {
-        animation: ease 0.5s topClose forwards;
-      }
-
-      &:nth-of-type(2) {
-        animation: ease 0.5s mdlClose forwards;
-      }
-
-      &:nth-of-type(3) {
-        animation: ease 0.5s btmClose forwards;
-      }
-    }
-  }
-}
-
 .main-nav__nav-item {
   margin-top: 5px;
 }
 
-@media (max-width: 659px) {
-  .main-nav--open {
-    .main-nav__nav-list {
-      height: 100vh;
-      transition: 0.5s;
-    }
-  }
-
-  .main-nav--close {
+@media (max-width: $pre-tabletW) {
+  .main-nav {
     height: 0;
 
     .main-nav__nav-list {
-      transform: translateX(100%);
       height: 90vh;
+      transform: translateX(100%);
       transition: 0.5s;
+    }
+
+    &--open {
+      .main-nav__nav-list {
+        height: 100vh;
+        transform: translateX(0);
+        transition: 0.5s;
+      }
     }
   }
 }
 
-@media (min-width: $tabletWidth) {
+@media (min-width: $tabletW) {
   .main-nav {
     background-color: $whiteColor;
     padding: 0 25px;
@@ -181,7 +176,7 @@
   }
 }
 
-@media (min-width: $desktopWidth) {
+@media (min-width: $desktopW) {
   .main-nav {
     padding: 0 120px;
   }
@@ -220,7 +215,7 @@
     }
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tabletW) {
     .main-nav {
       background-color: $blackColor;
     }

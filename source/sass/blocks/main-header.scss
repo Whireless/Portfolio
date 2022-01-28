@@ -46,7 +46,7 @@
   margin: 0;
 }
 
-@media (min-width: $tabletWidth) {
+@media (min-width: $tabletW) {
   .main-header {
     padding: 0 0 $tabletInt 0;
   }
@@ -78,7 +78,7 @@
   }
 }
 
-@media (min-width: $pre-desktopWidth) {
+@media (min-width: $pre-desktopW) {
   .main-header__me-info {
     &::before {
       top: 30px;
@@ -89,7 +89,7 @@
   }
 }
 
-@media (min-width: $desktopWidth) {
+@media (min-width: $desktopW) {
   .main-header {
     padding: 0 0 $desktopInt 0;
   }

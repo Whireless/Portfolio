@@ -89,7 +89,7 @@
   }
 }
 
-@media (min-width: $tabletWidth) {
+@media (min-width: $tabletW) {
   .main-footer {
     padding: $tabletInt 0 30px 0;
   }
@@ -102,7 +102,7 @@
   }
 }
 
-@media (min-width: $desktopWidth) {
+@media (min-width: $desktopW) {
   .main-footer {
     padding: $desktopInt 0 40px 0;
   }
