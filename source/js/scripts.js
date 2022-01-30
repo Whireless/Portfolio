@@ -70,10 +70,10 @@ buttonUp.onclick = function () {
 
 const projects = [
   {
-    img: 'img/projects/Pink.png',
-    alt: 'Надоели серые будни? Тогда мы идём к вам!',
-    href: 'https://whireless.github.io/Pink/',
-    text: 'Приложение для скрашивания скучных будней',
+    img: 'img/projects/Nevelvend.png',
+    alt: 'Лучшие палочки в мире. И это точно.',
+    href: 'https://whireless.github.io/Nevelvend/',
+    text: 'Твоё удобство на кончике размешивателя',
   },
   {
     img: 'img/projects/ProductFit.png',
@@ -82,10 +82,10 @@ const projects = [
     text: 'Разработка ИТ-продуктов нового поколения',
   },
   {
-    img: 'img/projects/Nevelvend.png',
-    alt: 'Лучшие палочки в мире. И это точно.',
-    href: 'https://whireless.github.io/Nevelvend/',
-    text: 'Твоё удобство на кончике размешивателя',
+    img: 'img/projects/Pink.png',
+    alt: 'Надоели серые будни? Тогда мы идём к вам!',
+    href: 'https://whireless.github.io/Pink/',
+    text: 'Приложение для скрашивания скучных будней',
   },
   {
     img: 'img/projects/Grand-Theatre.png',

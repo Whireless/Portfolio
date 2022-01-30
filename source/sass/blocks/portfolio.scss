@@ -151,7 +151,7 @@
   .portfolio__button-preview {
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 100px;
+    width: 102px;
     height: 75px;
     border: none;
     border-radius: 10px;
@@ -184,7 +184,7 @@
 
 @media (min-width: $pre-desktopW) {
   .portfolio__button-preview {
-    width: 145px;
+    width: 150px;
     height: 100px;
   }
 }
@@ -208,8 +208,15 @@
   }
 
   .portfolio__button-preview {
-    width: 170px;
+    width: 175px;
     height: 115px;
+  }
+}
+
+@media (min-width: $over-desktopW) {
+  .portfolio__button-preview {
+    width: 205px;
+    height: 130px;
   }
 }
 
