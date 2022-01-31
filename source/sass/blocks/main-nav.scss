@@ -50,11 +50,11 @@
   background-color: $whiteColor;
   padding: 10px 0;
   border-bottom: 2px solid $greyColor2;
+}
 
-  p {
-    margin: 0 auto;
-    align-self: center;
-  }
+.main-nav__title {
+  margin: 0 auto;
+  align-self: center;
 }
 
 .main-nav__nav-button {

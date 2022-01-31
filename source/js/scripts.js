@@ -1,4 +1,4 @@
-const page = document.querySelector('.main-body');
+const page = document.querySelector('body');
 
 const mainNav = page.querySelector('.main-nav'),
       navBtn = mainNav.querySelector('.main-nav__nav-button'),
@@ -60,11 +60,11 @@ window.onscroll = function () {
   } else {
     buttonUp.classList.remove('main-footer__button-up--active');
   }
-}
+};
 
 buttonUp.onclick = function () {
   window.scrollTo(0, 0);
-}
+};
 
 // Список проектов
 
@@ -108,8 +108,8 @@ const getPreviewProject = (photo, img, alt, href, text) => {
     projectLink.href = href;
     projectLink.textContent = text;
   });
-}
+};
 
 for (let i = 0; i < projects.length; i++) {
   getPreviewProject(photoBtn[i], projects[i].img, projects[i].alt, projects[i].href, projects[i].text);
-}
+};

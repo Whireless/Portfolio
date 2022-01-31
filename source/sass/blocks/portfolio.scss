@@ -70,12 +70,12 @@
   border: 1px solid $greyColor2;
   border-radius: 50%;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.8s;
 
   &:hover,
   &:focus {
     transform: scale(0.9);
-    transition: 0.4s;
+    transition: 0.8s;
     background-color: $blackColor;
 
     &::before {
@@ -89,7 +89,7 @@
     left: 40%;
   }
 
-  &--pink {
+  &--nevelvend {
     &::before {
       content: "1";
     }
@@ -101,7 +101,7 @@
     }
   }
 
-  &--nevelvend {
+  &--pink {
     &::before {
       content: "3";
     }
@@ -214,6 +214,11 @@
 }
 
 @media (min-width: $over-desktopW) {
+  .portfolio__project-image {
+    width: 720px;
+    height: 365px;
+  }
+
   .portfolio__button-preview {
     width: 205px;
     height: 130px;

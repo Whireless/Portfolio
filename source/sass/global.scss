@@ -1,12 +1,17 @@
-html, body {
-  min-width: 380px;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: "Source Code Pro", "Arial", monospace;
   font-size: 16px;
   line-height: 26px;
-  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-width: 380px;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   transition: 1s;
 
   @media (min-width: $tabletW) {
