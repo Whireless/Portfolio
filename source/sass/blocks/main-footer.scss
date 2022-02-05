@@ -64,7 +64,6 @@
   position: fixed;
   right: 40px;
   bottom: 40px;
-  background-color: $borderColor;
   width: 45px;
   height: 45px;
   padding: 0;
@@ -146,17 +145,11 @@
 
   .main-footer__button-up {
     svg {
-      fill: $whiteColor;
+      fill: $greyColor2;
     }
 
     &:hover {
       background-color: $whiteColor;
-      transition: 0.5s;
-
-      svg {
-        fill: $blackColor;
-        transition: 0.5s;
-      }
     }
   }
 }

@@ -11,7 +11,8 @@ const buttonUp = page.querySelector('.main-footer__button-up');
 
 const projectImg = page.querySelector('.portfolio__project-image'),
       projectLink = page.querySelector('.portfolio__project-link'),
-      photoBtn = page.querySelectorAll('.portfolio__button-preview');
+      prevProject = page.querySelector('.portfolio__button--previus'),
+      nextProject = page.querySelector('.portfolio__button--next');
 
 // Главное меню
 
@@ -101,15 +102,40 @@ const projects = [
   },
 ];
 
-const getPreviewProject = (photo, img, alt, href, text) => {
-  photo.addEventListener('click', function () {
-    projectImg.src = img;
-    projectImg.alt = alt;
-    projectLink.href = href;
-    projectLink.textContent = text;
-  });
+const getPreviewProject = () => {
+  const {img, alt, href, text} = projects[i];
+  projectImg.src = img;
+  projectImg.alt = alt;
+  projectLink.href = href;
+  projectLink.textContent = text;
+  return;
 };
 
-for (let i = 0; i < projects.length; i++) {
-  getPreviewProject(photoBtn[i], projects[i].img, projects[i].alt, projects[i].href, projects[i].text);
+let i = 0;
+const checkIndex = () => {
+  if (i < projects.length - 1) {
+    nextProject.disabled = false;
+  } else {
+    nextProject.disabled = true;
+  }
+
+  if (i > 0) {
+    prevProject.disabled = false;
+  } else {
+    prevProject.disabled = true;
+  }
+  return;
 };
+
+nextProject.onclick = () => {
+  i++;
+  checkIndex();
+  getPreviewProject();
+};
+
+prevProject.onclick = () => {
+  i--;
+  checkIndex();
+  getPreviewProject();
+};
+checkIndex();

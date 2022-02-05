@@ -30,8 +30,60 @@
 
 .portfolio__full-preview {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.portfolio__button {
+  background-color: $whiteColor;
+  width: 29px;
+  height: 29px;
+  margin-bottom: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.7s;
+
+  &:first-of-type {
+    &::before {
+      content: "<";
+      color: $blackColor;
+    }
+  }
+
+  &:last-of-type {
+    &::before {
+      content: ">";
+      color: $blackColor;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $blackColor;
+    transition: 0.7s;
+
+    &::before {
+      color: $whiteColor;
+    }
+  }
+
+  &:disabled {
+    background-color: $greyColor1;
+    cursor: auto;
+
+    &::before {
+      color: $greyColor1;
+    }
+  }
+}
+
+.portfolio__project-block {
+  display: flex;
   flex-direction: column;
   align-items: center;
+  width: 270px;
 }
 
 .portfolio__project-image {
@@ -52,82 +104,23 @@
   }
 }
 
-.portfolio__all-previews {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 15px;
-  margin-top: 20px;
-}
-
-.portfolio__button-preview {
-  position: relative;
-  background-color: $whiteColor;
-  width: 55px;
-  height: 55px;
-  margin: 0;
-  padding: 0;
-  border: 1px solid $greyColor2;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.8s;
-
-  &:hover,
-  &:focus {
-    transform: scale(0.9);
-    transition: 0.8s;
-    background-color: $blackColor;
-
-    &::before {
-      color: $whiteColor;
-    }
-  }
-
-  &::before {
-    position: absolute;
-    top: 32%;
-    left: 40%;
-  }
-
-  &--nevelvend {
-    &::before {
-      content: "1";
-    }
-  }
-
-  &--product-fit {
-    &::before {
-      content: "2";
-    }
-  }
-
-  &--pink {
-    &::before {
-      content: "3";
-    }
-  }
-
-  &--grand-theatre {
-    &::before {
-      content: "4";
-    }
-  }
-
-  &--nerds {
-    &::before {
-      content: "5";
-    }
-  }
-}
-
 @media (min-width: $tabletW) {
   .portfolio {
     padding: $tabletInt 0;
   }
 
+  .portfolio__button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .portfolio__project-block {
+    width: 465px;
+  }
+
   .portfolio__project-image {
-    width: 560px;
-    height: 300px;
+    width: 100%;
+    height: 250px;
   }
 
   .portfolio__project-link {
@@ -143,49 +136,20 @@
       background-color: $blackColor;
     }
   }
-
-  .portfolio__all-previews {
-    margin-top: 40px;
-  }
-
-  .portfolio__button-preview {
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 102px;
-    height: 75px;
-    border: none;
-    border-radius: 10px;
-
-    &::before {
-      display: none;
-    }
-
-    &--pink {
-      background-image: url("../img/projects/Pink.png");
-    }
-
-    &--product-fit {
-      background-image: url("../img/projects/ProductFit.png");
-    }
-
-    &--nevelvend {
-      background-image: url("../img/projects/Nevelvend.png");
-    }
-
-    &--grand-theatre {
-      background-image: url("../img/projects/Grand-Theatre.png");
-    }
-
-    &--nerds {
-      background-image: url("../img/projects/Nerds.png");
-    }
-  }
 }
 
 @media (min-width: $pre-desktopW) {
-  .portfolio__button-preview {
-    width: 150px;
-    height: 100px;
+  .portfolio__button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .portfolio__project-block {
+    width: 560px;
+  }
+
+  .portfolio__project-image {
+    height: 320px;
   }
 }
 
@@ -202,26 +166,26 @@
     }
   }
 
-  .portfolio__project-image {
-    width: 670px;
-    height: 350px;
+  .portfolio__button {
+    width: 50px;
+    height: 50px;
   }
 
-  .portfolio__button-preview {
-    width: 175px;
-    height: 115px;
+  .portfolio__project-block {
+    width: 700px;
+  }
+
+  .portfolio__project-image {
+    height: 360px;
   }
 }
 
 @media (min-width: $over-desktopW) {
-  .portfolio__project-image {
-    width: 720px;
-    height: 365px;
+  .portfolio__project-block {
+    width: 760px;
   }
-
-  .portfolio__button-preview {
-    width: 205px;
-    height: 130px;
+  .portfolio__project-image {
+    height: 380px;
   }
 }
 
@@ -237,19 +201,12 @@
     }
   }
 
-  .portfolio__button-preview {
-    background-color: $blackColor;
-
-    &::before {
-      color: $whiteColor;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: $whiteColor;
+  .portfolio__button {
+    &:disabled {
+      background-color: $greyColor3;
 
       &::before {
-        color: $blackColor;
+        color: $greyColor3;
       }
     }
   }

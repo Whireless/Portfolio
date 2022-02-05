@@ -52,19 +52,12 @@
     }
   }
 
-  .portfolio__button-preview {
-    background-color: $blackColor;
-
-    &::before {
-      color: $whiteColor;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: $whiteColor;
+  .portfolio__button {
+    &:disabled {
+      background-color: $greyColor3;
 
       &::before {
-        color: $blackColor;
+        color: $greyColor3;
       }
     }
   }
@@ -84,17 +77,11 @@
 
   .main-footer__button-up {
     svg {
-      fill: $whiteColor;
+      fill: $greyColor2;
     }
 
     &:hover {
       background-color: $whiteColor;
-      transition: 0.5s;
-
-      svg {
-        fill: $blackColor;
-        transition: 0.5s;
-      }
     }
   }
 
