@@ -7,12 +7,18 @@ const mainNav = page.querySelector('.main-nav'),
 
 const themeButton = page.querySelector('.main-header__theme-toggle');
 
-const buttonUp = page.querySelector('.main-footer__button-up');
+const shortInfoBtn = page.querySelector('.about-me__button--short'),
+      moreInfoBtn = page.querySelector('.about-me__button--more'),
+      infoClose = page.querySelectorAll('.about-me__button-close'),
+      shortInfo = page.querySelector('.about-me__shorter-info'),
+      moreInfo = page.querySelector('.about-me__more-info');
 
 const projectImg = page.querySelector('.portfolio__project-image'),
       projectLink = page.querySelector('.portfolio__project-link'),
       prevProject = page.querySelector('.portfolio__button--previus'),
       nextProject = page.querySelector('.portfolio__button--next');
+
+const buttonUp = page.querySelector('.main-footer__button-up');
 
 // Главное меню
 
@@ -24,32 +30,32 @@ navBtn.onclick = function () {
     page.style.overflow = 'hidden';
   } else {
     openMe.textContent = 'открой меня :)';
-    page.removeAttribute('style')
-  }
+    page.removeAttribute('style');
+  };
 };
 
 navElem.forEach(a => {
   a.onclick = () => {
-    mainNav.classList.toggle('main-nav--open')
-    page.removeAttribute('style')
+    mainNav.classList.toggle('main-nav--open');
+    page.removeAttribute('style');
   };
 });
 
 // Тёмная тема
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  page.classList.add('dark-theme')
+  page.classList.add('dark-theme');
 } else {
-  page.classList.add('light-theme')
+  page.classList.add('light-theme');
 };
 
 themeButton.onclick = function () {
   if (page.classList.contains('light-theme')) {
-    page.classList.remove('light-theme')
-    page.classList.add('dark-theme')
+    page.classList.remove('light-theme');
+    page.classList.add('dark-theme');
   } else if (page.classList.contains('dark-theme')) {
-    page.classList.remove('dark-theme')
-    page.classList.add('light-theme')
+    page.classList.remove('dark-theme');
+    page.classList.add('light-theme');
   };
 };
 
@@ -66,6 +72,23 @@ window.onscroll = function () {
 buttonUp.onclick = function () {
   window.scrollTo(0, 0);
 };
+
+// Блок 'Обо мне'
+
+shortInfoBtn.onclick = () => {
+  shortInfo.classList.add('about-me__shorter-info--active');
+};
+
+moreInfoBtn.onclick = () => {
+  moreInfo.classList.add('about-me__more-info--active');
+};
+
+infoClose.forEach(a => {
+  a.onclick = () => {
+    shortInfo.classList.remove('about-me__shorter-info--active');
+    moreInfo.classList.remove('about-me__more-info--active');
+  };
+});
 
 // Список проектов
 
@@ -117,13 +140,13 @@ const checkIndex = () => {
     nextProject.disabled = false;
   } else {
     nextProject.disabled = true;
-  }
+  };
 
   if (i > 0) {
     prevProject.disabled = false;
   } else {
     prevProject.disabled = true;
-  }
+  };
   return;
 };
 

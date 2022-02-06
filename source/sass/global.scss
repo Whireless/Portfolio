@@ -6,6 +6,7 @@ body {
   font-family: "Source Code Pro", "Arial", monospace;
   font-size: 16px;
   line-height: 26px;
+  letter-spacing: 1px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-width: 380px;
@@ -16,6 +17,11 @@ body {
 
   @media (min-width: $tabletW) {
     font-size: 17px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktopW) {
+    font-size: 18px;
     line-height: 30px;
   }
 

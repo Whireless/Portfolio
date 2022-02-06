@@ -37,6 +37,27 @@
     background-color: $greyColor3;
   }
 
+  .about-me__shorter-info {
+    background-color: $blackColor;
+  }
+
+  .about-me__more-info {
+    background-color: $blackColor;
+  }
+
+  .about-me__button {
+    svg {
+      &:hover,
+      &:focus {
+        fill: $whiteColor;
+      }
+    }
+  }
+
+  .about-me__button-close {
+    background-image: url("../img/close-info-white.svg");
+  }
+
   .skills {
     background-color: $blackColor;
   }
