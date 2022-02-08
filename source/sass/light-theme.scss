@@ -68,6 +68,16 @@
     background-color: $greyColor1;
   }
 
+  .portfolio__button {
+    &:disabled {
+      background-color: $greyColor1;
+
+      &::before {
+        color: $greyColor1;
+      }
+    }
+  }
+
   .portfolio__project-link {
     color: $greyColor2;
 

@@ -36,8 +36,8 @@
 
 .portfolio__button {
   background-color: $whiteColor;
-  width: 29px;
-  height: 29px;
+  width: 32px;
+  height: 32px;
   margin-bottom: 40px;
   padding: 0;
   border: none;
@@ -83,7 +83,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 270px;
+  width: 255px;
 }
 
 .portfolio__project-image {
@@ -110,17 +110,17 @@
   }
 
   .portfolio__button {
-    width: 32px;
-    height: 32px;
+    width: 45px;
+    height: 45px;
   }
 
   .portfolio__project-block {
-    width: 465px;
+    width: 520px;
   }
 
   .portfolio__project-image {
     width: 100%;
-    height: 250px;
+    height: 260px;
   }
 
   .portfolio__project-link {
@@ -135,21 +135,6 @@
       color: $whiteColor;
       background-color: $blackColor;
     }
-  }
-}
-
-@media (min-width: $pre-desktopW) {
-  .portfolio__button {
-    width: 45px;
-    height: 45px;
-  }
-
-  .portfolio__project-block {
-    width: 560px;
-  }
-
-  .portfolio__project-image {
-    height: 320px;
   }
 }
 

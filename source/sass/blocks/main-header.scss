@@ -55,10 +55,10 @@
     margin-top: 65px;
 
     &::before {
-      top: 50px;
-      right: 38%;
-      width: 115px;
-      height: 115px;
+      top: 30px;
+      right: 40%;
+      width: 140px;
+      height: 140px;
     }
   }
 
@@ -74,17 +74,6 @@
       display: inline;
       content: "Нажми меня =>";
       width: 170px;
-    }
-  }
-}
-
-@media (min-width: $pre-desktopW) {
-  .main-header__me-info {
-    &::before {
-      top: 30px;
-      right: 42%;
-      width: 150px;
-      height: 150px;
     }
   }
 }
