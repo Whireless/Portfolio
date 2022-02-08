@@ -46,9 +46,8 @@
   }
 
   .about-me__button {
-    svg {
-      &:hover,
-      &:focus {
+    &:hover {
+      svg {
         fill: $whiteColor;
       }
     }

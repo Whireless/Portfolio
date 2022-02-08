@@ -35,7 +35,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 15px;
+  padding-top: 20px;
 }
 
 .about-me__shorter-block {
@@ -99,18 +99,29 @@
   width: 100px;
   height: 100px;
   background-color: transparent;
+  margin-top: 10px;
   padding: 0;
   border: none;
+  box-shadow: 1px 1px 1px $greyColor2;
+  border-radius: 50%;
+  transition: 0.2s;
   cursor: pointer;
 
-  svg {
-    fill: $greyColor2;
-    transition: 0.7s;
+  &:hover {
+    box-shadow: 3px 3px 3px $greyColor2;
+    transition: 0.2s;
 
-    &:hover,
-    &:focus {
+    svg {
       fill: $blackColor;
+      transition: 0.4s;
     }
+  }
+
+  svg {
+    width: 70%;
+    height: 70%;
+    fill: $greyColor2;
+    transition: 0.4s;
   }
 }
 
@@ -248,9 +259,8 @@
   }
 
   .about-me__button {
-    svg {
-      &:hover,
-      &:focus {
+    &:hover {
+      svg {
         fill: $whiteColor;
       }
     }

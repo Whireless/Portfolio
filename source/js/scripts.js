@@ -109,7 +109,7 @@ const projects = [
     img: 'img/projects/Pink.png',
     alt: 'Надоели серые будни? Тогда мы идём к вам!',
     href: 'https://whireless.github.io/Pink/',
-    text: 'Приложение для скрашивания скучных будней',
+    text: 'Приложение для скрашивания скучных дней',
   },
   {
     img: 'img/projects/Grand-Theatre.png',
