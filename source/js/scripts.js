@@ -90,6 +90,13 @@ infoClose.forEach(a => {
   };
 });
 
+window.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Escape' || evt.key === 'Esc') {
+    shortInfo.classList.remove('about-me__shorter-info--active');
+    moreInfo.classList.remove('about-me__more-info--active');
+  };
+});
+
 // Список проектов
 
 const projects = [
