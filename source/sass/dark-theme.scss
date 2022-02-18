@@ -76,8 +76,8 @@
     &:disabled {
       background-color: $greyColor3;
 
-      &::before {
-        color: $greyColor3;
+      svg {
+        fill: $greyColor3;
       }
     }
   }

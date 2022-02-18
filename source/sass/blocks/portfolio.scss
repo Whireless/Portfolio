@@ -68,6 +68,9 @@
 }
 
 .portfolio__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $whiteColor;
   width: 45px;
   height: 45px;
@@ -77,17 +80,15 @@
   cursor: pointer;
   transition: 0.7s;
 
-  &:first-of-type {
-    &::before {
-      content: "<";
-      color: $blackColor;
+  &--previus {
+    svg {
+      transform: rotate(270deg);
     }
   }
 
-  &:last-of-type {
-    &::before {
-      content: ">";
-      color: $blackColor;
+  &--next {
+    svg {
+      transform: rotate(90deg);
     }
   }
 
@@ -96,8 +97,8 @@
     background-color: $blackColor;
     transition: 0.7s;
 
-    &::before {
-      color: $whiteColor;
+    svg {
+      fill: $whiteColor;
     }
   }
 
@@ -105,8 +106,8 @@
     background-color: $greyColor1;
     cursor: auto;
 
-    &::before {
-      color: $greyColor1;
+    svg {
+      fill: $greyColor1;
     }
   }
 }
@@ -217,8 +218,8 @@
     &:disabled {
       background-color: $greyColor3;
 
-      &::before {
-        color: $greyColor3;
+      svg {
+        fill: $greyColor3;
       }
     }
   }
