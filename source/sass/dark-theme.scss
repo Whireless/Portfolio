@@ -128,12 +128,10 @@
   }
 
   @media (min-width: $desktopW) {
-    .skills__skills-item {
-      svg {
-        &:hover,
-        &:focus {
-          fill: $whiteColor;
-        }
+    .skills__skill-icon {
+      &:hover,
+      &:focus {
+        fill: $whiteColor;
       }
     }
   }

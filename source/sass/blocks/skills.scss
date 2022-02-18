@@ -60,10 +60,11 @@
     margin-top: 15px;
     margin-bottom: 0;
   }
+}
 
-  svg {
-    animation: sphere 10s linear infinite;
-  }
+.skills__skill-icon {
+  fill: $greyColor2;
+  animation: sphere 10s linear infinite;
 }
 
 @media (min-width: $tabletW) {
@@ -75,11 +76,9 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .skills__skills-item {
-    svg {
-      width: 85px;
-      height: 85px;
-    }
+  .skills__skill-icon {
+    width: 85px;
+    height: 85px;
   }
 }
 
@@ -112,16 +111,16 @@
     p {
       margin-top: 30px;
     }
+  }
 
-    svg {
-      width: 96px;
-      height: 96px;
+  .skills__skill-icon {
+    width: 96px;
+    height: 96px;
 
-      &:hover,
-      &:focus {
-        fill: $blackColor;
-        animation: scale 1s ease-in-out;
-      }
+    &:hover,
+    &:focus {
+      fill: $blackColor;
+      animation: scale 1s ease-in-out;
     }
   }
 }
@@ -132,12 +131,10 @@
   }
 
   @media (min-width: $desktopW) {
-    .skills__skills-item {
-      svg {
-        &:hover,
-        &:focus {
-          fill: $whiteColor;
-        }
+    .skills__skill-icon {
+      &:hover,
+      &:focus {
+        fill: $whiteColor;
       }
     }
   }
