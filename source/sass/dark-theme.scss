@@ -86,12 +86,10 @@
     background-color: $blackColor;
   }
 
-  .main-footer__contact-item {
-    svg {
-      &:hover,
-      &:focus {
-        fill: $whiteColor;
-      }
+  .main-footer__contact-icon {
+    &:hover,
+    &:focus {
+      fill: $whiteColor;
     }
   }
 

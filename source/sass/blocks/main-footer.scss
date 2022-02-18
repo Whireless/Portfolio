@@ -47,14 +47,13 @@
   justify-content: center;
 }
 
-.main-footer__contact-item {
-  svg {
-    transition: 0.5s;
+.main-footer__contact-icon {
+  fill: $greyColor2;
+  transition: 0.4s;
 
-    &:hover {
-      transition: 0.5s;
-      fill: $blackColor;
-    }
+  &:hover {
+    fill: $blackColor;
+    transition: 0.4s;
   }
 }
 
@@ -71,7 +70,7 @@
   border-radius: 50%;
   cursor: pointer;
   animation: ease 0.5s btnUp-noSee forwards;
-  transition: 0.5s;
+  transition: 0.4s;
 
   &--active {
     animation: ease 0.5s btnUp-see forwards;
@@ -79,10 +78,10 @@
 
   &:hover {
     background-color: $blackColor;
-    transition: 0.5s;
+    transition: 0.4s;
 
     svg {
-      transition: 0.5s;
+      transition: 0.4s;
       fill: $whiteColor;
     }
   }
@@ -134,12 +133,10 @@
     background-color: $blackColor;
   }
 
-  .main-footer__contact-item {
-    svg {
-      &:hover,
-      &:focus {
-        fill: $whiteColor;
-      }
+  .main-footer__contact-icon {
+    &:hover,
+    &:focus {
+      fill: $whiteColor;
     }
   }
 

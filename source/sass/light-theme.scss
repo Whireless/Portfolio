@@ -91,12 +91,13 @@
     background-color: $whiteColor;
   }
 
-  .main-footer__contact-item {
-    svg {
-      &:hover,
-      &:focus {
-        fill: $blackColor;
-      }
+  .main-footer__contact-icon {
+    fill: $greyColor2;
+    transition: 0.4s;
+
+    &:hover {
+      fill: $blackColor;
+      transition: 0.4s;
     }
   }
 
