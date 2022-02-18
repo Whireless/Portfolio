@@ -107,19 +107,18 @@
   transition: 0.2s;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 3px 3px 3px $greyColor2;
     transition: 0.2s;
 
-    svg {
+    .about-me__icon {
       fill: $blackColor;
       transition: 0.4s;
     }
   }
 
-  svg {
-    width: 70%;
-    height: 70%;
+  .about-me__icon {
     fill: $greyColor2;
     transition: 0.4s;
   }
@@ -259,8 +258,9 @@
   }
 
   .about-me__button {
-    &:hover {
-      svg {
+    &:hover,
+    &:focus {
+      .about-me__icon {
         fill: $whiteColor;
       }
     }
