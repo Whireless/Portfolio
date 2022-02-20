@@ -1,6 +1,6 @@
 .dark-theme {
   color: $whiteColor;
-  transition: 1s;
+  transition: 0.5s;
 
   .main-header {
     background: $blackColor;
@@ -54,8 +54,11 @@
     }
   }
 
-  .about-me__button-close {
-    background-image: url("../img/close-info-white.svg");
+  .about-me__cross-icon {
+    &:hover,
+    &:focus {
+      fill: $whiteColor;
+    }
   }
 
   .skills {

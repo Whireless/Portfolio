@@ -132,17 +132,19 @@
   width: 30px;
   height: 30px;
   background-color: transparent;
-  background-image: url("../img/close-info.svg");
-  background-repeat: no-repeat;
   padding: 0;
   border: none;
   cursor: pointer;
-  transition: 0.6s;
+}
+
+.about-me__cross-icon {
+  fill: $greyColor2;
+  transition: 0.4s;
 
   &:hover,
   &:focus {
-    opacity: 0.4;
-    transition: 0.6s;
+    fill: $blackColor;
+    transition: 0.4s;
   }
 }
 
@@ -266,7 +268,10 @@
     }
   }
 
-  .about-me__button-close {
-    background-image: url("../img/close-info-white.svg");
+  .about-me__cross-icon {
+    &:hover,
+    &:focus {
+      fill: $whiteColor;
+    }
   }
 }

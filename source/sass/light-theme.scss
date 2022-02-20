@@ -54,10 +54,15 @@
     }
   }
 
-  .about-me__button-close {
-    background-color: transparent;
-    background-image: url("../img/close-info.svg");
-    background-repeat: no-repeat;
+  .about-me__cross-icon {
+    fill: $greyColor2;
+    transition: 0.4s;
+
+    &:hover,
+    &:focus {
+      fill: $blackColor;
+      transition: 0.4s;
+    }
   }
 
   .skills {
