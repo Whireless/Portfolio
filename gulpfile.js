@@ -67,21 +67,6 @@ const getSprite = () => {
           sprite: '../sprite.svg',
         }
       },
-      shape: {
-        transform: [
-          {
-            svgo: {
-              plugins: [
-                {
-                  removeAttrs: {
-                    attrs: ['class', 'data-name', 'fill', 'stroke'],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
     }))
     .pipe(gulp.dest('build/img'))
 };
