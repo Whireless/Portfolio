@@ -9,6 +9,7 @@ const csso = require('postcss-csso');
 const rename = require('gulp-rename');
 const terser = require('gulp-terser');
 const squoosh = require('gulp-libsquoosh');
+const svgSprite = require('gulp-svg-sprite');
 const del = require('del');
 const sync = require('browser-sync').create();
 
@@ -58,6 +59,19 @@ const optimizeImages = () => {
 }
 exports.optimizeImages = optimizeImages;
 
+const getSprite = () => {
+  return gulp.src('source/img/svg/*.svg')
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          sprite: '../sprite.svg',
+        }
+      }
+    }))
+    .pipe(gulp.dest('build/img'))
+};
+exports.getSprite = getSprite;
+
 // Copy
 
 const copy = (done) => {
@@ -105,7 +119,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series('styles'));
-  gulp.watch('source/js/*.js', gulp.series(scripts));
+  gulp.watch('source/js/*.js', gulp.series(scripts, reload));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
@@ -115,6 +129,7 @@ const build = gulp.series(
   clean,
   copy,
   optimizeImages,
+  getSprite,
   gulp.parallel(
     styles,
     html,
@@ -129,6 +144,7 @@ exports.default = gulp.series(
   clean,
   copy,
   optimizeImages,
+  getSprite,
   gulp.parallel(
     styles,
     html,
