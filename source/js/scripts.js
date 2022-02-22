@@ -20,8 +20,13 @@ const projectImg = page.querySelector('.portfolio__project-image'),
 
 const buttonUp = page.querySelector('.main-footer__button-up');
 
-// Главное меню
+// Preloader
+window.addEventListener('load', () => {
+  const preloader = page.querySelector('.preloader');
+  preloader.classList.add('preloader--hidden');
+});
 
+// Главное меню
 navBtn.onclick = function () {
   mainNav.classList.toggle('main-nav--open');
 
@@ -42,7 +47,6 @@ navElem.forEach(a => {
 });
 
 // Тёмная тема
-
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
   page.classList.add('dark-theme');
 } else {
@@ -60,7 +64,6 @@ themeButton.onclick = () => {
 };
 
 // Скролл в начало
-
 window.onscroll = function () {
   if (window.pageYOffset > 450) {
     buttonUp.classList.add('main-footer__button-up--active');
@@ -74,7 +77,6 @@ buttonUp.onclick = function () {
 };
 
 // Блок 'Обо мне'
-
 shortInfoBtn.onclick = () => {
   shortInfo.classList.add('about-me__shorter-info--active');
 };
@@ -98,7 +100,6 @@ window.addEventListener('keydown', (evt) => {
 });
 
 // Список проектов
-
 const projects = [
   {
     img: 'img/projects/Nevelvend.png',
