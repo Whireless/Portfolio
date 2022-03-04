@@ -91,7 +91,7 @@ exports.getSprite = getSprite;
 
 const copy = (done) => {
   gulp.src([
-    // 'source/fonts/*.{woff2,woff}', // Копирование шрифтов
+    'source/fonts/*.{woff2,woff}',
     'source/*.ico',
   ], {
     base: 'source'
