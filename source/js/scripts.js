@@ -120,6 +120,12 @@ const projects = [
     text: 'Приложение для скрашивания скучных дней',
   },
   {
+    img: 'img/projects/Restaurant.png',
+    alt: 'Путник, ты слишком долго искал сочный стейк, в этом ресторане твоя награда',
+    href: '#',
+    text: '[Проект в разработке]',
+  },
+  {
     img: 'img/projects/Grand-Theatre.png',
     alt: 'Надо уважать культуру, мать её.',
     href: 'https://whireless.github.io/Grand-Theatre/',
