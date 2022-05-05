@@ -122,8 +122,8 @@ const projects = [
   {
     img: 'img/projects/Restaurant.png',
     alt: 'Путник, ты слишком долго искал сочный стейк, в этом ресторане твоя награда',
-    href: '#',
-    text: '[Проект в разработке]',
+    href: 'https://whireless.github.io/Restaurant/',
+    text: 'Шикарный ужин в Санкт-Петербурге',
   },
   {
     img: 'img/projects/Grand-Theatre.png',
