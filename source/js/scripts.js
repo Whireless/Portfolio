@@ -102,6 +102,12 @@ window.addEventListener('keydown', (evt) => {
 // Список проектов
 const projects = [
   {
+    img: 'img/projects/Andrestatix.png',
+    alt: 'Если хочешь стать греческим атлетом - тебе сюда.',
+    href: 'https://whireless.github.io/andrestatix/',
+    text: 'Лучший сайт по развитию своего тела',
+  },
+  {
     img: 'img/projects/Nevelvend.png',
     alt: 'Лучшие палочки в мире. И это точно.',
     href: 'https://whireless.github.io/Nevelvend/',
