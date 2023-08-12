@@ -33,8 +33,7 @@
   flex-direction: column;
   align-items: center;
 
-  &:hover,
-  &:focus {
+  &:hover {
     .portfolio__project-image {
       filter: blur(4px);
     }
