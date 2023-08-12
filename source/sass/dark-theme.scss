@@ -69,20 +69,20 @@
     background-color: $greyColor3;
   }
 
+  .portfolio__project-info {
+    background-color: $whiteColor;
+    border: 1px solid $blackColor;
+  }
+
   .portfolio__project-link {
-    &:hover,
-    &:focus {
-      color: $whiteColor;
-    }
+    color: $blackColor;
   }
 
   .portfolio__button {
-    &:disabled {
-      background-color: $greyColor3;
+    background-color: $whiteColor;
 
-      svg {
-        fill: $greyColor3;
-      }
+    svg {
+      fill: $blackColor;
     }
   }
 
@@ -117,18 +117,6 @@
         border: 1px solid $whiteColor;
       }
     }
-
-    .portfolio__project-link {
-      color: $whiteColor;
-      background-color: $blackColor;
-      border: 1px solid $whiteColor;
-
-      &:hover,
-      &:focus {
-        color: $blackColor;
-        background-color: $whiteColor;
-      }
-    }
   }
 
   @media (min-width: $desktopW) {
@@ -137,6 +125,10 @@
       &:focus {
         fill: $whiteColor;
       }
+    }
+
+    .portfolio__button {
+      border: 1px solid $blackColor;
     }
   }
 }

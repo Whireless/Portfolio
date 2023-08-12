@@ -30,7 +30,7 @@
         <ul class="main-nav__nav-list">
           <li class="main-nav__nav-item"><a href="#about">Обо мне</a></li>
           <li class="main-nav__nav-item"><a href="#skills">Скиллы</a></li>
-          <li class="main-nav__nav-item"><a href="#portfolio">Портфолио</a></li>
+          <li class="main-nav__nav-item"><a href="#portfolio">Проекты</a></li>
           <li class="main-nav__nav-item"><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
@@ -47,7 +47,7 @@
         <h2 class="about-me__title">Обо мне</h2>
         <div class="about-me__details">
           <div class="about-me__shorter-block">
-            <span>покороче:</span>
+            <span>коротко:</span>
             <button class="about-me__button about-me__button--short" type="button" aria-label="Посмотреть краткую информацию обо мне">
               <svg class="about-me__icon" width="70%" height="70%">
                 <use xlink:href="img/sprite.svg#about-short"></use>
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="about-me__more-block">
-            <span>поподробнее:</span>
+            <span>подробнее:</span>
             <button class="about-me__button about-me__button--more" type="button" aria-label="Посмотреть подробную информацию обо мне">
               <svg class="about-me__icon" width="70%" height="70%">
                 <use xlink:href="img/sprite.svg#about-more"></use>
@@ -148,11 +148,14 @@
     </section>
     <section class="portfolio" id="portfolio">
       <div class="container">
-        <h2 class="portfolio__title">Портфолио</h2>
+        <h2 class="portfolio__title">Проекты</h2>
         <div class="portfolio__full-preview">
           <div class="portfolio__project-block">
-            <img class="portfolio__project-image" src="img/projects/Andrestatix.png" width="340" height="200" alt="Если хочешь стать греческим атлетом - тебе сюда.">
-            <a class="portfolio__project-link" href="https://andrestatix.com">Лучший сайт по развитию своего тела</a>
+            <img class="portfolio__project-image" src="img/projects/Andrestatix.png" width="340" height="185" alt="Если хочешь стать греческим атлетом - тебе сюда.">
+            <div class="portfolio__project-info">
+              <a class="portfolio__project-link" href="https://andrestatix.com">andrestatix.com</a>
+              <p class="portfolio__project-type">Тип: <span>Коммерческий</span></p>
+            </div>
           </div>
           <div class="portfolio__button-block">
             <button class="portfolio__button portfolio__button--previus" type="button" aria-label="Предыдущий проект">
