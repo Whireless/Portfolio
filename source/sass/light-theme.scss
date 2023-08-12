@@ -8,11 +8,8 @@
 
   .main-header__theme-toggle {
     background: url("../img/dark-theme.svg") no-repeat;
+    background-size: contain;
     z-index: 4;
-
-    &::before {
-      color: $blackColor;
-    }
   }
 
   .main-nav__nav-head {

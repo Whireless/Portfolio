@@ -8,11 +8,8 @@
 
   .main-header__theme-toggle {
     background: url("../img/light-theme.svg") no-repeat;
+    background-size: contain;
     z-index: 4;
-
-    &::before {
-      color: $whiteColor;
-    }
   }
 
   .main-nav__nav-head {

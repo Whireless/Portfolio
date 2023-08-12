@@ -31,6 +31,7 @@
   width: 26px;
   height: 26px;
   background: url("../img/dark-theme.svg") no-repeat;
+  background-size: contain;
   padding: 0;
   border: none;
   cursor: pointer;
@@ -44,6 +45,9 @@
 }
 
 .main-header__me-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0;
 }
 
@@ -57,25 +61,16 @@
 
     &::before {
       top: 30px;
-      right: 40%;
+      right: 38%;
       width: 140px;
       height: 140px;
     }
   }
 
   .main-header__theme-toggle {
-    top: 105px;
-    right: -20px;
-
-    &::before {
-      letter-spacing: 1px;
-      position: absolute;
-      top: 1px;
-      left: -170px;
-      display: inline;
-      content: "Нажми меня =>";
-      width: 170px;
-    }
+    top: 85px;
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -101,21 +96,18 @@
   }
 
   .main-header__theme-toggle {
-    top: 70px;
-    left: 55%;
-    width: 24px;
-    height: 25px;
+    top: 55px;
+    left: 48%;
     transition: 0.5s;
 
-    &:hover,
-    &:focus {
-      border-bottom: 1px solid $borderColor;
+    &:hover {
+      opacity: 0.7;
       transition: 0.5s;
     }
   }
 
   .main-header__me-name {
-    margin: 0 0 0 20px;
+    margin: 0;
   }
 }
 
@@ -126,12 +118,8 @@
 
   .main-header__theme-toggle {
     background: url("../img/light-theme.svg") no-repeat;
+    background-size: contain;
     z-index: 4;
     transition: 0.5s;
-
-    &::before {
-      color: $whiteColor;
-      transition: 0.5s;
-    }
   }
 }
