@@ -3,7 +3,7 @@
   transition: 0.5s;
 
   .main-header {
-    background: $blackColor;
+    background-color: $blackColor;
   }
 
   .main-header__theme-toggle {
@@ -31,7 +31,7 @@
   }
 
   .about-me {
-    background-color: $greyColor3;
+    background-color: $greyColor4;
   }
 
   .about-me__shorter-info {
@@ -63,7 +63,7 @@
   }
 
   .portfolio {
-    background-color: $greyColor3;
+    background-color: $greyColor4;
   }
 
   .portfolio__project-info {
