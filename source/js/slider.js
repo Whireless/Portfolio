@@ -51,7 +51,7 @@ const projects = [
   },
   {
     img: 'img/projects/Nerds.png',
-    alt: 'Они создали мой внеземной дизайн',
+    alt: 'Они создают внеземной дизайн',
     href: 'https://whireless.github.io/Nerds/',
     text: 'Nerds',
     type: 'Учебный',

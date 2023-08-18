@@ -1,0 +1,18 @@
+import {Swiper} from './swiper-bundle.js';
+
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  initialSlide: 0,
+  loop: false,
+  effect: 'coverflow',
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    bulletElement: 'span',
+    type: 'bullets',
+  },
+});
