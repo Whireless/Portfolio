@@ -1,4 +1,6 @@
-const mainNav = document.querySelector('.main-nav'),
+import {page} from './theme.js';
+
+const mainNav = page.querySelector('.main-nav'),
       navBtn = mainNav.querySelector('.main-nav__nav-button'),
       navElem = mainNav.querySelectorAll('.main-nav__nav-item a'),
       openMe = mainNav.querySelector('.main-nav__title');

@@ -2,18 +2,19 @@ const page = document.querySelector('body');
 const themeButton = page.querySelector('.main-header__theme-toggle');
 
 // Смена темы
-if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  page.classList.add('dark-theme');
-} else {
-  page.classList.add('light-theme');
+themeButton.onclick = () => {
+  page.classList.toggle('dark-theme');
+  page.classList.contains('dark-theme') ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light');
 };
 
-themeButton.onclick = () => {
-  if (page.classList.contains('light-theme')) {
-    page.classList.remove('light-theme');
-    page.classList.add('dark-theme');
-  } else {
+window.addEventListener('load', () => {
+  window.matchMedia('(prefers-color-scheme: dark)').matches ? page.classList.add('dark-theme') : page.classList.remove('dark-theme');
+
+  if (localStorage.getItem('theme') === 'light') {
     page.classList.remove('dark-theme');
-    page.classList.add('light-theme');
-  };
-};
+  } else if (localStorage.getItem('theme') === 'dark') {
+    page.classList.add('dark-theme');
+  }
+});
+
+export {page};

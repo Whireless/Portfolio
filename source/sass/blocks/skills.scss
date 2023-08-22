@@ -124,18 +124,3 @@
     }
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  .skills {
-    background-color: $blackColor;
-  }
-
-  @media (min-width: $desktopW) {
-    .skills__skill-icon {
-      &:hover,
-      &:focus {
-        fill: $whiteColor;
-      }
-    }
-  }
-}

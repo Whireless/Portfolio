@@ -75,14 +75,6 @@
     color: $blackColor;
   }
 
-  .portfolio__button {
-    background-color: $whiteColor;
-
-    svg {
-      fill: $blackColor;
-    }
-  }
-
   .main-footer {
     background-color: $blackColor;
   }
@@ -125,7 +117,12 @@
     }
 
     .portfolio__button {
+      background-color: $whiteColor;
       border: 1px solid $blackColor;
+
+      svg {
+        fill: $blackColor;
+      }
     }
   }
 }

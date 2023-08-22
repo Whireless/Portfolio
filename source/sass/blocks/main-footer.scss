@@ -131,25 +131,3 @@
     bottom: 80px;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  .main-footer {
-    background-color: $blackColor;
-  }
-
-  .main-footer__contact-icon {
-    &:hover {
-      fill: $whiteColor;
-    }
-  }
-
-  .main-footer__button-up {
-    svg {
-      fill: $greyColor2;
-    }
-
-    &:hover {
-      background-color: $whiteColor;
-    }
-  }
-}

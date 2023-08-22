@@ -1,5 +1,6 @@
 import {Swiper} from './swiper-bundle.js';
 
+// Слайдер проектов
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   initialSlide: 0,

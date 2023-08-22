@@ -1,4 +1,6 @@
 .swiper {
+  display: flex;
+  flex-direction: column;
   width: 340px;
   height: 180px;
 }
@@ -19,6 +21,11 @@
 
 .swiper-button-next {
   display: none;
+}
+
+.swiper-pagination {
+  background-color: $whiteColor;
+  border-radius: 50px;
 }
 
 @media (min-width: $tabletW) {

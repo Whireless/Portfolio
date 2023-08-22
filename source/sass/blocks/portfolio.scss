@@ -53,7 +53,7 @@
 
 .portfolio__project-info {
   position: absolute;
-  bottom: 16%;
+  bottom: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,10 +91,6 @@
 
   .portfolio__project-info {
     font-size: 18px;
-  }
-
-  .portfolio__project-link {
-    color: $blackColor;
   }
 }
 
@@ -139,43 +135,19 @@
   }
 
   .portfolio__button {
+    background-color: $blackColor;
     width: 75px;
     height: 75px;
     border: 1px solid $whiteColor;
     border-radius: 50%;
     padding: 0;
 
+    svg {
+      fill: $whiteColor;
+    }
+
     &::after {
       display: none;
-    }
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .portfolio {
-    background-color: $greyColor4;
-  }
-
-  .portfolio__project-info {
-    background-color: $whiteColor;
-    border: 1px solid $blackColor;
-  }
-
-  .portfolio__project-link {
-    color: $blackColor;
-  }
-
-  .portfolio__button {
-    background-color: $whiteColor;
-
-    svg {
-      fill: $blackColor;
-    }
-  }
-
-  @media (min-width: $desktopW) {
-    .portfolio__button {
-      border: 1px solid $blackColor;
     }
   }
 }

@@ -153,10 +153,8 @@ $border-top-color_1: transparent;
 .swiper-horizontal {
 	touch-action: pan-y;
 	>.swiper-pagination-bullets {
-		bottom: var(--swiper-pagination-bottom, 8px);
+		bottom: var(--swiper-pagination-bottom, 10px);
 		top: var(--swiper-pagination-top, auto);
-		left: 0;
-		width: 100%;
 		.swiper-pagination-bullet {
 			margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
 		}
@@ -625,6 +623,12 @@ $border-top-color_1: transparent;
 .swiper-pagination {
 	position: absolute;
 	text-align: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  margin: 0 auto;
+  padding: 4px;
 	transition: 300ms opacity;
 	transform: translate3d(0, 0, 0);
 	z-index: 10;
@@ -655,15 +659,11 @@ $border-top-color_1: transparent;
 .swiper-pagination-custom {
 	bottom: var(--swiper-pagination-bottom, 8px);
 	top: var(--swiper-pagination-top, auto);
-	left: 0;
-	width: 100%;
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-	bottom: var(--swiper-pagination-bottom, 8px);
+	bottom: var(--swiper-pagination-bottom, 10px);
 	top: var(--swiper-pagination-top, auto);
-	left: 0;
-	width: 100%;
 }
 
 .swiper-pagination-bullets-dynamic {

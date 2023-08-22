@@ -186,35 +186,3 @@
     }
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  .main-nav__nav-head {
-    background-color: $blackColor;
-  }
-
-  .main-nav__nav-list {
-    background-color: $blackColor;
-
-    a {
-      color: $whiteColor;
-
-      &:hover,
-      &:focus {
-        color: $blackColor;
-        background-color: $whiteColor;
-      }
-    }
-  }
-
-  @media (min-width: $tabletW) {
-    .main-nav {
-      background-color: $blackColor;
-    }
-
-    .main-nav__nav-list {
-      a {
-        border: 1px solid $whiteColor;
-      }
-    }
-  }
-}

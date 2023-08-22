@@ -245,33 +245,3 @@
     height: 200px;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  .about-me {
-    background-color: $greyColor4;
-  }
-
-  .about-me__shorter-info {
-    background-color: $blackColor;
-  }
-
-  .about-me__more-info {
-    background-color: $blackColor;
-  }
-
-  .about-me__button {
-    &:hover,
-    &:focus {
-      .about-me__icon {
-        fill: $whiteColor;
-      }
-    }
-  }
-
-  .about-me__cross-icon {
-    &:hover,
-    &:focus {
-      fill: $whiteColor;
-    }
-  }
-}
