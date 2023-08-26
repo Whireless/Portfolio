@@ -6,13 +6,8 @@ const about = document.querySelector('.about-me'),
       moreInfo = about.querySelector('.about-me__more-info');
 
 // Блок 'Обо мне'
-shortInfoBtn.onclick = () => {
-  shortInfo.classList.add('about-me__shorter-info--active');
-};
-
-moreInfoBtn.onclick = () => {
-  moreInfo.classList.add('about-me__more-info--active');
-};
+shortInfoBtn.onclick = () => shortInfo.classList.add('about-me__shorter-info--active');
+moreInfoBtn.onclick = () => moreInfo.classList.add('about-me__more-info--active');
 
 infoClose.forEach(a => {
   a.onclick = () => {

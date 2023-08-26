@@ -9,6 +9,4 @@ window.onscroll = function () {
   }
 };
 
-buttonUp.onclick = function () {
-  window.scrollTo(0, 0);
-};
+buttonUp.onclick = () => window.scrollTo(0, 0);
