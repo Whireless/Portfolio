@@ -61,7 +61,8 @@ $border-top-color_1: transparent;
 	list-style: none;
 	padding: 0;
 	z-index: 1;
-	display: block;
+	display: flex;
+  flex-direction: column;
 
 	&:not(.swiper-watch-progress) {
 		.swiper-lazy-preloader {
