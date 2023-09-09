@@ -3,9 +3,10 @@
   top: 0;
   left: 0;
   right: 0;
+  background-color: $greyColor1;
   z-index: 5;
 
-  .main-nav__button-element {
+  .main-nav__nav-span {
     &:nth-of-type(1) {
       animation: ease 0.5s topClose forwards;
     }
@@ -20,7 +21,7 @@
   }
 
   &--open {
-    .main-nav__button-element {
+    .main-nav__nav-span {
       &:nth-of-type(1) {
         animation: ease 0.5s topOpen forwards;
       }
@@ -33,50 +34,46 @@
         animation: ease 0.5s btmOpen forwards;
       }
     }
-
-    .main-nav__nav-head {
-      border: none;
-    }
   }
 }
 
-.main-nav__nav-head {
-  display: flex;
-  justify-content: space-between;
+.main-nav__button {
+  position: absolute;
+  top: 20px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
   background-color: $whiteColor;
-  padding: 10px 0;
-  border-bottom: 2px solid $greyColor2;
-}
-
-.main-nav__title {
-  margin: 0 auto;
-  align-self: center;
-}
-
-.main-nav__nav-button {
-  position: relative;
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-color: inherit;
-  margin-right: 28px;
-  padding: 0;
   border: none;
+  border-radius: 50%;
   cursor: pointer;
+  z-index: 4;
+
+  &--theme {
+    left: 20px;
+    background-image: url("../img/dark-theme.svg");
+    background-repeat: no-repeat;
+    background-size: 38px 38px;
+    background-position: center;
+  }
+
+  &--nav {
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 7px;
+  }
 }
 
-.main-nav__button-element {
+.main-nav__nav-span {
   position: relative;
-  display: block;
   width: 100%;
   height: 3px;
-  background-color: $greyColor2;
+  background-color: $blackColor;
   box-shadow: 0 2px 10px #00000030;
   border-radius: 20px;
-
-  &+ .main-nav__button-element {
-    margin-top: 7px;
-  }
 }
 
 .main-nav__nav-list {
@@ -86,20 +83,21 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: $whiteColor;
+  row-gap: 10px;
+  background-color: $greyColor1;
   margin: 0;
-  padding: 0 0 5px 0;
+  padding: 130px 0 0 0;
 
   a {
     text-transform: lowercase;
+    text-decoration: none;
     font-size: 17px;
     font-weight: 300;
     width: 100%;
-    height: 21vh;
+    height: 23vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
     color: $greyColor2;
     transition: 0.7s;
 
@@ -110,10 +108,6 @@
       transition: 0.7s;
     }
   }
-}
-
-.main-nav__nav-item {
-  margin-top: 5px;
 }
 
 @media (max-width: $pre-tabletW) {
@@ -138,19 +132,33 @@
 
 @media (min-width: $tabletW) {
   .main-nav {
-    background-color: $whiteColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 50px;
     border-bottom: 2px solid $greyColor2;
   }
 
-  .main-nav__nav-head {
-    display: none;
+  .main-nav__button {
+    &--theme {
+      position: static;
+      width: 40px;
+      height: 40px;
+      background-size: 32px 32px;
+      padding: 0;
+    }
+
+    &--nav {
+      display: none;
+    }
   }
 
   .main-nav__nav-list {
     position: static;
     flex-direction: row;
     justify-content: space-between;
+    width: max-content;
+    column-gap: 60px;
     padding: 16px 0;
     border: none;
 
@@ -166,15 +174,24 @@
   .main-nav__nav-item {
     margin-top: 0;
   }
-
-  .main-nav__nav-button {
-    display: none;
-  }
 }
 
 @media (min-width: $desktopW) {
   .main-nav {
     padding: 0 120px;
+  }
+
+  .main-nav__button {
+    &--theme {
+      top: 55px;
+      left: 48%;
+      transition: 0.5s;
+
+      &:hover {
+        opacity: 0.7;
+        transition: 0.5s;
+      }
+    }
   }
 
   .main-nav__nav-list {

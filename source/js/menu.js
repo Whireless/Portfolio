@@ -1,21 +1,13 @@
 import {page} from './theme.js';
 
 const mainNav = page.querySelector('.main-nav'),
-      navBtn = mainNav.querySelector('.main-nav__nav-button'),
-      navElem = mainNav.querySelectorAll('.main-nav__nav-item a'),
-      openMe = mainNav.querySelector('.main-nav__title');
+      navBtn = mainNav.querySelector('.main-nav__button--nav'),
+      navElem = mainNav.querySelectorAll('.main-nav__nav-item a');
 
 // Мобильное меню
 navBtn.onclick = function () {
   mainNav.classList.toggle('main-nav--open');
-
-  if (mainNav.classList.contains('main-nav--open')) {
-    openMe.textContent = 'закрой меня :)';
-    page.style.overflow = 'hidden';
-  } else {
-    openMe.textContent = 'открой меня :)';
-    page.removeAttribute('style');
-  };
+  mainNav.classList.contains('main-nav--open') ? page.style.overflow = 'hidden' : page.removeAttribute('style');
 };
 
 navElem.forEach(a => {

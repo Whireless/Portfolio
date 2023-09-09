@@ -1,20 +1,20 @@
 @font-face {
-  font-family: "GillSansNovaInline";
-  src: url("../fonts/GillSansNovaInline-Light.woff2") format("woff2");
+  font-family: "CeraStencilPRO";
+  src: url("../fonts/CeraStencilPRO-Light.woff") format("woff");
   font-weight: 300;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "GillSansNovaInline";
-  src: url("../fonts/GillSansNovaInline-Regular.woff2") format("woff2");
+  font-family: "CeraStencilPRO";
+  src: url("../fonts/CeraStencilPRO-Regular.woff") format("woff");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "GillSansNovaInline";
-  src: url("../fonts/GillSansNovaInline-SemiBold.woff2") format("woff2");
+  font-family: "CeraStencilPRO";
+  src: url("../fonts/CeraStencilPRO-Bold.woff") format("woff");
   font-weight: 700;
   font-display: swap;
 }
@@ -24,14 +24,14 @@ html {
 }
 
 body {
-  font-family: "GillSansNovaInline", "Arial", sans-serif;
+  font-family: "CeraStencilPRO", "Arial", sans-serif;
   font-size: 16px;
   line-height: 26px;
-  letter-spacing: 1px;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-width: 380px;
+  min-width: 370px;
   min-height: 100vh;
+  background-color: $greyColor1;
   margin: 0;
   padding: 0;
   transition: 0.5s;
@@ -44,5 +44,20 @@ body {
   @media (min-width: $desktopW) {
     font-size: 18px;
     line-height: 30px;
+  }
+}
+
+.shadow {
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: $blackColor, $alpha: 0.7);
+    filter: blur(3px);
+    z-index: 10;
   }
 }

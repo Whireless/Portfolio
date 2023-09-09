@@ -1,23 +1,37 @@
 .dark-theme {
   color: $whiteColor;
+  background-color: $greyColor4;
   transition: 0.5s;
 
-  .main-header {
-    background-color: $blackColor;
+  .main-header__button {
+    &--open-info {
+      svg {
+        fill: $whiteColor;
+      }
+
+      &::before {
+        color: $whiteColor;
+      }
+    }
   }
 
-  .main-header__theme-toggle {
-    background: url("../img/light-theme.svg") no-repeat;
-    background-size: contain;
-    z-index: 4;
+  .main-header__info {
+    background-color: $greyColor4;
   }
 
-  .main-nav__nav-head {
-    background-color: $blackColor;
+  .main-nav {
+    background-color: $greyColor4;
+  }
+
+  .main-nav__button {
+    background-color: $greyColor5;
+    &--theme {
+      background-image: url("../img/light-theme.svg");
+    }
   }
 
   .main-nav__nav-list {
-    background-color: $blackColor;
+    background-color: $greyColor4;
 
     a {
       color: $whiteColor;
@@ -30,40 +44,8 @@
     }
   }
 
-  .about-me {
-    background-color: $greyColor4;
-  }
-
-  .about-me__shorter-info {
-    background-color: $blackColor;
-  }
-
-  .about-me__more-info {
-    background-color: $blackColor;
-  }
-
-  .about-me__button {
-    &:hover,
-    &:focus {
-      .about-me__icon {
-        fill: $whiteColor;
-      }
-    }
-  }
-
-  .about-me__cross-icon {
-    &:hover,
-    &:focus {
-      fill: $whiteColor;
-    }
-  }
-
-  .skills {
-    background-color: $blackColor;
-  }
-
-  .portfolio {
-    background-color: $greyColor4;
+  .main-nav__nav-span {
+    background-color: $whiteColor;
   }
 
   .portfolio__project-info {
@@ -75,8 +57,12 @@
     color: $blackColor;
   }
 
-  .main-footer {
-    background-color: $blackColor;
+  .portfolio__pagination {
+    background-color: $greyColor5;
+
+    span {
+      background-color: $whiteColor;
+    }
   }
 
   .main-footer__contact-icon {
@@ -87,20 +73,14 @@
   }
 
   .main-footer__button-up {
-    svg {
-      fill: $greyColor2;
-    }
+    background-color: $greyColor5;
 
-    &:hover {
-      background-color: $whiteColor;
+    svg {
+      fill: $whiteColor;
     }
   }
 
   @media (min-width: $tabletW) {
-    .main-nav {
-      background-color: $blackColor;
-    }
-
     .main-nav__nav-list {
       a {
         border: 1px solid $whiteColor;

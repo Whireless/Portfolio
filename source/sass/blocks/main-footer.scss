@@ -1,10 +1,5 @@
 .main-footer {
-  position: relative;
-  padding: $mobileInt 0 20px 0;
-}
-
-.main-footer__contact-info {
-  text-align: center;
+  padding: $mobileInt 0 0 0;
 }
 
 .main-footer__title {
@@ -32,20 +27,14 @@
   }
 }
 
-.main-footer__description {
-  font-weight: 300;
-  margin-top: 20px;
-  margin-bottom: 0;
-}
-
 .main-footer__contact-list {
   height: 40px;
-  margin: 20px 0 0 0;
+  margin: 30px 0 0 0;
   padding: 0;
   list-style: none;
   display: flex;
-  column-gap: 30px;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .main-footer__contact-icon {
@@ -58,49 +47,82 @@
   }
 }
 
+.main-footer__other {
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  border-top: 1px solid $greyColor2;
+}
+
+.main-footer__copyright-link {
+  text-decoration: none;
+  color: $greyColor2;
+  transition: 0.7s;
+
+  &:hover {
+    color: $blackColor;
+    transition: 0.7s;
+  }
+}
+
+.main-footer__nocopy {
+  font-size: 11px;
+}
+
 .main-footer__button-up {
   letter-spacing: 1px;
   text-transform: uppercase;
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  right: 40px;
-  bottom: 40px;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
+  background-color: $whiteColor;
   padding: 0;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 4;
   animation: ease 0.5s btnUp-noSee forwards;
-  transition: 0.4s;
 
   &--active {
     animation: ease 0.5s btnUp-see forwards;
-  }
-
-  &:hover {
-    background-color: $blackColor;
-    transition: 0.4s;
-
-    svg {
-      transition: 0.4s;
-      fill: $whiteColor;
-    }
   }
 }
 
 @media (min-width: $tabletW) {
   .main-footer {
-    padding: $tabletInt 0 30px 0;
+    padding: $tabletInt 0 0 0;
+  }
+
+  .main-footer__contact-list {
+    margin: 70px 0 0 0;
+  }
+
+  .main-footer__other {
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 15px 0;
+  }
+
+  .main-footer__nocopy {
+    font-size: inherit;
   }
 
   .main-footer__button-up {
-    right: 60px;
+    right: 50px;
     bottom: 60px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 }
 

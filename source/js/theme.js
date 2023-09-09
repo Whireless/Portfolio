@@ -1,5 +1,5 @@
 const page = document.querySelector('body');
-const themeButton = page.querySelector('.main-header__theme-toggle');
+const themeButton = page.querySelector('.main-nav__button--theme');
 
 // Смена темы
 themeButton.onclick = () => {

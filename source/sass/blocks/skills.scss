@@ -4,16 +4,11 @@
   padding: $mobileInt 0;
 }
 
-.skills__skills-info {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
 .skills__title {
   text-transform: lowercase;
   font-weight: 500;
   letter-spacing: 2px;
+  text-align: center;
   position: relative;
   display: table;
   width: 200px;
@@ -34,18 +29,13 @@
   }
 }
 
-.skills__description {
-  font-weight: 300;
-  margin-top: 20px;
-  margin-bottom: 0;
-}
-
 .skills__skills-list {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  margin: 25px 0 0 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  // margin: 25px 0 0 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -73,12 +63,13 @@
   }
 
   .skills__skills-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 45px;
   }
 
   .skills__skill-icon {
-    width: 85px;
-    height: 85px;
+    width: 80px;
+    height: 80px;
   }
 }
 
