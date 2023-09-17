@@ -1,4 +1,4 @@
-import {Swiper} from './swiper-bundle.js';
+import {Swiper} from "./swiper-bundle.js";
 
 // Слайдер проектов
 const swiper = new Swiper('.portfolio__slider', {

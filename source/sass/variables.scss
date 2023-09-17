@@ -1,23 +1,22 @@
-//displays
-$pre-tabletW: 767px;
+// Разрешения экранов
+$pre-tabletW: 767px; // Для правильного отображения меню на планшете
 $tabletW: 768px;
-$pre-desktopW: 992px;
 $desktopW: 1200px;
 $over-desktopW: 1360px;
 
-//colors
-$greyColor1: #f6f6f6;
+// Цвета
+$greyColor1: #f6f6f6; // Фон светлой темы
 $greyColor2: #828282;
 $greyColor3: #464c5e;
-$greyColor4: #38444c;
-$greyColor5: #323232;
-$gradient: linear-gradient(130deg, #100032, #40007f, #100032);
+$greyColor4: #38444c; // Фон темной темы
+$greyColor5: #323232; // Цвет для кнопок
+// $gradient: linear-gradient(130deg, #100032, #40007f, #100032);
 $whiteColor: #ffffff;
 $blackColor: #000000;
 $borderColor: #cbdcea;
 $preloaderColor: #333333;
 
-//indent blocks
+// Отступы для блоков
 $mobileInt: 25px;
 $tabletInt: 40px;
 $desktopInt: 60px;

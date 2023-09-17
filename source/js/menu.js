@@ -1,4 +1,4 @@
-import {page} from './theme.js';
+import {page} from "./theme.js";
 
 const mainNav = page.querySelector('.main-nav'),
       navBtn = mainNav.querySelector('.main-nav__button--nav'),

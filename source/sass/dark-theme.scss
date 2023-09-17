@@ -38,7 +38,7 @@
 
       &:hover,
       &:focus {
-        color: $blackColor;
+        color: $greyColor5;
         background-color: $whiteColor;
       }
     }
@@ -49,12 +49,11 @@
   }
 
   .portfolio__project-info {
-    background-color: $whiteColor;
-    border: 1px solid $blackColor;
+    background-color: $greyColor5;
   }
 
   .portfolio__project-link {
-    color: $blackColor;
+    color: $whiteColor;
   }
 
   .portfolio__pagination {
@@ -82,8 +81,24 @@
 
   @media (min-width: $tabletW) {
     .main-nav__nav-list {
+      background-color: inherit;
+
       a {
-        border: 1px solid $whiteColor;
+        color: $greyColor2;
+
+        &::before {
+          background-color: $greyColor2;
+        }
+
+        &:hover,
+        &:focus {
+          color: $whiteColor;
+          background-color: inherit;
+
+          &::before {
+            background-color: $whiteColor;
+          }
+        }
       }
     }
   }
@@ -97,11 +112,10 @@
     }
 
     .portfolio__button {
-      background-color: $whiteColor;
-      border: 1px solid $blackColor;
+      background-color: $greyColor5;
 
       svg {
-        fill: $blackColor;
+        fill: $whiteColor;
       }
     }
   }

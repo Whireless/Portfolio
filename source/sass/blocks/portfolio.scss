@@ -65,9 +65,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $blackColor;
+  background-color: $whiteColor;
   padding: 10px 20px;
-  border: 1px solid $whiteColor;
   border-radius: 30px;
   transition: 0.7s;
   opacity: 0;
@@ -82,7 +81,7 @@
 .portfolio__project-link {
   text-align: center;
   text-decoration: none;
-  color: $whiteColor;
+  color: $blackColor;
   transition: 0.7s;
 
   &:hover,
@@ -114,31 +113,22 @@
 
   .portfolio__slider {
     width: 668px;
-    height: 390px;
+    height: 380px;
   }
 
   .portfolio__project-item {
     width: 668px;
-    height: 350px;
-  }
-
-  .portfolio__project-info {
-    font-size: 18px;
+    height: 340px;
   }
 
   .portfolio__project-image {
     width: 100%;
     height: 100%;
   }
-}
 
-@media (min-width: $pre-desktopW) {
   .portfolio__project-info {
-    padding: 15px 25px;
-  }
-
-  .portfolio__project-link {
     font-size: 20px;
+    padding: 15px 25px;
   }
 
   .portfolio__project-type {
@@ -159,6 +149,15 @@
     }
   }
 
+  .portfolio__slider {
+    width: 960px;
+    height: 510px;
+  }
+
+  .portfolio__project-item {
+    height: 475px;
+  }
+
   .portfolio__project-info {
     padding: 15px 30px;
     z-index: 2;
@@ -173,15 +172,33 @@
   }
 
   .portfolio__button {
-    background-color: $blackColor;
+    display: block;
+    background-color: $whiteColor;
     width: 75px;
     height: 75px;
-    border: 1px solid $whiteColor;
+    border: none;
     border-radius: 50%;
     padding: 0;
+    transition: 0.7s;
+
+    &--prev {
+      transform: rotate(270deg);
+      left: 3%;
+    }
+
+    &--next {
+      transform: rotate(90deg);
+      right: 3%;
+    }
 
     svg {
-      fill: $whiteColor;
+      fill: $blackColor;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.85;
+      transition: 0.7s;
     }
 
     &::after {
