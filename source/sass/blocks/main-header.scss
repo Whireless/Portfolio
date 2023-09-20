@@ -39,10 +39,9 @@
 
     &::before {
       content: "Обо мне";
-      font-size: 14px;
       color: $blackColor;
       position: absolute;
-      left: -10px;
+      left: -13px;
       bottom: -16px;
       width: max-content;
     }
@@ -93,6 +92,14 @@
     grid-row: 1/-1;
   }
 
+  .main-header__button {
+    &--open-info {
+      &::before {
+        left: -15px;
+      }
+    }
+  }
+
   .main-header__info {
     left: 50px;
     right: 50px;
@@ -124,6 +131,22 @@
   }
 
   .main-header__button {
+    &--open-info {
+      animation: none;
+      transition: 0.7s;
+
+      &::before {
+        left: 200px;
+        bottom: 8px;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 0.65;
+        transition: 0.7s;
+      }
+    }
+
     &--close-info {
       transition: 0.7s;
 
@@ -135,9 +158,23 @@
   }
 
   .main-header__info {
-    font-size: 20px;
-    line-height: 32px;
+    top: 180px;
     left: 120px;
     right: 120px;
+  }
+}
+
+@media (min-width: $over-desktopW) {
+  .main-header__button {
+    &--open-info {
+      &::before {
+        left: 195px;
+        bottom: 5px;
+      }
+    }
+  }
+
+  .main-header__info {
+    top: 230px;
   }
 }

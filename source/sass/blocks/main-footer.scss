@@ -158,3 +158,15 @@
     }
   }
 }
+
+@media (min-width: $over-desktopW) {
+  .main-footer__button-up {
+    width: 60px;
+    height: 60px;
+
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

@@ -1,7 +1,7 @@
-const page = document.querySelector('body');
-const themeButton = page.querySelector('.main-nav__button--theme');
-
 // Смена темы
+const page = document.querySelector('body'),
+      themeButton = page.querySelector('.main-nav__button--theme');
+
 themeButton.onclick = () => {
   page.classList.toggle('dark-theme');
   page.classList.contains('dark-theme') ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light');

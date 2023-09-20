@@ -1,8 +1,9 @@
 import {page} from "./theme.js";
 
-const info = page.querySelector('.main-header__info');
-const openInfo = page.querySelector('.main-header__button--open-info');
-const closeInfo = page.querySelector('.main-header__button--close-info');
+// Блок "Обо мне"
+const info = page.querySelector('.main-header__info'),
+      openInfo = page.querySelector('.main-header__button--open-info'),
+      closeInfo = page.querySelector('.main-header__button--close-info');
 
 openInfo.onclick = () => {
   info.classList.remove('main-header__info--hidden');

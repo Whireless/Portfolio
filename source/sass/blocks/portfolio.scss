@@ -206,3 +206,14 @@
     }
   }
 }
+
+@media (min-width: $over-desktopW) {
+  .portfolio__slider {
+    width: 1120px;
+    height: 595px;
+  }
+
+  .portfolio__project-item {
+    height: 560px;
+  }
+}
