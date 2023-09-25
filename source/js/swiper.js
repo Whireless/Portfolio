@@ -1,5 +1,3 @@
-import {Swiper} from "./swiper-bundle.js";
-
 // Слайдер проектов
 const swiper = new Swiper('.portfolio__slider', {
   speed: 600,
@@ -30,7 +28,12 @@ const swiper = new Swiper('.portfolio__slider', {
   },
   pagination: {
     el: '.portfolio__pagination',
-    bulletElement: 'span',
-    type: 'bullets',
   },
 });
+
+//Стили для пагинации (Свойства не поддающиеся изменению через css)
+const pagination = document.querySelector('.portfolio__pagination');
+pagination.style.width = 'max-content';
+pagination.style.top = 'auto';
+pagination.style.bottom = 0;
+pagination.style.left = 'auto';

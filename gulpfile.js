@@ -14,7 +14,6 @@ const del = require('del');
 const sync = require('browser-sync').create();
 
 // HTML
-
 const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
@@ -23,7 +22,6 @@ const html = () => {
 exports.html = html;
 
 // Styles
-
 const styles = () => {
   return gulp.src('source/sass/style.scss')
     .pipe(plumber())
@@ -41,16 +39,14 @@ const styles = () => {
 exports.styles = styles;
 
 // Scripts
-
 const scripts = () => {
-  return gulp.src('source/js/*.js')
+  return gulp.src('source/js/**/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
 }
 exports.scripts = scripts;
 
 // Images
-
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,svg,jpeg}')
     .pipe(squoosh())
@@ -87,7 +83,6 @@ const getSprite = () => {
 exports.getSprite = getSprite;
 
 // Copy
-
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
@@ -101,14 +96,12 @@ const copy = (done) => {
 exports.copy = copy;
 
 // Clean
-
 const clean = () => {
   return del('build');
 }
 exports.clean = clean;
 
 // Server
-
 const server = (done) => {
   sync.init({
     server: {
@@ -123,14 +116,12 @@ const server = (done) => {
 exports.server = server;
 
 // Reload
-
 const reload = (done) => {
   sync.reload();
   done();
 }
 
 // Watcher
-
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series('styles'));
   gulp.watch('source/js/*.js', gulp.series(scripts, reload));
@@ -138,7 +129,6 @@ const watcher = () => {
 }
 
 // Build
-
 const build = gulp.series(
   clean,
   copy,
@@ -153,7 +143,6 @@ const build = gulp.series(
 exports.build = build;
 
 // Default
-
 exports.default = gulp.series(
   clean,
   copy,

@@ -2,6 +2,7 @@
   "name": "portfolio",
   "private": true,
   "description": "my portfolio",
+  "type": "commonjs",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "^10.3.6",

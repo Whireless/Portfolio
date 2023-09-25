@@ -7,16 +7,16 @@
   }
 }
 
-// Анимация кнопки в хедере
-@keyframes finger {
-  0% {
-    transform: scale(1);
-  } 50% {
-    transform: scale(1.4);
-  } 100% {
-    transform: scale(1);
-  }
-}
+// // Анимация кнопки в хедере
+// @keyframes finger {
+//   0% {
+//     transform: scale(1);
+//   } 50% {
+//     transform: scale(1.4);
+//   } 100% {
+//     transform: scale(1);
+//   }
+// }
 
 // Анимация вращения скиллов
 @keyframes sphere {

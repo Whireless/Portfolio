@@ -34,12 +34,16 @@
     background-color: $greyColor4;
 
     a {
-      color: $whiteColor;
+      color: $greyColor2;
 
       &:hover,
       &:focus {
-        color: $greyColor5;
-        background-color: $whiteColor;
+        color: $whiteColor;
+
+        &::before,
+        &::after {
+          background-color: $whiteColor;
+        }
       }
     }
   }
@@ -82,24 +86,6 @@
   @media (min-width: $tabletW) {
     .main-nav__nav-list {
       background-color: inherit;
-
-      a {
-        color: $greyColor2;
-
-        &::before {
-          background-color: $greyColor2;
-        }
-
-        &:hover,
-        &:focus {
-          color: $whiteColor;
-          background-color: inherit;
-
-          &::before {
-            background-color: $whiteColor;
-          }
-        }
-      }
     }
   }
 

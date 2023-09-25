@@ -94,6 +94,7 @@
     text-decoration: none;
     font-weight: 300;
     letter-spacing: 1px;
+    position: relative;
     width: 100%;
     height: 23vh;
     display: flex;
@@ -102,11 +103,37 @@
     color: $greyColor2;
     transition: 0.7s;
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 40px;
+      width: 55%;
+      height: 1px;
+      background-color: $greyColor2;
+      border-radius: 50px;
+      transition: 0.7s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 40px;
+      width: 55%;
+      height: 1px;
+      background-color: $greyColor2;
+      border-radius: 50px;
+      transition: 0.7s;
+    }
+
     &:hover,
     &:focus {
-      color: $whiteColor;
-      background-color: $blackColor;
+      color: $blackColor;
       transition: 0.7s;
+
+      &::before,
+      &::after {
+        background-color: $blackColor;
+      }
     }
   }
 }
@@ -137,7 +164,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
-    border-bottom: 2px solid $greyColor2;
+    border-bottom: 1px solid $greyColor2;
   }
 
   .main-nav__button {
@@ -165,30 +192,18 @@
     border: none;
 
     a {
-      position: relative;
       width: 120px;
       height: 30px;
       margin-top: 0;
 
       &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
+        top: 0;
         width: 75%;
-        height: 1px;
-        background-color: $greyColor2;
-        border-radius: 50px;
-        transition: 0.7s;
       }
 
-      &:hover,
-      &:focus {
-        color: $blackColor;
-        background-color: inherit;
-
-        &::before {
-          background-color: $blackColor;
-        }
+      &::after {
+        bottom: 0;
+        width: 75%;
       }
     }
   }
