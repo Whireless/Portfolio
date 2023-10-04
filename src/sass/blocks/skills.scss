@@ -1,0 +1,136 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  padding: $mobileInt 0;
+}
+
+.skills__title {
+  text-transform: lowercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  display: table;
+  width: 200px;
+  margin: 40px auto;
+  padding: 10px;
+  border: 1px solid $borderColor;
+  border-radius: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border: 1px solid $borderColor;
+    border-radius: 10px;
+  }
+}
+
+.skills__skills-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.skills__skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.skills__skill-icon {
+  fill: $greyColor2;
+}
+
+.skills__details-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.skills__details-item {
+  border-bottom: 1px solid $greyColor2;
+}
+
+@media (min-width: $tabletW) {
+  .skills {
+    padding: $tabletInt 0;
+  }
+
+  .skills__skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 100px;
+    width: 668px;
+  }
+
+  .skills__skill-icon {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: $desktopW) {
+  .skills {
+    padding: $desktopInt 0;
+  }
+
+  .skills__title {
+    border: 2px solid $borderColor;
+
+    &::after {
+      border: 2px solid $borderColor;
+    }
+  }
+
+  .skills__description {
+    margin-top: 30px;
+  }
+
+  .skills__skills-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 960px;
+    gap: 50px;
+    align-items: start;
+  }
+
+  .skills__skills-item {
+    row-gap: 30px;
+  }
+
+  .skills__details-list {
+    font-size: 16px;
+    height: auto;
+  }
+
+  .skills__skill-icon {
+    width: 120px;
+    height: 120px;
+
+    &:hover,
+    &:focus {
+      fill: $blackColor;
+    }
+  }
+}
+
+
+@media (min-width: $over-desktopW) {
+  // .skills__skill-icon {
+  //   width: 85px;
+  //   height: 85px;
+  // }
+}

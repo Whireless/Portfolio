@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "CeraStencilPRO";
+  src: url("../fonts/CeraStencilPRO-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CeraStencilPRO";
+  src: url("../fonts/CeraStencilPRO-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CeraStencilPRO";
+  src: url("../fonts/CeraStencilPRO-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "CeraStencilPRO", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-width: 370px;
+  min-height: 100vh;
+  background-color: $greyColor1;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+
+  @media (min-width: $tabletW) {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktopW) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $over-desktopW) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.shadow {
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: $blackColor, $alpha: 0.7);
+    filter: blur(3px);
+    z-index: 10;
+  }
+}

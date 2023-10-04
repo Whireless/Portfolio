@@ -1,0 +1,105 @@
+.dark-theme {
+  color: $whiteColor;
+  background-color: $greyColor4;
+  transition: 0.5s;
+
+  .main-header__button {
+    &--open-info {
+      svg {
+        fill: $whiteColor;
+      }
+
+      &::before {
+        color: $whiteColor;
+      }
+    }
+  }
+
+  .main-header__info {
+    background-color: $greyColor4;
+  }
+
+  .main-nav {
+    background-color: $greyColor4;
+  }
+
+  .main-nav__button {
+    background-color: $greyColor5;
+  }
+
+  .main-nav__nav-list {
+    background-color: $greyColor4;
+
+    a {
+      color: $greyColor2;
+
+      &:hover,
+      &:focus {
+        color: $whiteColor;
+
+        &::before,
+        &::after {
+          background-color: $whiteColor;
+        }
+      }
+    }
+  }
+
+  .main-nav__nav-span {
+    background-color: $whiteColor;
+  }
+
+  .portfolio__project-info {
+    background-color: $greyColor5;
+  }
+
+  .portfolio__project-link {
+    color: $whiteColor;
+  }
+
+  .portfolio__pagination {
+    background-color: $greyColor5;
+
+    span {
+      background-color: $whiteColor;
+    }
+  }
+
+  .main-footer__contact-icon {
+    &:hover,
+    &:focus {
+      fill: $whiteColor;
+    }
+  }
+
+  .main-footer__button-up {
+    background-color: $greyColor5;
+
+    svg {
+      fill: $whiteColor;
+    }
+  }
+
+  @media (min-width: $tabletW) {
+    .main-nav__nav-list {
+      background-color: inherit;
+    }
+  }
+
+  @media (min-width: $desktopW) {
+    .skills__skill-icon {
+      &:hover,
+      &:focus {
+        fill: $whiteColor;
+      }
+    }
+
+    .portfolio__button {
+      background-color: $greyColor5;
+
+      svg {
+        fill: $whiteColor;
+      }
+    }
+  }
+}

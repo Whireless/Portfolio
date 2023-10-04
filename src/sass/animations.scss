@@ -1,0 +1,129 @@
+// Анимация preloader
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+  }
+}
+
+// Анимация мобильного меню
+@keyframes topOpen {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes topClose {
+  0% {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes mdlOpen {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes mdlClose {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes btmOpen {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 10px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes btmClose {
+  0% {
+    bottom: 10px;
+    transform: rotate(-45deg);
+  }
+  50% {
+    bottom: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+// Анимация кнопки 'В начало'
+@keyframes btnUp-see {
+  0% {
+    display: none;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    display: block;
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes btnUp-noSee {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  95% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    transform: translateX(-3000%);
+    opacity: 0;
+  }
+}
