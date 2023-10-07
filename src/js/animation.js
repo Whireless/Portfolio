@@ -22,20 +22,20 @@ window.onload = () => {
 
     scroll
     .from('.skills', {
-      x: '-220%',
-      scale: 0,
+      y: '-30%',
+      opacity: 0,
       scrollTrigger: {
         trigger: '.main-header',
-        start: 'top center',
+        start: '500px center',
         scrub: true,
       }
     })
     .from('.portfolio', {
-      x: '-220%',
-      scale: 0,
+      y: '-30%',
+      opacity: 0,
       scrollTrigger: {
         trigger: '.skills',
-        start: 'top center',
+        start: '600px 200px',
         scrub: true,
       }
     });
@@ -69,10 +69,9 @@ window.onload = () => {
     scroll.from('.portfolio', {
       y: '50%',
       opacity: 0,
-      scale: 0,
       scrollTrigger: {
         trigger: '.skills',
-        start: 'top top',
+        start: 'center top',
         scrub: true,
       }
     });
