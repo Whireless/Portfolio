@@ -1,7 +1,7 @@
 {
-  "name": "portfolio2.0",
+  "name": "portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,7 @@
     "sass": "^1.68.0",
     "sharp": "^0.32.6",
     "svgo": "^3.0.2",
-    "vite": "^4.4.5",
+    "vite": "^4.5.0",
     "vite-plugin-image-optimizer": "^1.1.7",
     "vite-plugin-svg-spriter": "^1.0.0"
   },

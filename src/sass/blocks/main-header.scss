@@ -33,43 +33,19 @@
   padding: 0;
   cursor: pointer;
 
-  &--open-info {
-    position: relative;
+  &--resume {
+    text-decoration: none;
+    color: $greyColor2;
+    z-index: 10;
+    padding: 7px;
+    border: 1px solid $greyColor2;
+    border-radius: 20px;
 
-    &::before {
-      content: "Обо мне";
+    &:hover {
       color: $blackColor;
-      position: absolute;
-      left: -13px;
-      bottom: -16px;
-      width: max-content;
+      border: 1px solid $blackColor;
     }
   }
-}
-
-.main-header__info {
-  text-align: center;
-  position: fixed;
-  top: 120px;
-  left: 20px;
-  right: 20px;
-  display: block;
-  padding: 10px;
-  background-color: $greyColor1;
-  border: 1px solid $blackColor;
-  border-radius: 20px;
-  z-index: 10;
-  transform: translateX(0);
-  transition: 0.7s;
-
-  &--hidden {
-    transform: translateX(-500%);
-    transition: 0.7s;
-  }
-}
-
-.main-header__hello {
-  margin: 0;
 }
 
 @media (min-width: $tabletW) {
@@ -102,19 +78,6 @@
     width: 230px;
     height: 230px;
   }
-
-  .main-header__button {
-    &--open-info {
-      &::before {
-        left: -16px;
-      }
-    }
-  }
-
-  .main-header__info {
-    left: 50px;
-    right: 50px;
-  }
 }
 
 @media (min-width: $desktopW) {
@@ -136,30 +99,6 @@
     width: 280px;
     height: 280px;
   }
-
-  .main-header__button {
-    &--open-info {
-      &::before {
-        left: -18px;
-        bottom: -16px;
-      }
-    }
-
-    &--close-info {
-      transition: 0.7s;
-
-      &:hover {
-        transition: 0.7s;
-        opacity: 0.6;
-      }
-    }
-  }
-
-  .main-header__info {
-    top: 180px;
-    left: 120px;
-    right: 120px;
-  }
 }
 
 @media (min-width: $over-desktopW) {
@@ -172,21 +111,8 @@
     font-size: 24px;
   }
 
-  .main-header__button {
-    &--open-info {
-      &::before {
-        left: -21px;
-        bottom: -19px;
-      }
-    }
-  }
-
   .main-header__photo {
     width: 340px;
     height: 340px;
-  }
-
-  .main-header__info {
-    top: 230px;
   }
 }

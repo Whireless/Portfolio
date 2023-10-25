@@ -51,18 +51,3 @@ body {
     line-height: 32px;
   }
 }
-
-.shadow {
-  &::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba($color: $blackColor, $alpha: 0.7);
-    filter: blur(3px);
-    z-index: 10;
-  }
-}

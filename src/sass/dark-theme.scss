@@ -4,19 +4,12 @@
   transition: 0.5s;
 
   .main-header__button {
-    &--open-info {
-      svg {
-        fill: $whiteColor;
-      }
-
-      &::before {
+    &--resume {
+      &:hover {
         color: $whiteColor;
+        border: 1px solid $whiteColor;
       }
     }
-  }
-
-  .main-header__info {
-    background-color: $greyColor4;
   }
 
   .main-nav {
