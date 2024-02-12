@@ -30,7 +30,12 @@
 .portfolio__slider {
   display: grid;
   width: 325px;
-  height: 410px;
+  height: 220px;
+}
+
+.portfolio__subtitle {
+  margin: 20px auto;
+  width: max-content;
 }
 
 .portfolio__project-list {
@@ -109,6 +114,27 @@
   }
 }
 
+.portfolio__other-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+.portfolio__other-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid $blackColor;
+  border-radius: 20px;
+}
+
+.portfolio__other-link {
+  color: $greyColor2;
+}
+
 @media (min-width: $tabletW) {
   .portfolio {
     padding: $tabletInt 0;
@@ -136,6 +162,10 @@
 
   .portfolio__project-type {
     font-size: 15px;
+  }
+
+  .portfolio__other-item {
+    padding: 10px 20px;
   }
 }
 

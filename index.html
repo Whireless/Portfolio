@@ -31,7 +31,6 @@
           <ul class="main-nav__nav-list">
             <li class="main-nav__nav-item"><a href="#skills">Скиллы</a></li>
             <li class="main-nav__nav-item"><a href="#portfolio">Проекты</a></li>
-            <li class="main-nav__nav-item"><a href="#contacts">Контакты</a></li>
           </ul>
         </nav>
         <div class="main-header__intro">
@@ -47,50 +46,33 @@
         <div class="container">
           <h2 class="skills__title">Скиллы</h2>
           <ul class="skills__skills-list" aria-label="Список моих скиллов">
-            <li class="skills__skills-item skills__skills-item--html">
-              <svg class="skills__skill-icon skills__skill-icon--html" width="90" height="90">
-                <use xlink:href="#skill-html"></use>
-              </svg>
-              <ul class="skills__details-list skills__details-list--html">
-                <li class="skills__details-item">Семантика</li>
-                <li class="skills__details-item">Кроссбраузерность</li>
-                <li class="skills__details-item">БЭМ-методология</li>
-              </ul>
-            </li>
-            <li class="skills__skills-item skills__skills-item--css">
-              <svg class="skills__skill-icon skills__skill-icon--css" width="90" height="90">
-                <use xlink:href="#skill-css"></use>
-              </svg>
-              <ul class="skills__details-list skills__details-list--css">
-                <li class="skills__details-item">Препроцессор SCSS (SASS)</li>
-                <li class="skills__details-item">Mobile First</li>
-                <li class="skills__details-item">@keyframes и @media</li>
-              </ul>
-            </li>
-            <li class="skills__skills-item skills__skills-item--js">
-              <svg class="skills__skill-icon skills__skill-icon--js" width="90" height="90">
-                <use xlink:href="#skill-js"></use>
-              </svg>
-              <ul class="skills__details-list skills__details-list--js">
-                <li class="skills__details-item">Vanilla JS ES6+</li>
-                <li class="skills__details-item">Фреймворк Vue 3</li>
+            <li class="skills__skills-item">
+              <h3 class="skills__skills-title">Frontend</h3>
+              <ul class="skills__details-list">
+                <li class="skills__details-item">JS ES6+</li>
+                <li class="skills__details-item">Vue 3</li>
                 <li class="skills__details-item">Pinia (Vuex)</li>
-                <li class="skills__details-item">Модульная организация</li>
-                <li class="skills__details-item">NodeJS (Поднять сервер)</li>
-                <li class="skills__details-item">JS-библиотеки</li>
-                <li class="skills__details-item">SVG-спрайты</li>
+                <li class="skills__details-item">SCSS</li>
+                <li class="skills__details-item">БЭМ</li>
+                <li class="skills__details-item">@keyframes</li>
+                <li class="skills__details-item">@media</li>
               </ul>
             </li>
-            <li class="skills__skills-item skills__skills-item--other">
-              <svg class="skills__skill-icon skills__skill-icon--other" width="90" height="90">
-                <use xlink:href="#skill-other"></use>
-              </svg>
-              <ul class="skills__details-list skills__details-list--other">
-                <li class="skills__details-item">Работа с Git и NPM через CI</li>
-                <li class="skills__details-item">Сборка на Gulp 4</li>
-                <li class="skills__details-item">Сборка на ViteJS</li>
+            <li class="skills__skills-item">
+              <h3 class="skills__skills-title">Backend</h3>
+              <ul class="skills__details-list">
+                <li class="skills__details-item">NodeJS</li>
+                <li class="skills__details-item">Nginx</li>
+              </ul>
+            </li>
+            <li class="skills__skills-item">
+              <h3 class="skills__skills-title">Dev Tools</h3>
+              <ul class="skills__details-list">
+                <li class="skills__details-item">Git</li>
+                <li class="skills__details-item">NPM</li>
                 <li class="skills__details-item">Figma</li>
-                <li class="skills__details-item">Настройка Nginx-сервера</li>
+                <li class="skills__details-item">Vite</li>
+                <li class="skills__details-item">Gulp</li>
               </ul>
             </li>
           </ul>
@@ -99,10 +81,11 @@
       <section class="portfolio" id="portfolio">
         <div class="container">
           <h2 class="portfolio__title">Проекты</h2>
+          <h3 class="portfolio__subtitle">Сайты</h3>
           <div class="portfolio__slider swiper">
             <ul class="portfolio__project-list swiper-wrapper" aria-label="Список выполненных проектов">
               <li class="portfolio__project-item swiper-slide">
-                <img class="portfolio__project-image" src="img/projects/Saturn-Braids.png" width="325" height="170" alt="Плетут шикарные дреды, кудри и брейды в Питере.">
+                <img class="portfolio__project-image" src="img/projects/Saturn-Braids.png" width="325" height="220" alt="Плетут шикарные дреды, кудри и брейды в Питере.">
                 <div class="portfolio__project-info">
                   <a class="portfolio__project-link portfolio__project-link--site" href="https://saturnbraids.ru">saturnbraids.ru</a>
                   <p class="portfolio__project-type">Тип: <span>Коммерческий</span></p>
@@ -121,7 +104,7 @@
                 <img class="portfolio__project-image" src="img/projects/Easyweather.png" width="325" height="170" alt="Акутальная погода в любой точке мира.">
                 <div class="portfolio__project-info">
                   <a class="portfolio__project-link" href="https://whireless.github.io/weather/">easyweather</a>
-                  <p class="portfolio__project-type">Тип: <span>Open Source</span></p>
+                  <p class="portfolio__project-type">Тип: <span>Pet-проект</span></p>
                   <a class="portfolio__project-link portfolio__project-link--gh" href="https://github.com/Whireless/weather">github/weather</a>
                 </div>
               </li>
@@ -180,42 +163,33 @@
               </svg>
             </button>
           </div>
+          <h3 class="portfolio__subtitle">Прочее</h3>
+          <ul class="portfolio__other-list">
+            <li class="portfolio__other-item">
+              <a href="https://t.me/trueetherbot" class="portfolio__other-link">@trueetherbot</a>
+              Телеграм-бот для получения погоды в любой точке мира.
+            </li>
+          </ul>
         </div>
       </section>
     </main>
     <footer class="main-footer" id="contacts">
-      <div class="container">
-        <h2 class="main-footer__title">Контакты</h2>
-        <div class="main-footer__contact-block">
-          <ul class="main-footer__contact-list" aria-label="Список методов для связи со мной">
-            <li class="main-footer__contact-item">
-              <a href="https://t.me/whireless" aria-label="Написать в Телеграме">
-                <svg class="main-footer__contact-icon" width="45" height="45">
-                  <use xlink:href="#telegram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="main-footer__contact-item">
-              <a href="https://github.com/Whireless" aria-label="Профиль на ГитХабе">
-                <svg class="main-footer__contact-icon" width="46" height="46">
-                  <use xlink:href="#github"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="main-footer__contact-item">
-              <a href="#" aria-label="Тут будет ссылка на мою почту">
-                <svg class="main-footer__contact-icon" width="45" height="45">
-                  <use xlink:href="#email"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="main-footer__other">
-          <span class="main-footer__copyright">Copyright © <a class="main-footer__copyright-link" href="https://legalacts.ru/kodeks/GK-RF-chast-4/razdel-vii/">Все авторские права защищены</a></span>
-          <span class="main-footer__nocopy">Копирование любых материалов сайта строго запрещено</span>
-        </div>
-      </div>
+      <ul class="main-footer__contact-list" aria-label="Способы связи со мной">
+        <li class="main-footer__contact-item">
+          <a href="https://t.me/whireless" aria-label="Написать в Телеграме">
+            <svg class="main-footer__contact-icon" width="35" height="35">
+              <use xlink:href="#telegram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="main-footer__contact-item">
+          <a href="https://github.com/Whireless" aria-label="Профиль на ГитХабе">
+            <svg class="main-footer__contact-icon" width="35" height="35">
+              <use xlink:href="#github"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
       <button class="main-footer__button-up" type="button" aria-label="В начало сайта">
         <svg width="40" height="40">
           <use xlink:href="#arrow"></use>

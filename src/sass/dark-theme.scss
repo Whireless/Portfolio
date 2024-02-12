@@ -58,11 +58,16 @@
     }
   }
 
+  .portfolio__other-item {
+    border: 1px solid $whiteColor;
+  }
+
+  .main-footer__contact-item {
+    background-color: $greyColor5;
+  }
+
   .main-footer__contact-icon {
-    &:hover,
-    &:focus {
-      fill: $whiteColor;
-    }
+    fill: $whiteColor;
   }
 
   .main-footer__button-up {
@@ -80,13 +85,6 @@
   }
 
   @media (min-width: $desktopW) {
-    .skills__skill-icon {
-      &:hover,
-      &:focus {
-        fill: $whiteColor;
-      }
-    }
-
     .portfolio__button {
       background-color: $greyColor5;
 

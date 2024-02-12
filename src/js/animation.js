@@ -10,41 +10,15 @@ window.onload = () => {
     .from('.main-nav__button', {y: '-100%', opacity: 0})
     .from('.main-header__intro', {x: '-50%', opacity: 0})
     .from('.main-header__button--resume', {y: '100%', opacity: 0});
-  } else if (window.matchMedia('(min-width: 768px) and (max-width: 1199px)').matches) {
+  } else if(window.matchMedia('(min-width: 768px)').matches) {
     afterLoad
-    .from('.main-header__title', {x: '-40%', opacity: 0})
-    .from('.main-header__subtitle', {x: '-40%', opacity: 0})
-    .from('.main-header__button--resume', {x: '-40%', opacity: 0})
-    .from('.main-header__photo', {y: '30%', opacity: 0})
-    .fromTo('.main-nav', {opacity: 0}, {opacity: 1})
-    .fromTo('.main-nav__button--theme', {opacity: 0, y: '-30%'}, {opacity: 1, y: '0%', stagger: 0.15})
-    .fromTo('.main-nav__nav-item', {opacity: 0, y: '-30%'}, {opacity: 1, y: '0%', stagger: 0.20});
-
-    scroll
-    .from('.skills', {
-      y: '-30%',
-      opacity: 0,
-      scrollTrigger: {
-        trigger: '.main-header',
-        start: '500px center',
-        scrub: true,
-      }
-    })
-    .from('.portfolio', {
-      y: '-30%',
-      opacity: 0,
-      scrollTrigger: {
-        trigger: '.skills',
-        start: '600px 200px',
-        scrub: true,
-      }
-    });
-  } else if (window.matchMedia('(min-width: 1200px)').matches) {
-    afterLoad.from('.main-header__intro', {y: '-100%', opacity: 0, ease: 'back.out', duration: 1.0})
+    .fromTo('.main-nav', {y: '-300%', opacity: 0}, {y: '0', opacity: 1, ease: 'linear', duration: 1})
+    .from('.main-header__intro', {y: '30%', opacity: 0, ease: 'linear', duration: 0.5, delay: 0.5})
+    .from('.main-footer__contact-list', {x: '-500%', ease: 'linear', duration: 0.5, delay: 0.5});
 
     const skills = gsap.utils.toArray('.skills__skills-item');
     skills.forEach((skill, i) => {
-      if (i === 0 || i === 1) {
+      if (i === 0) {
         scroll.from(skills[i], {
           x: '-1000%',
           opacity: 0,
@@ -54,7 +28,17 @@ window.onload = () => {
             scrub: true,
           }
         })
-      } else if (i === 2 || i === 3) {
+      } else if (i === 1) {
+        scroll.from(skills[i], {
+          y: '-5000%',
+          opacity: 0,
+          scrollTrigger: {
+            trigger: '.main-header',
+            start: '-200px center',
+            scrub: true,
+          }
+        })
+      } else if (i === 2) {
         scroll.from(skills[i], {
           y: '1000%',
           opacity: 0,

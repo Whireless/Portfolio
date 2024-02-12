@@ -50,7 +50,7 @@
 
 @media (min-width: $tabletW) {
   .main-header {
-    padding: 63px 0 $tabletInt 0;
+    padding: 83px 0 $tabletInt 0;
   }
 
   .main-header__intro {
@@ -59,7 +59,7 @@
     grid-template-rows: repeat(3, min-content);
     justify-items: center;
     height: auto;
-    padding-top: 140px;
+    padding: 140px 0 40px 0;
   }
 
   .main-header__title {

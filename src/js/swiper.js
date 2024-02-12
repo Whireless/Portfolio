@@ -6,21 +6,6 @@ const swiper = new Swiper('.portfolio__slider', {
   initialSlide: 0,
   slidesPerGroup: 1,
   slidesPerView: 1,
-  breakpoints: {
-    370: {
-      grid: {
-        fill: 'row',
-        rows: 2,
-      },
-      spaceBetween: 30,
-    },
-    768: {
-      grid: {
-        fill: 'column',
-        rows: 1,
-      },
-    },
-  },
   loop: false,
   effect: 'coverflow',
 
