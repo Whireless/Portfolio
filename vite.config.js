@@ -9,8 +9,8 @@ const SRC_PATH = path.resolve(__dirname, 'src');
 const SVG_FOLDER_PATH = path.resolve(SRC_PATH, 'icons');
 
 export default defineConfig({
-  // base: '/Vue-Portfolio', // Github
-  base: '/', // Хостинг
+  base: '/Portfolio', // Github
+  // base: '/', // Хостинг
   server: {
     open: true,
   },
