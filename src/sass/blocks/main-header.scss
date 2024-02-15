@@ -36,10 +36,11 @@
   &--resume {
     text-decoration: none;
     color: $greyColor2;
-    z-index: 10;
-    padding: 7px;
+    z-index: 2;
+    padding: 7px 12px;
     border: 1px solid $greyColor2;
-    border-radius: 20px;
+    border-radius: 30px;
+    transition: 0.5s;
 
     &:hover {
       color: $blackColor;

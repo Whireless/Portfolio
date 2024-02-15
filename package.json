@@ -1,24 +1,28 @@
 {
   "name": "portfolio",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "eslint": "^8.50.0",
-    "sass": "^1.68.0",
-    "sharp": "^0.32.6",
-    "svgo": "^3.0.2",
-    "vite": "^4.5.0",
-    "vite-plugin-image-optimizer": "^1.1.7",
-    "vite-plugin-svg-spriter": "^1.0.0"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "gsap": "^3.12.2",
-    "swiper": "^10.3.0"
+    "gsap": "^3.12.5",
+    "swiper": "^11.0.6",
+    "vue": "^3.4.19"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.4.0",
+    "eslint": "^8.49.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "sass": "^1.69.4",
+    "sharp": "^0.33.2",
+    "svgo": "^3.2.0",
+    "vite": "^5.1.2",
+    "vite-plugin-image-optimizer": "^1.1.7",
+    "vite-plugin-svg-spriter": "^1.0.0"
   }
 }

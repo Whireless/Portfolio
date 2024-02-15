@@ -27,37 +27,9 @@
   }
 }
 
-.portfolio__slider {
-  display: grid;
-  width: 325px;
-  height: 220px;
-}
-
 .portfolio__subtitle {
   margin: 20px auto;
   width: max-content;
-}
-
-.portfolio__project-list {
-  margin: 0;
-  padding: 0;
-}
-
-.portfolio__project-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 170px;
-
-  &:hover {
-    .portfolio__project-image {
-      filter: blur(4px);
-    }
-
-    .portfolio__project-info {
-      opacity: 1;
-    }
-  }
 }
 
 .portfolio__project-image {
@@ -98,22 +70,6 @@
   }
 }
 
-.portfolio__button {
-  display: none;
-}
-
-.portfolio__pagination {
-  justify-self: center;
-  display: flex;
-  background-color: $whiteColor;
-  padding: 3px;
-  border-radius: 50px;
-
-  span {
-    background-color: $blackColor;
-  }
-}
-
 .portfolio__other-list {
   display: flex;
   flex-direction: column;
@@ -138,16 +94,6 @@
 @media (min-width: $tabletW) {
   .portfolio {
     padding: $tabletInt 0;
-  }
-
-  .portfolio__slider {
-    width: 668px;
-    height: 380px;
-  }
-
-  .portfolio__project-item {
-    width: 668px;
-    height: 340px;
   }
 
   .portfolio__project-image {
@@ -182,15 +128,6 @@
     }
   }
 
-  .portfolio__slider {
-    width: 960px;
-    height: 510px;
-  }
-
-  .portfolio__project-item {
-    height: 475px;
-  }
-
   .portfolio__project-info {
     padding: 15px 30px;
     z-index: 2;
@@ -202,51 +139,5 @@
 
   .portfolio__project-type {
     font-size: 16px;
-  }
-
-  .portfolio__button {
-    display: block;
-    background-color: $whiteColor;
-    width: 75px;
-    height: 75px;
-    border: none;
-    border-radius: 50%;
-    padding: 0;
-    transition: 0.7s;
-
-    &--prev {
-      transform: rotate(270deg);
-      left: 3%;
-    }
-
-    &--next {
-      transform: rotate(90deg);
-      right: 3%;
-    }
-
-    svg {
-      fill: $blackColor;
-    }
-
-    &:hover,
-    &:focus {
-      opacity: 0.85;
-      transition: 0.7s;
-    }
-
-    &::after {
-      display: none;
-    }
-  }
-}
-
-@media (min-width: $over-desktopW) {
-  .portfolio__slider {
-    width: 1120px;
-    height: 595px;
-  }
-
-  .portfolio__project-item {
-    height: 560px;
   }
 }
