@@ -10,19 +10,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
   mounted() {
-    const afterLoad = gsap.timeline({delay: 0.15}),
-          scroll = gsap.timeline();
+    const page = document.querySelector('body');
 
     window.onload = () => {
 
       // Скрытие прелоадера
 
-      document.querySelector('.preloader').classList.add('preloader--hidden');
+      page.querySelector('.preloader').classList.add('preloader--hidden');
 
       // Установка темы при загрузке страницы
 
-      const page = document.querySelector('body'),
-            themeIcon = page.querySelector('.main-nav__icon use');
+      const themeIcon = page.querySelector('.main-nav__icon use');
       window.matchMedia('(prefers-color-scheme: dark)').matches ? page.classList.add('dark-theme') : page.classList.remove('dark-theme');
 
       if (localStorage.getItem('theme') === 'light') {
@@ -35,11 +33,13 @@ export default {
 
       // Анимации
 
+      const afterLoad = gsap.timeline({delay: 0.15}),
+            scroll = gsap.timeline();
+
       if(window.matchMedia('(min-width: 375px) and (max-width: 767px)').matches) {
         afterLoad
         .from('.main-nav__button', {y: '-100%', opacity: 0})
         .from('.main-header__intro', {x: '-50%', opacity: 0})
-        .from('.main-header__button--resume', {y: '100%', opacity: 0});
       } else {
         afterLoad
         .fromTo('.main-nav', {y: '-300%', opacity: 0}, {y: '0', opacity: 1, ease: 'linear', duration: 1})
@@ -91,19 +91,13 @@ export default {
         });
       }
     };
-  },
-  computed: {
+
     // Кнопка "В начало"
-    
-    upSite() {
-      window.onscroll = () => {
-        if (window.pageYOffset > 450) {
-          document.querySelector('.main-footer__button-up').classList.add('main-footer__button-up--active');
-        } else {
-          document.querySelector('.main-footer__button-up').classList.remove('main-footer__button-up--active');
-        }
-      };
-    },
+
+    const btnUp = page.querySelector('.main-footer__button-up');
+    window.onscroll = () => {
+      window.pageYOffset > 450 ? btnUp.classList.add('main-footer__button-up--active') : btnUp.classList.remove('main-footer__button-up--active');
+    };
   },
   components: {
     preloader,
@@ -117,7 +111,7 @@ export default {
 
 <template>
   <preloader></preloader>
-  <main-header v-on:scroll="upSite"></main-header>
+  <main-header></main-header>
   <skills></skills>
   <portfolio></portfolio>
   <main-footer></main-footer>

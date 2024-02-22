@@ -69,7 +69,7 @@ export default {
         {
           img: {
             src: 'img/projects/Pink.png',
-            alt: '',
+            alt: 'Надоели серые будни? Тогда мы идём к вам!',
           },
           projectText: {
             site: 'Pink',
@@ -84,7 +84,7 @@ export default {
         {
           img: {
             src: 'img/projects/ProductFit.png',
-            alt: '',
+            alt: 'На самом деле интернет создали мы.',
           },
           projectText: {
             site: 'ProductFit',
@@ -99,7 +99,7 @@ export default {
         {
           img: {
             src: 'img/projects/Restaurant.png',
-            alt: '',
+            alt: 'Путник, ты слишком долго искал сочный стейк, в этом ресторане твоя награда.',
           },
           projectText: {
             site: 'Restaurant',
@@ -114,7 +114,7 @@ export default {
         {
           img: {
             src: 'img/projects/Grand-Theatre.png',
-            alt: '',
+            alt: 'Надо уважать культуру, мать её.',
           },
           projectText: {
             site: 'Grand-Theatre',
@@ -172,28 +172,6 @@ export default {
           </article>
         </swiper-slide>
       </swiper>
-              <!-- 
-              <li class="portfolio__project-item swiper-slide">
-                <img class="portfolio__project-image" src="img/projects/Nerds.png" width="320" height="180" alt="Они создают внеземной дизайн">
-                <div class="portfolio__project-info">
-                  <a class="portfolio__project-link" href="https://whireless.github.io/Nerds/">Nerds</a>
-                  <p class="portfolio__project-type">Тип: <span>Учебный</span></p>
-                </div>
-              </li> 
-              -->
-          <!-- </ul>
-          <div class="portfolio__pagination swiper-pagination"></div>
-          <button class="portfolio__button portfolio__button--prev swiper-button-prev">
-            <svg width="24" height="24">
-              <use xlink:href="#arrow"></use>
-            </svg>
-          </button>
-          <button class="portfolio__button portfolio__button--next swiper-button-next">
-            <svg width="24" height="24">
-              <use xlink:href="#arrow"></use>
-            </svg>
-          </button>
-        </div> -->
       <h3 class="portfolio__subtitle">Прочее</h3>
       <ul class="portfolio__other-list">
         <li class="portfolio__other-item">

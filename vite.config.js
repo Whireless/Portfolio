@@ -5,12 +5,11 @@ import createSvgSpritePlugin from 'vite-plugin-svg-spriter';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 
-const SRC_PATH = path.resolve(__dirname, 'src');
+const SRC_PATH = path.resolve('src');
 const SVG_FOLDER_PATH = path.resolve(SRC_PATH, 'icons');
 
 export default defineConfig({
   base: '/Portfolio', // Github
-  // base: '/', // Хостинг
   server: {
     open: true,
   },

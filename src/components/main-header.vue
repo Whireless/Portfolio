@@ -15,18 +15,22 @@ export default {
     }
   },
   methods: {
+
     // Открытие меню
+
     openMenu() {
       const page = document.querySelector('body');
       const nav = page.querySelector('.main-nav');
       nav.classList.toggle('main-nav--open');
       nav.classList.contains('main-nav--open') ? page.style.overflow = 'hidden' : page.removeAttribute('style');
     },
+
     // Смена темы
+
     changeTheme() {
       const page = document.querySelector('body'),
             themeIcon = page.querySelector('.main-nav__icon use');
-      
+
       page.classList.toggle('dark-theme');
       if (page.classList.contains('dark-theme')) {
         localStorage.setItem('theme', 'dark');
@@ -68,12 +72,12 @@ export default {
           </li>
         </ul>
       </nav>
-      <div class="main-header__intro">
+      <article class="main-header__intro">
         <h1 class="main-header__title">Александр Сидунов</h1>
         <p class="main-header__subtitle">Frontend-разработчик</p>
         <img class="main-header__photo" src="/img/my-photo.png" width="200" height="200" alt="На этом фото я :)">
         <a class="main-header__button main-header__button--resume" href="/Portfolio/Sidunov-Alexander.doc" download="">Скачать резюме</a>
-      </div>
+      </article>
     </div>
   </header>
 </template>

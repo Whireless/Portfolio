@@ -5,6 +5,3 @@ import App from './App.vue';
 
 const app = createApp(App);
 app.mount('#app');
-
-// JS
-// import './js/animation.js';
