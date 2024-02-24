@@ -163,7 +163,7 @@ export default {
               :navigation="true"
               effect="coverflow"
               :speed="600">
-        <swiper-slide v-for="project in projectList" v-bind:key="project">
+        <swiper-slide v-for="project in projectList" :key="project">
           <img class="portfolio__project-image" :src="project.img.src" :alt="project.img.alt" width="325" height="220">
           <article class="portfolio__project-info">
             <a class="portfolio__project-link portfolio__project-link--site" :href="project.projectLink.site">{{ project.projectText.site }}</a>

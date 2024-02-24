@@ -26,10 +26,10 @@ export default {
      <div class="container">
       <h2 class="skills__title">Скиллы</h2>
       <ul class="skills__skills-list" aria-label="Список моих скиллов">
-        <li class="skills__skills-item" v-for="li in skillsList" v-bind:key="li">
+        <li class="skills__skills-item" v-for="li in skillsList" :key="li">
           <h3 class="skills__skills-title">{{ li.title }}</h3>
           <ul class="skills__details-list">
-            <li class="skills__details-item" v-for="detailsItem in li.detailsList" v-bind:key="detailsItem">{{ detailsItem }}</li>
+            <li class="skills__details-item" v-for="detailsItem in li.detailsList" :key="detailsItem">{{ detailsItem }}</li>
           </ul>
         </li>
       </ul>

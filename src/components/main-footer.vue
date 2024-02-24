@@ -28,7 +28,7 @@ export default {
     </ul>
     <button class="main-footer__button-up"
             type="button"
-            v-on:click="scrollUp"
+            @click="scrollUp"
             aria-label="В начало сайта">
       <svg width="40" height="40">
         <use xlink:href="#arrow"></use>
