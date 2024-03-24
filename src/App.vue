@@ -62,12 +62,13 @@
           .fromTo('.main-header__button--resume', {x: '-500%', opacity: 0}, {x: 0, opacity: 1})
 
           scroll.to('.main-header__intro', {
-            x: '-500%',
+            x: '-300%',
             opacity: 0,
             scrollTrigger: {
+              markers: true,
               trigger: '.main-header',
-              start: '350px center',
-              end: 'bottom center',
+              start: 'bottom center',
+              end: '900px center',
               scrub: true,
             },
           }).from('.skills__title', {
