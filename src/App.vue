@@ -55,14 +55,14 @@
 
           // Анимации для мобильной версии
 
-          afterLoad.from('.main-nav__button', {y: '-100%', opacity: 0})
-          .from('.main-header__title', {x: '-100%', opacity: 0})
-          .from('.main-header__subtitle', {x: '-100%', opacity: 0})
-          .from('.main-header__photo', {x: '-100%', opacity: 0})
-          .fromTo('.main-header__button--resume', {x: '-100%', opacity: 0}, {x: 0, opacity: 1})
+          afterLoad.from('.main-nav__button', {y: '-500%', opacity: 0})
+          .from('.main-header__title', {x: '-500%', opacity: 0})
+          .from('.main-header__subtitle', {x: '-500%', opacity: 0})
+          .from('.main-header__photo', {x: '-500%', opacity: 0})
+          .fromTo('.main-header__button--resume', {x: '-500%', opacity: 0}, {x: 0, opacity: 1})
 
           scroll.to('.main-header__intro', {
-            x: '-100%',
+            x: '-500%',
             opacity: 0,
             scrollTrigger: {
               trigger: '.main-header',
