@@ -51,7 +51,7 @@
         const personalList = gsap.utils.toArray('.portfolio__item--personal');
         const studyList = gsap.utils.toArray('.portfolio__item--study');
 
-        if (window.matchMedia('(min-width: 375px) and (max-width: 767px)').matches) {
+        if (window.matchMedia('(min-width: 320px) and (max-width: 767px)').matches) {
 
           // Анимации для мобильной версии
 

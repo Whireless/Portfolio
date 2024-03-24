@@ -34,7 +34,8 @@ body {
   line-height: 25px;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-width: 370px;
+  // min-width: 370px;
+  min-width: 320px;
   min-height: 100vh;
   background-color: $greyColor1;
   margin: 0;
