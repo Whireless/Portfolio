@@ -67,7 +67,7 @@
             scrollTrigger: {
               trigger: '.main-header',
               start: 'bottom center',
-              end: '850px center',
+              end: '1000px center',
               scrub: true,
             },
           }).from('.skills__title', {
@@ -76,17 +76,16 @@
             scrollTrigger: {
               trigger: '.skills',
               start: 'top center',
-              end: '40px center',
+              end: '85px center',
               scrub: true,
             },
           }).from(skills[0], {
             x: '-60%',
             opacity: 0,
             scrollTrigger: {
-              // markers: true,
               trigger: '.skills',
-              start: '40px center',
-              end: '100px center',
+              start: '90px center',
+              end: '200px center',
               scrub: true,
             },
           }).from(skills[1], {
@@ -95,7 +94,7 @@
             opacity: 0,
             scrollTrigger: {
               trigger: skills[0],
-              start: '-50px center',
+              start: 'center center',
               scrub: true,
             },
           }).from(skills[2], {
@@ -103,7 +102,7 @@
             opacity: 0,
             scrollTrigger: {
               trigger: skills[1],
-              start: '-80px center',
+              start: 'top center',
               scrub: true,
             },
           }).from('.portfolio__title', {
@@ -111,7 +110,7 @@
             opacity: 0,
             scrollTrigger: {
               trigger: skills[2],
-              start: '-400px top',
+              start: 'bottom center',
               scrub: true,
             },
           }).from('.portfolio__subtitle--commercial', {
@@ -177,17 +176,22 @@
             opacity: 0,
             scrollTrigger: {
               trigger: '.main-footer',
-              start: '200px center',
-              end: '255px center',
+              // start: '200px center',
+              // end: '255px center',
+              start: 'top center',
+              end: 'center center',
               scrub: true,
             },
           }).from('.main-footer__contact-list', {
             y: '100%',
             opacity: 0,
             scrollTrigger: {
+              // markers: true,
               trigger: '.main-footer',
-              start: '240px center',
-              end: '340px center',
+              // start: '240px center',
+              // end: '340px center',
+              start: 'center center',
+              end: 'bottom center',
               scrub: true,
             },
           }).from('.main-footer__copyright', {
@@ -195,8 +199,10 @@
             opacity: 0,
             scrollTrigger: {
               trigger: '.main-footer',
-              start: '295px center',
-              end: '315px center',
+              // start: '295px center',
+              // end: '315px center',
+              start: 'center center',
+              end: 'bottom center',
               scrub: true,
             },
           })
