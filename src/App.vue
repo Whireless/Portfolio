@@ -114,8 +114,9 @@
               scrub: true,
             },
           }).from('.portfolio__subtitle--commercial', {
-            display: 'none',
-            x: '60%',
+            // display: 'none',
+            // x: '60%',
+            scale: 0,
             opacity: 0,
             scrollTrigger: {
               trigger: '.portfolio__title',
@@ -152,8 +153,9 @@
               scrub: true,
             },
           }).from('.portfolio__subtitle--study', {
-            display: 'none',
-            x: '60%',
+            // display: 'none',
+            // x: '60%',
+            scale: 0,
             opacity: 0,
             scrollTrigger: {
               trigger: '.portfolio__projects--study',
@@ -186,23 +188,23 @@
             y: '100%',
             opacity: 0,
             scrollTrigger: {
-              // markers: true,
               trigger: '.main-footer',
-              // start: '240px center',
-              // end: '340px center',
-              start: 'center center',
-              end: 'bottom center',
+              start: '150px center',
+              end: '220px center',
+              // start: 'top center',
+              // end: 'center center',
               scrub: true,
             },
           }).from('.main-footer__copyright', {
             x: '-60%',
             opacity: 0,
             scrollTrigger: {
+              markers: true,
               trigger: '.main-footer',
-              // start: '295px center',
-              // end: '315px center',
-              start: 'center center',
-              end: 'bottom center',
+              start: '180px center',
+              end: '275px center',
+              // start: 'top center',
+              // end: 'center center',
               scrub: true,
             },
           })
