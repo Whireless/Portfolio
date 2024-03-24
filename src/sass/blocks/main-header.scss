@@ -22,9 +22,8 @@
 }
 
 .main-header__photo {
-  border-radius: 40px;
+  border-radius: 30px;
   display: block;
-  border: 1px solid $blackColor;
 }
 
 .main-header__button {
@@ -34,22 +33,28 @@
   cursor: pointer;
 
   &--resume {
+    font-size: 16px;
     text-decoration: none;
-    color: $greyColor2;
+    color: $blackColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 160px;
+    border: 1px solid $blackColor;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
     z-index: 2;
-    padding: 7px 12px;
-    border: 1px solid $greyColor2;
-    border-radius: 30px;
     transition: 0.5s;
 
     &:hover {
-      color: $blackColor;
-      border: 1px solid $blackColor;
+      color: $whiteColor;
+      background-color: $blackColor;
     }
   }
 }
 
-@media (min-width: $tabletW) {
+@media (min-width: $tablet) {
   .main-header {
     padding: 83px 0 $tabletInt 0;
   }
@@ -81,9 +86,9 @@
   }
 }
 
-@media (min-width: $desktopW) {
+@media (min-width: $desktop) {
   .main-header {
-    padding: 81px 0 $desktopInt 0;
+    padding: 93px 0 $desktopInt 0;
   }
 
   .main-header__title {
@@ -102,7 +107,7 @@
   }
 }
 
-@media (min-width: $over-desktopW) {
+@media (min-width: $over-desktop) {
   .main-header__title {
     font-size: 53px;
     line-height: 57px;

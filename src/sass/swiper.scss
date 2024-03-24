@@ -1,28 +1,20 @@
 .swiper {
   position: relative;
   display: grid;
-  width: 325px;
-  // height: 220px;
-  height: 285px;
-  // border: 1px solid $blackColor;
-  // border-radius: 25px;
+  width: 313px;
+  height: 300px;
+  margin: 60px auto 0 auto;
+  padding: 12px;
+  border: 1px solid $blackColor;
+  border-radius: 20px;
 }
 
 .swiper-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 15px;
   height: 170px;
-
-  // &:hover {
-  //   .portfolio__project-image {
-  //     filter: blur(4px);
-  //   }
-
-  //   .portfolio__project-info {
-  //     opacity: 1;
-  //   }
-  // }
 }
 
 .swiper-button-prev,
@@ -39,7 +31,7 @@
   width: max-content;
   top: auto;
   left: auto;
-  bottom: 0;
+  bottom: 10px;
   padding: 3px 5px;
   border-radius: 50px;
 }
@@ -55,11 +47,12 @@
   }
 }
 
-@media (min-width: $tabletW) {
+@media (min-width: $tablet) {
   .swiper {
-    width: 668px;
-    // height: 380px;
+    width: 638px;
     height: 480px;
+    margin: 70px auto 0 auto;
+    padding: 15px;
   }
 
   .swiper-slide {
@@ -68,15 +61,17 @@
   }
 }
 
-@media (min-width: $desktopW) {
+@media (min-width: $desktop) {
   .swiper {
-    width: 960px;
-    height: 510px;
+    width: 850px;
+    height: 470px;
+    margin: 80px auto 0 auto;
+    padding: 25px;
   }
 
   .swiper-slide {
     width: 100%;
-    height: 475px;
+    height: 430px;
 
     &:hover {
       .portfolio__project-image {
@@ -131,15 +126,19 @@
       transition: 0.7s;
     }
   }
+
+  .swiper-pagination {
+    bottom: 20px;
+  }
 }
 
-@media (min-width: $over-desktopW) {
+@media (min-width: $over-desktop) {
   .swiper {
-    width: 1120px;
-    height: 580px;
+    width: 1000px;
+    height: 540px;
   }
 
   .swiper-slide {
-    height: 560px;
+    height: 510px;
   }
 }

@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  font-family: "CeraStencilPRO", "Arial", sans-serif;
+  font-family: 'CeraStencilPRO', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 25px;
   display: grid;
@@ -41,17 +41,17 @@ body {
   padding: 0;
   transition: 0.5s;
 
-  @media (min-width: $tabletW) {
+  @media (min-width: $tablet) {
     font-size: 17px;
     line-height: 28px;
   }
 
-  @media (min-width: $desktopW) {
+  @media (min-width: $desktop) {
     font-size: 18px;
     line-height: 30px;
   }
 
-  @media (min-width: $over-desktopW) {
+  @media (min-width: $over-desktop) {
     font-size: 20px;
     line-height: 32px;
   }

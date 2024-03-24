@@ -1,4 +1,5 @@
 // Анимация preloader
+
 @keyframes sk-bounce {
   0%, 100% {
     transform: scale(0.0);
@@ -8,6 +9,7 @@
 }
 
 // Анимация мобильного меню
+
 @keyframes topOpen {
   0% {
     top: 0;
@@ -93,6 +95,7 @@
 }
 
 // Анимация кнопки 'В начало'
+
 @keyframes btnUp-see {
   0% {
     display: none;

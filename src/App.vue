@@ -1,118 +1,372 @@
 <script>
-import preloader from './components/preloader.vue';
-import mainHeader from './components/main-header.vue';
-import skills from './components/skills.vue';
-import portfolio from './components/portfolio.vue';
-import mainFooter from './components/main-footer.vue';
+  import preloader from './components/preloader.vue';
+  import mainHeader from './components/main-header.vue';
+  import skills from './components/skills.vue';
+  import portfolio from './components/portfolio.vue';
+  import mainFooter from './components/main-footer.vue';
 
-import { gsap, ScrollTrigger } from 'gsap/all';
-gsap.registerPlugin(ScrollTrigger);
+  import { useGlobalStore } from './store';
+  import { storeToRefs } from 'pinia';
 
-export default {
-  mounted() {
-    const page = document.querySelector('body');
+  import { gsap, ScrollTrigger } from 'gsap/all';
+  gsap.registerPlugin(ScrollTrigger);
 
-    window.onload = () => {
-
-      // Скрытие прелоадера
-
-      page.querySelector('.preloader').classList.add('preloader--hidden');
-
-      // Установка темы при загрузке страницы
-
-      const themeIcon = page.querySelector('.main-nav__icon use');
-      window.matchMedia('(prefers-color-scheme: dark)').matches ? page.classList.add('dark-theme') : page.classList.remove('dark-theme');
-
-      if (localStorage.getItem('theme') === 'light') {
-        page.classList.remove('dark-theme');
-        themeIcon.setAttribute('xlink:href', '#dark-theme');
-      } else if (localStorage.getItem('theme') === 'dark') {
-        page.classList.add('dark-theme');
-        themeIcon.setAttribute('xlink:href', '#light-theme');
+  export default {
+    setup() {
+      const { themeStatus } = storeToRefs(useGlobalStore());
+      const { preloaderHidden, toUp, } = useGlobalStore();
+      return {
+        themeStatus,
+        preloaderHidden,
+        toUp,
       }
+    },
+    mounted() {
+      this.preloaderHidden();
+      this.toUp();
 
-      // Анимации
+      // const page = document.querySelector('body');
 
-      const afterLoad = gsap.timeline({delay: 0.15}),
-            scroll = gsap.timeline();
+      window.onload = () => {
 
-      if(window.matchMedia('(min-width: 375px) and (max-width: 767px)').matches) {
-        afterLoad
-        .from('.main-nav__button', {y: '-100%', opacity: 0})
-        .from('.main-header__intro', {x: '-50%', opacity: 0})
-      } else {
-        afterLoad
-        .fromTo('.main-nav', {y: '-300%', opacity: 0}, {y: '0', opacity: 1, ease: 'linear', duration: 1})
-        .from('.main-header__intro', {y: '30%', opacity: 0, ease: 'linear', duration: 0.5, delay: 0.5})
-        .from('.main-footer__contact-list', {x: '-500%', ease: 'linear', duration: 0.5, delay: 0.5});
+        // Установка темы при загрузке страницы
+
+        // const themeIcon = page.querySelector('.main-nav__icon use');
+        // window.matchMedia('(prefers-color-scheme: dark)').matches ? page.classList.add('dark-theme') : page.classList.remove('dark-theme');
+
+        // if (localStorage.getItem('theme') === 'light') {
+        //   page.classList.remove('dark-theme');
+        //   themeIcon.setAttribute('xlink:href', '#dark-theme');
+        // } else if (localStorage.getItem('theme') === 'dark') {
+        //   page.classList.add('dark-theme');
+        //   themeIcon.setAttribute('xlink:href', '#light-theme');
+        // }
+
+        // Анимации
+
+        const afterLoad = gsap.timeline({delay: 0.15}),
+              scroll = gsap.timeline();
 
         const skills = gsap.utils.toArray('.skills__skills-item');
-        skills.forEach((skill, i) => {
-          if (i === 0) {
-            scroll.from(skills[i], {
-              x: '-1000%',
-              opacity: 0,
-              scrollTrigger: {
-                trigger: '.main-header',
-                start: '-200px center',
-                scrub: true,
-              }
-            })
-          } else if (i === 1) {
-            scroll.from(skills[i], {
-              y: '-5000%',
-              opacity: 0,
-              scrollTrigger: {
-                trigger: '.main-header',
-                start: '-200px center',
-                scrub: true,
-              }
-            })
-          } else if (i === 2) {
-            scroll.from(skills[i], {
-              y: '1000%',
-              opacity: 0,
-              scrollTrigger: {
-                trigger: '.main-header',
-                start: '-200px center',
-                scrub: true,
-              }
-            });
-          }
-        });
-        scroll.from('.portfolio', {
-          y: '50%',
-          opacity: 0,
-          scrollTrigger: {
-            trigger: '.skills',
-            start: 'center top',
-            scrub: true,
-          }
-        });
-      }
-    };
+        const personalList = gsap.utils.toArray('.portfolio__item--personal');
+        const studyList = gsap.utils.toArray('.portfolio__item--study');
 
-    // Кнопка "В начало"
+        if (window.matchMedia('(min-width: 375px) and (max-width: 767px)').matches) {
 
-    const btnUp = page.querySelector('.main-footer__button-up');
-    window.onscroll = () => {
-      window.pageYOffset > 450 ? btnUp.classList.add('main-footer__button-up--active') : btnUp.classList.remove('main-footer__button-up--active');
-    };
-  },
-  components: {
-    preloader,
-    mainHeader,
-    skills,
-    portfolio,
-    mainFooter,
+          // Анимации для мобильной версии
+
+          afterLoad.from('.main-nav__button', {y: '-100%', opacity: 0})
+          .from('.main-header__title', {x: '-100%', opacity: 0})
+          .from('.main-header__subtitle', {display: 'none', x: '100%', opacity: 0})
+          .from('.main-header__photo', {x: '-100%', opacity: 0})
+          .fromTo('.main-header__button--resume', {x: '100%', opacity: 0}, {x: 0, opacity: 1})
+
+          scroll.to('.main-header__intro', {
+            x: '-100%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-header',
+              start: '350px center',
+              end: 'bottom center',
+              scrub: true,
+            },
+          }).from('.skills__title', {
+            scale: 0,
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-header',
+              start: '-300px top',
+              scrub: true,
+            },
+          }).from(skills[0], {
+            x: '-60%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-header',
+              start: '400px center',
+              scrub: true,
+            },
+          }).from(skills[1], {
+            display: 'none',
+            x: '60%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: skills[0],
+              start: '-50px center',
+              scrub: true,
+            },
+          }).from(skills[2], {
+            x: '-60%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: skills[1],
+              start: '-80px center',
+              scrub: true,
+            },
+          }).from('.portfolio__title', {
+            scale: 0,
+            opacity: 0,
+            scrollTrigger: {
+              trigger: skills[2],
+              start: '-400px top',
+              scrub: true,
+            },
+          }).from('.portfolio__subtitle--commercial', {
+            display: 'none',
+            x: '60%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.portfolio__title',
+              start: '150px center',
+              end: '400px center',
+              scrub: true,
+            },
+          }).from('.swiper', {
+            scale: 0,
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.portfolio__title',
+              start: '350px center',
+              end: '450px center',
+              scrub: true,
+            },
+          }).from('.portfolio__subtitle--personal', {
+            x: '-60%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.portfolio__projects--personal',
+              start: '200px center',
+              end: '255px center',
+              scrub: true,
+            },
+          }).from(personalList, {
+            scale: 0,
+            opacity: 0,
+            stagger: 0.9,
+            scrollTrigger: {
+              trigger: '.portfolio__projects--personal',
+              start: '250px center',
+              end: 'bottom center',
+              scrub: true,
+            },
+          }).from('.portfolio__subtitle--study', {
+            display: 'none',
+            x: '60%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.portfolio__projects--study',
+              start: '200px center',
+              end: '255px center',
+              scrub: true,
+            },
+          }).from(studyList, {
+            scale: 0,
+            opacity: 0,
+            stagger: 0.9,
+            scrollTrigger: {
+              trigger: '.portfolio__projects--study',
+              start: '300px center',
+              end: 'bottom center',
+              scrub: true,
+            },
+          }).from('.main-footer__title', {
+            scale: 0,
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-footer',
+              start: '200px center',
+              end: '255px center',
+              scrub: true,
+            },
+          }).from('.main-footer__contact-list', {
+            y: '100%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-footer',
+              start: '240px center',
+              end: '340px center',
+              scrub: true,
+            },
+          }).from('.main-footer__copyright', {
+            x: '-60%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-footer',
+              start: '300px center',
+              end: '340px center',
+              scrub: true,
+            },
+          })
+        } else if (window.matchMedia('(min-width: 768px)').matches) {
+
+          // Анимации для планшета
+
+          const navLinks = gsap.utils.toArray('.main-nav__nav-link');
+
+          afterLoad.fromTo('.main-nav', {y: '-1000%', opacity: 0}, {y: 0, opacity: 1, ease: 'linear', duration: 0.45})
+          .fromTo('.main-nav__button--theme', {y: '-1100%', opacity: 0}, {y: 0, opacity: 1, duration: 0.5})
+          .fromTo(navLinks, {y: '-100%', opacity: 0,}, {y: 0, opacity: 1, stagger: 0.25})
+          .from('.main-header__title', {y: '-100%', opacity: 0})
+          .from('.main-header__subtitle', {y: '-100%', opacity: 0})
+          .fromTo('.main-header__button--resume', {y: '-100%', opacity: 0}, {y: 0, opacity: 1})
+          .from('.main-header__photo', {x: '-100%', opacity: 0})
+
+          scroll.to('.main-header__intro', {
+            x: '-100%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-header',
+              start: '350px center',
+              end: '800px center',
+              scrub: true,
+            },
+          }).from('.skills__title', {
+            x: '-100%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.skills',
+              start: '-120px center',
+              end: 'top center',
+              scrub: true,
+            },
+          }).from(skills[0], {
+            x: '-800%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-header',
+              start: '350px center',
+              scrub: true,
+            }
+          }).from(skills[1], {
+            y: '-1500%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-header',
+              start: '350px center',
+              scrub: true,
+            }
+          }).from(skills[2], {
+            y: '800%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-header',
+              start: '350px center',
+              scrub: true,
+            }
+          }).from('.portfolio__title', {
+            x: '-100%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.portfolio',
+              start: '-150px center',
+              end: '50px center',
+              scrub: true,
+            },
+          }).from('.portfolio__subtitle--commercial', {
+            display: 'none',
+            x: '60%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.portfolio__projects--commercial',
+              start: '-120px center',
+              end: 'top center',
+              scrub: true,
+            },
+          }).from('.swiper', {
+            scale: 0,
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.portfolio__projects--commercial',
+              start: 'top center',
+              end: 'center center',
+              scrub: true,
+            },
+          }).from('.portfolio__subtitle--personal', {
+            x: '-60%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.portfolio__projects--personal',
+              start: '-120px center',
+              end: 'top center',
+              scrub: true,
+            },
+          }).from(personalList, {
+            scale: 0,
+            opacity: 0,
+            stagger: 0.9,
+            scrollTrigger: {
+              trigger: '.portfolio__projects--personal',
+              start: 'top center',
+              end: 'bottom 460px',
+              scrub: true,
+            },
+          }).from('.portfolio__subtitle--study', {
+            display: 'none',
+            x: '60%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.portfolio__projects--study',
+              start: '-120px center',
+              end: 'top center',
+              scrub: true,
+            },
+          }).from(studyList, {
+            scale: 0,
+            opacity: 0,
+            stagger: 0.9,
+            scrollTrigger: {
+              trigger: '.portfolio__projects--study',
+              start: 'top center',
+              end: 'bottom 460px',
+              scrub: true,
+            },
+          }).from('.main-footer__title', {
+            x: '-100%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-footer',
+              start: '-150px center',
+              end: '50px center',
+              scrub: true,
+            },
+          }).from('.main-footer__contact-list', {
+            y: '100%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-footer',
+              start: '-50px center',
+              end: '80px center',
+              scrub: true,
+            },
+          }).from('.main-footer__copyright', {
+            x: '-60%',
+            opacity: 0,
+            scrollTrigger: {
+              trigger: '.main-footer',
+              start: 'top center',
+              end: '120px center',
+              scrub: true,
+            },
+          })
+        }
+      };
+    },
+    components: {
+      preloader,
+      mainHeader,
+      skills,
+      portfolio,
+      mainFooter,
+    }
   }
-}
 </script>
 
 <template>
-  <preloader></preloader>
-  <main-header></main-header>
-  <skills></skills>
-  <portfolio></portfolio>
-  <main-footer></main-footer>
+  <main :class="{'dark-theme' : themeStatus}">
+    <preloader></preloader>
+    <main-header></main-header>
+    <skills></skills>
+    <portfolio></portfolio>
+    <main-footer></main-footer>
+  </main>
 </template>

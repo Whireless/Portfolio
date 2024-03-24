@@ -1,60 +1,32 @@
 <script>
-export default {
-  data() {
-    return {
-      nav: { open: false, hidden: 'hidden', },
-      navList: [
-        { href: '#skills', text: 'Скиллы', },
-        { href: '#portfolio', text: 'Проекты', },
-      ],
-    }
-  },
-  methods: {
+  import { useGlobalStore } from '../store';
+  import { storeToRefs } from 'pinia';
 
-    // Открытие меню
-
-    openMenu(navItem) {
-      if(navItem) {
-        this.nav.open = false;
-        document.body.removeAttribute('style');
-      } else if(this.nav.open === false) {
-        this.nav.open = true;
-        document.body.style.overflow = this.nav.hidden;
-      } else {
-        this.nav.open = false;
-        document.body.removeAttribute('style');
+  export default {
+    setup() {
+      const { navIsOpen, themeIcon } = storeToRefs(useGlobalStore());
+      const { openMenu, changeTheme, navList } = useGlobalStore();
+      return {
+        navIsOpen,
+        themeIcon,
+        openMenu,
+        changeTheme,
+        navList,
       }
     },
-
-    // Смена темы
-
-    changeTheme() {
-      const page = document.querySelector('body'),
-            themeIcon = page.querySelector('.main-nav__icon use');
-
-      page.classList.toggle('dark-theme');
-      if (page.classList.contains('dark-theme')) {
-        localStorage.setItem('theme', 'dark');
-        themeIcon.setAttribute('xlink:href', '#light-theme');
-      } else {
-        localStorage.setItem('theme', 'light');
-        themeIcon.setAttribute('xlink:href', '#dark-theme');
-      }
-    },
-  },
-}
+  }
 </script>
 
 <template>
-  <header class="main-header">
+  <header class="main-header" id="start">
     <div class="container">
-      <nav :class="['main-nav', {'main-nav--open' : nav.open}]">
+      <nav :class="['main-nav', {'main-nav--open' : navIsOpen}]">
         <button class="main-nav__button main-nav__button--theme"
                 type="button"
                 @click="changeTheme()"
                 aria-label="Сменить тему">
-          <svg class="main-nav__icon" width="35" height="35">
-            <use xlink:href="#dark-theme"></use>
+          <svg class="main-nav__icon main-nav__icon--theme" width="35" height="35">
+            <use :href="themeIcon"></use>
           </svg>
         </button>
         <button class="main-nav__button main-nav__button--nav"
@@ -68,8 +40,14 @@ export default {
           <li class="main-nav__nav-item"
               v-for="li in navList"
               :key="li">
-              <a :href="li.href"
-                  @click="openMenu(true)">{{ li.text }}</a>
+              <a class="main-nav__nav-link"
+                 :href="li.href"
+                 @click="openMenu(true)">
+                 <svg class="main-nav__icon main-nav__icon--link" width="30" height="30">
+                  <use :href="li.icon"></use>
+                 </svg>
+                 {{ li.text }}
+              </a>
           </li>
         </ul>
       </nav>

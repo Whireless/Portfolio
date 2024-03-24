@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "gsap": "^3.12.5",
+    "pinia": "^2.1.7",
     "swiper": "^11.0.6",
     "vue": "^3.4.19"
   },

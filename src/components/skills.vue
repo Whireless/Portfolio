@@ -1,38 +1,36 @@
 <script>
-export default {
-  data() {
-    return {
-      skillsList: [
-        {
-          title: 'Frontend',
-          detailsList: ['JS ES6+', 'Vue 3', 'Pinia (Vuex)', 'SCSS', 'БЭМ', '@keyframes', '@media',],
-        },
-        {
-          title: 'Backend',
-          detailsList: ['NodeJS', 'Express.js', 'Nginx',],
-        },
-        {
-          title: 'Dev Tool',
-          detailsList: ['Git', 'NPM', 'Figma','Vite', 'Gulp',],
-        },
-      ],
-    }
-  },
-}
+  import { useGlobalStore } from '../store';
+
+  export default {
+    setup() {
+      const { skillsList } = useGlobalStore();
+      return {
+        skillsList,
+      }
+    },
+  }
 </script>
 
 <template>
   <section class="skills" id="skills">
-     <div class="container">
-      <h2 class="skills__title">Скиллы</h2>
-      <ul class="skills__skills-list" aria-label="Список моих скиллов">
-        <li class="skills__skills-item" v-for="li in skillsList" :key="li">
-          <h3 class="skills__skills-title">{{ li.title }}</h3>
+    <h2 class="skills__title">
+      Скиллы
+      <svg width="30" height="30">
+        <use href="#skill"></use>
+      </svg>
+    </h2>
+    <ul class="skills__skills-list" aria-label="Список моих скиллов">
+      <li class="skills__skills-item" v-for="skill in skillsList" :key="skill">
+        <svg class="skills__icon" width="100" height="100">
+          <use :href="skill.icon"></use>
+        </svg>
+        <article class="skills__skills-info">
+          <h3 class="skills__subtitle">{{ skill.title }}</h3>
           <ul class="skills__details-list">
-            <li class="skills__details-item" v-for="detailsItem in li.detailsList" :key="detailsItem">{{ detailsItem }}</li>
+            <li class="skills__details-item" v-for="detailsItem in skill.detailsList" :key="detailsItem">{{ detailsItem }}</li>
           </ul>
-        </li>
-      </ul>
-    </div>
+        </article>
+      </li>
+    </ul>
   </section>
 </template>
