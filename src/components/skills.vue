@@ -21,7 +21,7 @@
     </h2>
     <ul class="skills__skills-list" aria-label="Список моих скиллов">
       <li class="skills__skills-item" v-for="skill in skillsList" :key="skill">
-        <svg class="skills__icon" width="100" height="100">
+        <svg class="skills__icon" width="85" height="85">
           <use :href="skill.icon"></use>
         </svg>
         <article class="skills__skills-info">

@@ -41,7 +41,7 @@
               effect="coverflow"
               :speed="600">
           <swiper-slide v-for="project in projects.commercial.list" :key="project">
-            <img class="portfolio__project-image" :src="project.img.src" :alt="project.img.alt" width="310" height="200">
+            <img class="portfolio__project-image" :src="project.img.src" :alt="project.img.alt" width="270" height="190">
             <article class="portfolio__project-info">
               <a class="portfolio__project-link portfolio__project-link--site" :href="project.site.link">{{ project.site.name }}</a>
               <p>{{ project.description }}</p>
@@ -59,7 +59,7 @@
         </h3>
         <ul class="portfolio__list portfolio__list--personal">
           <li class="portfolio__item portfolio__item--personal" v-for="project in projects.personal.list" :key="project">
-            <img class="portfolio__img" :src="project.img.src" width="310" height="160" :alt="project.img.alt">
+            <img class="portfolio__img" :src="project.img.src" width="270" height="140" :alt="project.img.alt">
             <a :href="project.site.link" class="portfolio__link">{{ project.site.name }}</a>
             <p>{{ project.description }}</p>
           </li>
@@ -74,7 +74,7 @@
         </h3>
         <ul class="portfolio__list portfolio__list--study">
           <li class="portfolio__item portfolio__item--study" v-for="project in projects.study.list" :key="project">
-            <img class="portfolio__img" :src="project.img.src" width="310" height="160" :alt="project.img.alt">
+            <img class="portfolio__img" :src="project.img.src" width="270" height="140" :alt="project.img.alt">
             <a :href="project.site.link" class="portfolio__link">{{ project.site.name }}</a>
             <p>{{ project.description }}</p>
           </li>

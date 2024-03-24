@@ -1,5 +1,6 @@
 .portfolio {
   padding: $mobileInt 0;
+  // width: 320px;
 }
 
 .portfolio__title {
@@ -70,9 +71,10 @@
   flex-direction: column;
   align-items: center;
   row-gap: 25px;
-  list-style: none;
+  width: 275px;
   margin-top: 40px;
   padding: 0 20px;
+  list-style: none;
 }
 
 .portfolio__item {

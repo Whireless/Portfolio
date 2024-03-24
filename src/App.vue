@@ -57,9 +57,9 @@
 
           afterLoad.from('.main-nav__button', {y: '-100%', opacity: 0})
           .from('.main-header__title', {x: '-100%', opacity: 0})
-          .from('.main-header__subtitle', {display: 'none', x: '100%', opacity: 0})
+          .from('.main-header__subtitle', {x: '-100%', opacity: 0})
           .from('.main-header__photo', {x: '-100%', opacity: 0})
-          .fromTo('.main-header__button--resume', {x: '100%', opacity: 0}, {x: 0, opacity: 1})
+          .fromTo('.main-header__button--resume', {x: '-100%', opacity: 0}, {x: 0, opacity: 1})
 
           scroll.to('.main-header__intro', {
             x: '-100%',
@@ -192,8 +192,8 @@
             opacity: 0,
             scrollTrigger: {
               trigger: '.main-footer',
-              start: '300px center',
-              end: '340px center',
+              start: '295px center',
+              end: '315px center',
               scrub: true,
             },
           })
