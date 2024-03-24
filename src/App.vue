@@ -55,36 +55,38 @@
 
           // Анимации для мобильной версии
 
-          afterLoad.from('.main-nav__button', {y: '-500%', opacity: 0})
-          .from('.main-header__title', {x: '-500%', opacity: 0})
-          .from('.main-header__subtitle', {x: '-500%', opacity: 0})
-          .from('.main-header__photo', {x: '-500%', opacity: 0})
-          .fromTo('.main-header__button--resume', {x: '-500%', opacity: 0}, {x: 0, opacity: 1})
+          afterLoad.from('.main-nav__button', {y: '-200%', opacity: 0})
+          .from('.main-header__title', {x: '-200%', opacity: 0})
+          .from('.main-header__subtitle', {x: '-200%', opacity: 0})
+          .from('.main-header__photo', {x: '-200%', opacity: 0})
+          .fromTo('.main-header__button--resume', {x: '-200%', opacity: 0}, {x: 0, opacity: 1})
 
           scroll.to('.main-header__intro', {
-            x: '-300%',
+            x: '-100%',
             opacity: 0,
             scrollTrigger: {
-              markers: true,
               trigger: '.main-header',
               start: 'bottom center',
-              end: '900px center',
+              end: '850px center',
               scrub: true,
             },
           }).from('.skills__title', {
             scale: 0,
             opacity: 0,
             scrollTrigger: {
-              trigger: '.main-header',
-              start: '-300px top',
+              trigger: '.skills',
+              start: 'top center',
+              end: '40px center',
               scrub: true,
             },
           }).from(skills[0], {
             x: '-60%',
             opacity: 0,
             scrollTrigger: {
-              trigger: '.main-header',
-              start: '400px center',
+              // markers: true,
+              trigger: '.skills',
+              start: '40px center',
+              end: '100px center',
               scrub: true,
             },
           }).from(skills[1], {
