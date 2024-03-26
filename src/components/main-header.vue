@@ -54,7 +54,7 @@
       <article class="main-header__intro">
         <h1 class="main-header__title">Александр Сидунов</h1>
         <p class="main-header__subtitle">Frontend-разработчик</p>
-        <img class="main-header__photo" src="/img/my-photo.png" width="200" height="200" alt="На этом фото я :)">
+        <img class="main-header__photo" src="/img/my-photo.png" width="225" height="225" alt="На этом фото я :)">
         <a class="main-header__button main-header__button--resume" href="/Portfolio/Sidunov-Alexander.doc" download="">Скачать резюме</a>
       </article>
     </div>

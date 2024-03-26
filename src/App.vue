@@ -51,164 +51,164 @@
         const personalList = gsap.utils.toArray('.portfolio__item--personal');
         const studyList = gsap.utils.toArray('.portfolio__item--study');
 
-        if (window.matchMedia('(min-width: 320px) and (max-width: 767px)').matches) {
+        // if (window.matchMedia('(min-width: 320px) and (max-width: 767px)').matches) {
 
-          // Анимации для мобильной версии
+        //   // Анимации для мобильной версии
 
-          afterLoad.from('.main-nav__button', {y: '-200%', opacity: 0})
-          .from('.main-header__title', {x: '-200%', opacity: 0})
-          .from('.main-header__subtitle', {x: '-200%', opacity: 0})
-          .from('.main-header__photo', {x: '-200%', opacity: 0})
-          .fromTo('.main-header__button--resume', {x: '-200%', opacity: 0}, {x: 0, opacity: 1})
+        //   afterLoad.from('.main-nav__button', {y: '-200%', opacity: 0})
+        //   .from('.main-header__title', {x: '-200%', opacity: 0})
+        //   .from('.main-header__subtitle', {x: '-200%', opacity: 0})
+        //   .from('.main-header__photo', {x: '-200%', opacity: 0})
+        //   .fromTo('.main-header__button--resume', {x: '-200%', opacity: 0}, {x: 0, opacity: 1})
 
-          scroll.to('.main-header__intro', {
-            x: '-100%',
-            opacity: 0,
-            scrollTrigger: {
-              trigger: '.main-header',
-              start: 'bottom center',
-              end: '1000px center',
-              scrub: true,
-            },
-          }).from('.skills__title', {
-            scale: 0,
-            opacity: 0,
-            scrollTrigger: {
-              trigger: '.skills',
-              start: 'top center',
-              end: '85px center',
-              scrub: true,
-            },
-          }).from(skills[0], {
-            x: '-60%',
-            opacity: 0,
-            scrollTrigger: {
-              trigger: '.skills',
-              start: '90px center',
-              end: '200px center',
-              scrub: true,
-            },
-          }).from(skills[1], {
-            display: 'none',
-            x: '60%',
-            opacity: 0,
-            scrollTrigger: {
-              trigger: skills[0],
-              start: 'center center',
-              scrub: true,
-            },
-          }).from(skills[2], {
-            x: '-60%',
-            opacity: 0,
-            scrollTrigger: {
-              trigger: skills[1],
-              start: 'top center',
-              scrub: true,
-            },
-          }).from('.portfolio__title', {
-            scale: 0,
-            opacity: 0,
-            scrollTrigger: {
-              trigger: skills[2],
-              start: 'bottom center',
-              scrub: true,
-            },
-          }).from('.portfolio__subtitle--commercial', {
-            // display: 'none',
-            // x: '60%',
-            scale: 0,
-            opacity: 0,
-            scrollTrigger: {
-              trigger: '.portfolio__title',
-              start: '150px center',
-              end: '400px center',
-              scrub: true,
-            },
-          }).from('.swiper', {
-            scale: 0,
-            opacity: 0,
-            scrollTrigger: {
-              trigger: '.portfolio__title',
-              start: '350px center',
-              end: '450px center',
-              scrub: true,
-            },
-          }).from('.portfolio__subtitle--personal', {
-            x: '-60%',
-            opacity: 0,
-            scrollTrigger: {
-              trigger: '.portfolio__projects--personal',
-              start: '200px center',
-              end: '255px center',
-              scrub: true,
-            },
-          }).from(personalList, {
-            scale: 0,
-            opacity: 0,
-            stagger: 0.9,
-            scrollTrigger: {
-              trigger: '.portfolio__projects--personal',
-              start: '250px center',
-              end: 'bottom center',
-              scrub: true,
-            },
-          }).from('.portfolio__subtitle--study', {
-            // display: 'none',
-            // x: '60%',
-            scale: 0,
-            opacity: 0,
-            scrollTrigger: {
-              trigger: '.portfolio__projects--study',
-              start: '200px center',
-              end: '255px center',
-              scrub: true,
-            },
-          }).from(studyList, {
-            scale: 0,
-            opacity: 0,
-            stagger: 0.9,
-            scrollTrigger: {
-              trigger: '.portfolio__projects--study',
-              start: '300px center',
-              end: 'bottom center',
-              scrub: true,
-            },
-          }).from('.main-footer__title', {
-            scale: 0,
-            opacity: 0,
-            scrollTrigger: {
-              trigger: '.main-footer',
-              // start: '200px center',
-              // end: '255px center',
-              start: 'top center',
-              end: 'center center',
-              scrub: true,
-            },
-          }).from('.main-footer__contact-list', {
-            y: '100%',
-            opacity: 0,
-            scrollTrigger: {
-              trigger: '.main-footer',
-              start: '150px center',
-              end: '220px center',
-              // start: 'top center',
-              // end: 'center center',
-              scrub: true,
-            },
-          }).from('.main-footer__copyright', {
-            x: '-60%',
-            opacity: 0,
-            scrollTrigger: {
-              markers: true,
-              trigger: '.main-footer',
-              start: '180px center',
-              end: '275px center',
-              // start: 'top center',
-              // end: 'center center',
-              scrub: true,
-            },
-          })
-        } else if (window.matchMedia('(min-width: 768px)').matches) {
+        //   scroll.to('.main-header__intro', {
+        //     x: '-100%',
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: '.main-header',
+        //       start: 'bottom center',
+        //       end: '1000px center',
+        //       scrub: true,
+        //     },
+        //   }).from('.skills__title', {
+        //     scale: 0,
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: '.skills',
+        //       start: 'top center',
+        //       end: '85px center',
+        //       scrub: true,
+        //     },
+        //   }).from(skills[0], {
+        //     x: '-60%',
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: '.skills',
+        //       start: '90px center',
+        //       end: '200px center',
+        //       scrub: true,
+        //     },
+        //   }).from(skills[1], {
+        //     display: 'none',
+        //     x: '60%',
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: skills[0],
+        //       start: 'center center',
+        //       scrub: true,
+        //     },
+        //   }).from(skills[2], {
+        //     x: '-60%',
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: skills[1],
+        //       start: 'top center',
+        //       scrub: true,
+        //     },
+        //   }).from('.portfolio__title', {
+        //     scale: 0,
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: skills[2],
+        //       start: 'bottom center',
+        //       scrub: true,
+        //     },
+        //   }).from('.portfolio__subtitle--commercial', {
+        //     // display: 'none',
+        //     // x: '60%',
+        //     scale: 0,
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: '.portfolio__title',
+        //       start: '150px center',
+        //       end: '400px center',
+        //       scrub: true,
+        //     },
+        //   }).from('.swiper', {
+        //     scale: 0,
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: '.portfolio__title',
+        //       start: '350px center',
+        //       end: '450px center',
+        //       scrub: true,
+        //     },
+        //   }).from('.portfolio__subtitle--personal', {
+        //     x: '-60%',
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: '.portfolio__projects--personal',
+        //       start: '200px center',
+        //       end: '255px center',
+        //       scrub: true,
+        //     },
+        //   }).from(personalList, {
+        //     scale: 0,
+        //     opacity: 0,
+        //     stagger: 0.9,
+        //     scrollTrigger: {
+        //       trigger: '.portfolio__projects--personal',
+        //       start: '250px center',
+        //       end: 'bottom center',
+        //       scrub: true,
+        //     },
+        //   }).from('.portfolio__subtitle--study', {
+        //     // display: 'none',
+        //     // x: '60%',
+        //     scale: 0,
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: '.portfolio__projects--study',
+        //       start: '200px center',
+        //       end: '255px center',
+        //       scrub: true,
+        //     },
+        //   }).from(studyList, {
+        //     scale: 0,
+        //     opacity: 0,
+        //     stagger: 0.9,
+        //     scrollTrigger: {
+        //       trigger: '.portfolio__projects--study',
+        //       start: '300px center',
+        //       end: 'bottom center',
+        //       scrub: true,
+        //     },
+        //   }).from('.main-footer__title', {
+        //     scale: 0,
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: '.main-footer',
+        //       // start: '200px center',
+        //       // end: '255px center',
+        //       start: 'top center',
+        //       end: 'center center',
+        //       scrub: true,
+        //     },
+        //   }).from('.main-footer__contact-list', {
+        //     y: '100%',
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: '.main-footer',
+        //       start: '150px center',
+        //       end: '220px center',
+        //       // start: 'top center',
+        //       // end: 'center center',
+        //       scrub: true,
+        //     },
+        //   }).from('.main-footer__copyright', {
+        //     x: '-60%',
+        //     opacity: 0,
+        //     scrollTrigger: {
+        //       trigger: '.main-footer',
+        //       start: '180px center',
+        //       end: '275px center',
+        //       // start: 'top center',
+        //       // end: 'center center',
+        //       scrub: true,
+        //     },
+        //   })
+        // } else
+        if (window.matchMedia('(min-width: 768px)').matches) {
 
           // Анимации для планшета
 

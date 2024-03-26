@@ -41,7 +41,7 @@
               effect="coverflow"
               :speed="600">
           <swiper-slide v-for="project in projects.commercial.list" :key="project">
-            <img class="portfolio__project-image" :src="project.img.src" :alt="project.img.alt" width="270" height="190">
+            <img class="portfolio__project-img" :src="project.img.src" :alt="project.img.alt" width="270" height="190">
             <article class="portfolio__project-info">
               <a class="portfolio__project-link portfolio__project-link--site" :href="project.site.link">{{ project.site.name }}</a>
               <p>{{ project.description }}</p>

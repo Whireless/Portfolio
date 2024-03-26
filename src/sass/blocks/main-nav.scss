@@ -136,6 +136,18 @@
   }
 }
 
+@media (min-width: $smart) {
+  .main-nav__button {
+    &--theme {
+      left: 20px;
+    }
+
+    &--nav {
+      right: 20px;
+    }
+  }
+}
+
 @media (min-width: $tablet) {
   .main-nav {
     display: flex;
