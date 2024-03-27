@@ -1,6 +1,5 @@
 .portfolio {
   padding: $mobileInt 0;
-  // width: 320px;
 }
 
 .portfolio__title {
@@ -54,6 +53,9 @@
   flex-direction: column;
   align-items: center;
   row-gap: 5px;
+  border: 1px solid $blackColor;
+  border-radius: 20px;
+  padding: 5px 0;
 }
 
 .portfolio__project-link {
@@ -73,7 +75,7 @@
   row-gap: 25px;
   width: 275px;
   margin-top: 40px;
-  padding: 0 20px;
+  // padding: 0 15px;
   list-style: none;
 }
 
@@ -83,7 +85,7 @@
   flex-direction: column;
   align-items: center;
   row-gap: 15px;
-  padding: 10px;
+  padding: 6px;
   border: 1px solid $blackColor;
   border-radius: 20px;
 }
@@ -103,15 +105,20 @@
 
 @media (min-width: $smart) {
   .portfolio__project-img {
-    width: 300px;
+    width: 320px;
+  }
+
+  .portfolio__project-info {
+    row-gap: 10px;
   }
 
   .portfolio__item {
     width: 308px;
+    padding: 9px;
   }
 
   .portfolio__img {
-    width: 300px;
+    width: 315px;
     height: 170px;
   }
 }
@@ -150,6 +157,7 @@
   .portfolio__project-info {
     font-size: 20px;
     padding: 15px 0;
+    width: 638px;
   }
 
   .portfolio__item {
@@ -158,8 +166,8 @@
   }
 
   .portfolio__img {
-    width: 475px;
-    height: 250px;
+    width: 520px;
+    height: 285px;
   }
 }
 
@@ -225,7 +233,8 @@
   }
 
   .portfolio__img {
-    width: 450px;
+    width: 455px;
+    height: 260px;
   }
 }
 

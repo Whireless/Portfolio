@@ -166,11 +166,6 @@
       padding: 3px;
       background-color: transparent;
       border: 1px solid $blackColor;
-
-      .main-nav__icon {
-        width: 95%;
-        height: 95%;
-      }
     }
 
     &--nav {
@@ -213,9 +208,14 @@
   }
 
   .main-nav__icon {
+    &--theme {
+      width: 95%;
+      height: 95%;
+    }
+
     &--link {
-      width: 27px;
-      height: 27px;
+      width: 24px;
+      height: 24px;
     }
   }
 }

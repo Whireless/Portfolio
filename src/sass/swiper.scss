@@ -2,11 +2,8 @@
   position: relative;
   display: grid;
   width: 280px;
-  height: 285px;
+  height: 300px;
   margin: 60px auto 0 auto;
-  padding: 10px 5px;
-  border: 1px solid $blackColor;
-  border-radius: 20px;
 }
 
 .swiper-slide {
@@ -15,7 +12,7 @@
   align-items: center;
   row-gap: 15px;
   width: 280px;
-  height: 170px;
+  height: 165px;
 }
 
 .swiper-button-prev,
@@ -51,13 +48,14 @@
 @media (min-width: $smart) {
   .swiper {
     width: 318px;
+    height: 325px;
   }
 }
 
 @media (min-width: $tablet) {
   .swiper {
     width: 638px;
-    height: 480px;
+    height: 490px;
     margin: 70px auto 0 auto;
     padding: 15px;
   }

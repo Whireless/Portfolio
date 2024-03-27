@@ -85,16 +85,16 @@
     }
   }
 
+  .portfolio__project-info {
+    border: 1px solid $whiteColor;
+  }
+
   .portfolio__pagination {
     background-color: $greyColor5;
 
     span {
       background-color: $whiteColor;
     }
-  }
-
-  .swiper {
-    border: 1px solid $whiteColor;
   }
 
   .swiper-pagination {
