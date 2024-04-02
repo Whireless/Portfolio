@@ -52,14 +52,29 @@ export const useGlobalStore = defineStore('globalStore', {
         list: [
           {
             img: {
+              src: 'img/projects/commercial/Avicenna.png',
+              alt: '',
+            },
+            site: {
+              name: 'avicenna-taganrog.ru',
+              link: 'https://avicenna-taganrog.ru',
+            },
+            description: 'Сайт стоматологии в Таганроге "АвиценнА"',
+            github: {
+              name: 'github/stomatology',
+              link: 'https://github.com/Whireless/stomatology',
+            },
+          },
+          {
+            img: {
               src: 'img/projects/commercial/Saturn-Braids.png',
-              alt: 'Плетут шикарные дреды, кудри и брейды в Питере.',
+              alt: 'Плетут шикарные дреды, кудри и брейды в Питере',
             },
             site: {
               name: 'saturnbraids.ru',
               link: 'https://saturnbraids.ru',
             },
-            description: 'Сайт студии афро-причёсок в Санкт-Петербурге.',
+            description: 'Сайт студии афро-причёсок в Санкт-Петербурге',
             github: {
               name: 'github/saturnbraids',
               link: 'https://github.com/Whireless/saturn-braids',
