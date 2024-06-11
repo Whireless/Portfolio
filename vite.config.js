@@ -16,6 +16,13 @@ export default defineConfig({
   build: {
     outDir: './build',
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/sass/variables.scss";`,
+      },
+    },
+  },
   plugins: [
     vue(),
     ViteImageOptimizer({

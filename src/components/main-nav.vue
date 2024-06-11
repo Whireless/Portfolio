@@ -1,3 +1,57 @@
+<script>
+  import { useGlobalStore } from '../store';
+  import { storeToRefs } from 'pinia';
+
+  export default {
+    setup() {
+      const { navIsOpen, themeIcon } = storeToRefs(useGlobalStore());
+      const { openMenu, changeTheme, navList } = useGlobalStore();
+      return {
+        navIsOpen,
+        themeIcon,
+        openMenu,
+        changeTheme,
+        navList,
+      }
+    },
+  }
+</script>
+
+<template>
+  <nav :class="['main-nav', {'main-nav--open' : navIsOpen}]">
+    <button class="main-nav__button main-nav__button--theme"
+            type="button"
+            @click="changeTheme()"
+            aria-label="Сменить тему">
+      <svg class="main-nav__icon main-nav__icon--theme" width="35" height="35">
+        <use :href="themeIcon"></use>
+      </svg>
+    </button>
+    <button class="main-nav__button main-nav__button--nav"
+            @click="openMenu()"
+            aria-label="Открыть меню">
+      <span class="main-nav__nav-span"></span>
+      <span class="main-nav__nav-span"></span>
+      <span class="main-nav__nav-span"></span>
+    </button>
+    <ul class="main-nav__nav-list">
+      <li class="main-nav__nav-item"
+          v-for="li in navList"
+          :key="li">
+          <a class="main-nav__nav-link"
+              :href="li.href"
+              @click="openMenu(true)">
+              <svg class="main-nav__icon main-nav__icon--link" width="30" height="30">
+              <use :href="li.icon"></use>
+              </svg>
+              {{ li.text }}
+          </a>
+      </li>
+    </ul>
+  </nav>
+</template>
+
+<style lang="scss">
 .main-nav {
   position: fixed;
   top: 0;
@@ -252,3 +306,4 @@
     }
   }
 }
+</style>
