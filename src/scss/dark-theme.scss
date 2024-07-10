@@ -1,0 +1,28 @@
+.dark-theme {
+  color: $whitesmoke;
+  background-color: $black2;
+
+  .main-nav {
+    background-color: $black2;
+  }
+
+  .main-nav__link {
+    color: $whitesmoke;
+  }
+
+  .main-header {
+    background-color: $black2;
+  }
+
+  .contacts {
+    background-color: $black2;
+  }
+
+  .contacts__icon {
+    fill: $whitesmoke;
+  }
+
+  .main-footer {
+    background-color: $black;
+  }
+}

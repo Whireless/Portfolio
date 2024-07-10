@@ -1,0 +1,162 @@
+// Анимация мобильного меню
+
+@keyframes topOpen {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes topClose {
+  0% {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes mdlOpen {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes mdlClose {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes btmOpen {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 10px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes btmClose {
+  0% {
+    bottom: 10px;
+    transform: rotate(-45deg);
+  }
+  50% {
+    bottom: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+// Анимация ободка фото
+
+// @keyframes photoBorder {
+//   0% {
+//     border: 3px solid $green;
+//     border-radius: 50%;
+//   } 50% {
+//     border: 3px solid $whitesmoke;
+//     border-radius: 50%;
+//   } 100% {
+//     border: 3px solid $green;
+//     border-radius: 50%;
+//   }
+// }
+
+// Параллелограмы
+
+// @keyframes photoBorder {
+//   0% {
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); // Квадрат
+//   }
+//   30% {
+//     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); // Параллелограм
+//   }
+//   50% {
+//     // clip-path: polygon(42% 57%, 54% 58%, 55% 46%, 43% 44%); // Мелкий разворот
+//     // clip-path: polygon(41% 60%, 51% 60%, 55% 49%, 45% 49%);
+//     clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+//   }
+//   100% {
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); // Квадрат
+//   }
+// }
+
+// Треугольники
+
+// @keyframes photoBorder {
+//   0% {
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); // Квадрат
+//   }
+//   30% {
+//     clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%); // Верхний угол
+//   }
+//   50% {
+//     clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%); // Нижний угол
+//   }
+//   100% {
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); // Квадрат
+//   }
+// }
+
+// Треугольники 2
+
+// @keyframes photoBorder {
+//   0% {
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); // Квадрат
+//   }
+//   15% {
+//     clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%); // Верхний угол
+//   }
+//   30% {
+//     clip-path: polygon(100% 50%, 100% 50%, 0 100%, 0 0); // Правый угол
+//   }
+//   45% {
+//     clip-path: polygon(50% 100%, 50% 100%, 0 0, 100% 0); // Нижний угол
+//   }
+//   60% {
+//     clip-path: polygon(0 50%, 0 50%, 100% 0, 100% 100%); // Левый угол
+//   }
+//   75% {
+//     clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%); // Верхний угол
+//   }
+//   100% {
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); // Квадрат
+//   }
+// }

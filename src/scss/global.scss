@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cera Pro', 'Arial', sans-serif;
+  font-size: 16px;
+  color: $black2;
+  min-width: 320px;
+  height: 100vh;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+main {
+  transition: 0.5s;
+}
