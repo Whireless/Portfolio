@@ -128,7 +128,7 @@ export default {
   }
 
   @media (min-width: $tablet) {
-    row-gap: 70px;
+    row-gap: 75px;
     margin: 40px auto 0 auto;
   }
 
@@ -186,8 +186,8 @@ export default {
   border-radius: 15px;
 
   @media (min-width: $smart) {
-    width: 345px;
-    height: 175px;
+    width: 340px;
+    height: 170px;
   }
 
   @media (min-width: $tablet) {
