@@ -82,14 +82,20 @@ export default {
   text-align: center;
   color: $green;
   width: max-content;
-  margin: 10px auto 0 auto;
+  margin: 20px auto 0 auto;
   padding: 2px 8px;
   border: 1px solid $green;
   border-radius: 20px;
   opacity: 0.8;
 
   &--pets {
-    margin-top: 20px;
+    margin-top: 30px;
+  }
+
+  @media (min-width: $smart) {
+    &--pets {
+    margin-top: 40px;
+  }
   }
 
   @media (min-width: $tablet) {
@@ -102,6 +108,8 @@ export default {
   }
 
   @media (min-width: $desktop) {
+    margin-top: 20px;
+
     &--pets {
       margin-top: 90px;
     }
@@ -112,8 +120,12 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 35px;
+  row-gap: 50px;
   margin: 25px auto 0 auto;
+
+  @media (min-width: $smart) {
+    row-gap: 60px;
+  }
 
   @media (min-width: $tablet) {
     row-gap: 70px;
@@ -121,7 +133,7 @@ export default {
   }
 
   @media (min-width: $desktop) {
-    row-gap: 90px;
+    row-gap: 95px;
     margin: 60px auto 0 auto;
   }
 
@@ -135,7 +147,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 11px 5px;
 
   @media (min-width: $tablet) {
     flex-direction: row;
@@ -174,14 +185,19 @@ export default {
   box-shadow: 1px 1px 5px 1px $green;
   border-radius: 15px;
 
-  @media (min-width: $tablet) {
-    width: 335px;
+  @media (min-width: $smart) {
+    width: 345px;
     height: 175px;
   }
 
+  @media (min-width: $tablet) {
+    width: 370px;
+    height: 195px;
+  }
+
   @media (min-width: $desktop) {
-    width: 375px;
-    height: 190px;
+    width: 400px;
+    height: 210px;
   }
 
   @media (min-width: $laptop) {
@@ -196,6 +212,10 @@ export default {
   align-items: center;
   row-gap: 15px;
   margin-top: 20px;
+
+  @media (min-width: $smart) {
+    row-gap: 20px;
+  }
 
   @media (min-width: $tablet) {
     text-align: center;
