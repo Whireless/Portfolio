@@ -17,7 +17,7 @@
         </ul>
         <article class="main-header__resume-block">
           <img class="main-header__photo" width="60" height="60" src="/img/my-photo.png" alt="Моё фото"/>
-          <a class="main-header__link main-header__link--resume" href="" download="">Скачать резюме</a>
+          <a class="main-header__link main-header__link--resume" href="/public/Sidunov-Alexander.doc" download="">Скачать резюме</a>
         </article>
       </article>
     </div>

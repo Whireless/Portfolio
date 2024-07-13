@@ -15,7 +15,7 @@
             </svg>
           </div>
           <div class="projects__links">
-            <a class="projects__link" :href="li.site.link">Посмотреть сайт</a>
+            <a class="projects__link" :href="li.site.link">На сайт</a>
             <a class="projects__link" :href="li.github">Код проекта</a>
           </div>
         </article>
@@ -34,7 +34,7 @@
             </svg>
           </div>
           <div class="projects__links">
-            <a class="projects__link" :href="li.site.link">Посмотреть сайт</a>
+            <a class="projects__link" :href="li.site.link">На сайт</a>
             <a class="projects__link" :href="li.github">Код проекта</a>
           </div>
         </article>
@@ -79,12 +79,13 @@ export default {
 }
 
 .projects__sub {
+  text-transform: uppercase;
   text-align: center;
-  color: $green;
+  letter-spacing: 1px;
+  color: $grey2;
   width: max-content;
   margin: 20px auto 0 auto;
   padding: 2px 8px;
-  border: 1px solid $green;
   border-radius: 20px;
   opacity: 0.8;
 
@@ -108,7 +109,7 @@ export default {
   }
 
   @media (min-width: $desktop) {
-    margin-top: 20px;
+    margin-top: 35px;
 
     &--pets {
       margin-top: 90px;
@@ -120,21 +121,21 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 50px;
+  row-gap: 60px;
   margin: 25px auto 0 auto;
 
   @media (min-width: $smart) {
-    row-gap: 60px;
+    row-gap: 70px;
   }
 
   @media (min-width: $tablet) {
-    row-gap: 75px;
+    row-gap: 80px;
     margin: 40px auto 0 auto;
   }
 
   @media (min-width: $desktop) {
-    row-gap: 95px;
-    margin: 60px auto 0 auto;
+    row-gap: 100px;
+    margin: 50px auto 0 auto;
   }
 
   @media (min-width: $laptop) {
@@ -157,7 +158,7 @@ export default {
     transition: 0.5s;
 
     &:hover {
-      transform: scale(1.06);
+      transform: scale(1.02);
       box-shadow: 1px 1px 5px 1px $green;
     }
 
@@ -182,7 +183,7 @@ export default {
 }
 
 .projects__img {
-  box-shadow: 1px 1px 5px 1px $green;
+  box-shadow: 1px 1px 3px 1px $green;
   border-radius: 15px;
 
   @media (min-width: $smart) {
@@ -191,13 +192,13 @@ export default {
   }
 
   @media (min-width: $tablet) {
-    width: 370px;
-    height: 195px;
+    width: 385px;
+    height: 200px;
   }
 
   @media (min-width: $desktop) {
-    width: 400px;
-    height: 210px;
+    width: 425px;
+    height: 220px;
   }
 
   @media (min-width: $laptop) {
@@ -221,11 +222,12 @@ export default {
     text-align: center;
     width: 280px;
     margin-top: 0;
-    padding: 7px 8px 7px 0;
+    padding: 8px 8px 8px 0;
   }
 
   @media (min-width: $desktop) {
     width: 330px;
+    padding: 11px 8px 11px 0;
   }
 
   @media (min-width: $laptop) {
@@ -241,24 +243,47 @@ export default {
 .projects__technologies {
   display: flex;
   column-gap: 7px;
-  border: 1px solid $grey2;
-  border-radius: 15px;
-  padding: 2px 15px;
+
+  @media (min-width: $smart) {
+    column-gap: 9px;
+  }
+
+  @media (min-width: $desktop) {
+    column-gap: 15px;
+  }
+
+  @media (min-width: $laptop) {
+    column-gap: 20px;
+  }
 }
 
 .projects__links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  row-gap: 15px;
   width: 100%;
 }
 
 .projects__link {
-  color: $grey2;
+  color: $green;
   text-decoration: none;
   transition: 0.5s;
+  width: max-content;
+  padding: 2px 9px;
+  border: 1px solid $green;
+  border-radius: 25px;
 
   &:hover {
-    color: $green;
+    color: $white;
+    background-color: $green;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 3px 12px;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 5px 20px;
   }
 }
 </style>
