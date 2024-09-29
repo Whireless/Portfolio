@@ -85,17 +85,21 @@ export default {
     }
   }
 
+  @media (min-width: $smart) {
+    padding: 13px 35px;
+  }
+
   @media (min-width: $tablet) {
     background-color: inherit;
-    padding: 15px 40px;
+    padding: 15px 45px;
   }
 
   @media (min-width: $desktop) {
-    padding: 15px 80px;
+    padding: 17px 80px;
   }
 
   @media (min-width: $laptop) {
-    padding: 15px 120px;
+    padding: 18px 120px;
   }
 }
 
@@ -124,11 +128,11 @@ export default {
   }
 
   @media (min-width: $desktop) {
-    column-gap: 60px;
+    column-gap: 70px;
   }
 
   @media (min-width: $laptop) {
-    column-gap: 75px;
+    column-gap: 90px;
   }
 }
 

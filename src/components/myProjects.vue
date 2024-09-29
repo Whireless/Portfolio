@@ -9,11 +9,7 @@
         <article class="projects__info">
           <h3 class="projects__subtitle">{{ li.name }}</h3>
           <p class="projects__description">{{ li.description }}</p>
-          <div class="projects__technologies">
-            <svg class="projects__technologies-icon" v-for="icon in li.technologies" :key="icon" width="25" height="25">
-              <use :href="icon"></use>
-            </svg>
-          </div>
+          <p class="projects__year">{{ li.year }}</p>
           <div class="projects__links">
             <a class="projects__link" :href="li.site.link">На сайт</a>
             <a class="projects__link" :href="li.github">Код проекта</a>
@@ -28,11 +24,7 @@
         <article class="projects__info">
           <h3 class="projects__subtitle">{{ li.name }}</h3>
           <p class="projects__description">{{ li.description }}</p>
-          <div class="projects__technologies">
-            <svg class="projects__technologies-icon" v-for="icon in li.technologies" :key="icon" width="25" height="25">
-              <use :href="icon"></use>
-            </svg>
-          </div>
+          <p class="projects__year">{{ li.year }}</p>
           <div class="projects__links">
             <a class="projects__link" :href="li.site.link">На сайт</a>
             <a class="projects__link" :href="li.github">Код проекта</a>
@@ -95,8 +87,8 @@ export default {
 
   @media (min-width: $smart) {
     &--pets {
-    margin-top: 40px;
-  }
+      margin-top: 40px;
+    }
   }
 
   @media (min-width: $tablet) {
@@ -129,12 +121,12 @@ export default {
   }
 
   @media (min-width: $tablet) {
-    row-gap: 80px;
+    row-gap: 90px;
     margin: 40px auto 0 auto;
   }
 
   @media (min-width: $desktop) {
-    row-gap: 100px;
+    row-gap: 120px;
     margin: 50px auto 0 auto;
   }
 
@@ -152,23 +144,13 @@ export default {
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-around;
-    column-gap: 35px;
+    column-gap: 40px;
     padding: 0;
     border-radius: 20px;
-    transition: 0.5s;
-
-    &:hover {
-      transform: scale(1.02);
-      box-shadow: 1px 1px 5px 1px $green;
-    }
 
     &:nth-child(even) {
       .projects__img {
         order: 1,
-      }
-
-      .projects__info {
-        padding: 7px 0 7px 8px;
       }
     }
   }
@@ -187,18 +169,18 @@ export default {
   border-radius: 15px;
 
   @media (min-width: $smart) {
-    width: 340px;
-    height: 170px;
+    width: 350px;
+    height: 175px;
   }
 
   @media (min-width: $tablet) {
-    width: 385px;
-    height: 200px;
+    width: 320px;
+    height: 160px;
   }
 
   @media (min-width: $desktop) {
     width: 425px;
-    height: 220px;
+    height: 210px;
   }
 
   @media (min-width: $laptop) {
@@ -210,34 +192,46 @@ export default {
 .projects__info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  row-gap: 15px;
-  margin-top: 20px;
+  row-gap: 12px;
+  margin-top: 25px;
 
   @media (min-width: $smart) {
-    row-gap: 20px;
+    width: 100%;
   }
 
   @media (min-width: $tablet) {
-    text-align: center;
-    width: 280px;
+    align-self: start;
     margin-top: 0;
-    padding: 8px 8px 8px 0;
+    padding: 0;
+    row-gap: 13px;
   }
 
   @media (min-width: $desktop) {
-    width: 330px;
-    padding: 11px 8px 11px 0;
+    row-gap: 22px;
   }
 
   @media (min-width: $laptop) {
     width: 450px;
-    row-gap: 25px;
+    row-gap: 30px;
+  }
+}
+
+.projects__subtitle {
+  width: max-content;
+  border-bottom: 1px solid $green;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 2px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 4px;
   }
 }
 
 .projects__description {
-  text-align: center;
+  text-align: justify;
+  font-weight: 100;
 }
 
 .projects__technologies {
@@ -259,9 +253,23 @@ export default {
 
 .projects__links {
   display: flex;
-  justify-content: space-evenly;
-  row-gap: 15px;
-  width: 100%;
+  column-gap: 15px;
+
+  @media (min-width: $smart) {
+    column-gap: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    column-gap: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    column-gap: 30px;
+  }
+
+  @media (min-width: $laptop) {
+    column-gap: 35px;
+  }
 }
 
 .projects__link {
@@ -278,8 +286,16 @@ export default {
     background-color: $green;
   }
 
+  @media (min-width: $smart) {
+    padding: 3px 11px;
+  }
+
   @media (min-width: $tablet) {
     padding: 3px 12px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 4px 15px;
   }
 
   @media (min-width: $laptop) {

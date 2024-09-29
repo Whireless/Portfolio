@@ -45,41 +45,46 @@ export default {
 
 <style lang="scss">
 .main-header {
-  padding-top: 63px;
+  padding-top: 62px;
   background-color: $grey;
   transition: 0.5s;
+
+  @media (min-width: $smart) {
+    padding-top: 64px;
+  }
 
   @media (min-width: $tablet) {
     padding-top: 68px;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 73px;
+    padding-top: 77px;
   }
 
   @media (min-width: $laptop) {
-    padding-top: 78px;
+    padding-top: 84px;
   }
 }
 
 .main-header__title {
-  font-size: 30px;
+  font-size: 33px;
+  line-height: 45px;
   text-align: center;
 
   @media (min-width: $tablet) {
     font-size: 50px;
-    line-height: 52px;
+    line-height: 53px;
   }
 
   @media (min-width: $desktop) {
-    font-size: 55px;
-    line-height: 57px;
+    font-size: 58px;
+    line-height: 62px;
     text-align: left;
   }
 
   @media (min-width: $laptop) {
     font-size: 60px;
-    line-height: 62px;
+    line-height: 64px;
   }
 }
 
@@ -92,7 +97,7 @@ export default {
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 600px max-content;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     grid-template-rows: 120px 150px 75px;
   }
@@ -201,7 +206,7 @@ export default {
   @media (min-width: $desktop) {
     grid-row: 1/5;
     grid-column: 2;
-    align-self: top;
+    align-self: start;
     margin-top: 0;
     row-gap: 18px;
   }
@@ -221,6 +226,11 @@ export default {
     height: 250px;
     // border-radius: 0;
     // animation: ease 6s photoBorder infinite;
+  }
+
+  @media (min-width: $desktop) {
+    width: 265px;
+    height: 265px;
   }
 
   @media (min-width: $laptop) {

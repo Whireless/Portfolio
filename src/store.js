@@ -30,12 +30,26 @@ export const useGlobalStore = defineStore('globalStore', {
       commercial: [
         {
           img: {
+            src: 'img/projects/Maxplumber.png',
+            alt: '',
+          },
+          name: 'Частный сантехник',
+          description: 'Ремонт сантехники в Ростове на Дону',
+          year: '2024',
+          site: {
+            name: '',
+            link: '',
+          },
+          github: 'https://github.com/Whireless/plumber',
+        },
+        {
+          img: {
             src: 'img/projects/Avicenna.png',
             alt: '',
           },
-          name: 'Стоматология Авиценна',
-          description: 'Сайт стоматологической клиники в Таганроге',
-          technologies: ['#scss', '#vue'],
+          name: 'Стоматология "Авиценна"',
+          description: 'Стоматологическая клиника в Таганроге',
+          year: '2024',
           site: {
             name: 'avicenna-taganrog.ru',
             link: 'https://avicenna-taganrog.ru',
@@ -47,9 +61,9 @@ export const useGlobalStore = defineStore('globalStore', {
             src: 'img/projects/Saturn-Braids.png',
             alt: 'Плетут шикарные дреды, кудри и брейды в Питере',
           },
-          name: 'Афростудия Saturn Braids',
-          description: 'Сайт студии афро-причёсок в Санкт-Петербурге',
-          technologies: ['#scss', '#vue'],
+          name: 'Афростудия "Saturn Braids"',
+          description: 'Студия афро-причёсок в Санкт-Петербурге',
+          year: '2024',
           site: {
             name: 'saturnbraids.ru',
             link: 'https://saturnbraids.ru',
@@ -61,9 +75,9 @@ export const useGlobalStore = defineStore('globalStore', {
             src: 'img/projects/Andrestatix.png',
             alt: 'Если хочешь стать греческим атлетом - тебе сюда.',
           },
-          name: 'Курсы развития тела',
+          name: 'Тренер по стритлифтингу',
           description: 'Курсы для развития силовых качеств твоего тела',
-          technologies: ['#html', '#scss', '#js'],
+          year: '2023',
           site: {
             name: 'andrestatix.com',
             link: 'https://andrestatix.com',
@@ -79,7 +93,7 @@ export const useGlobalStore = defineStore('globalStore', {
           },
           name: '.easyпогода',
           description: 'Сайт позволяющий узнать погоду в любой точке мира',
-          technologies: ['#vue', '#scss'],
+          year: '2023',
           site: {
             name: 'easyweather',
             link: 'https://whireless.github.io/weather/',
