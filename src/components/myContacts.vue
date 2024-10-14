@@ -83,7 +83,7 @@ export default {
   align-items: center;
   column-gap: 15px;
   width: max-content;
-  transition: 0.5s;
+  transition: 0.4s;
 
   &:hover {
     color: $green;

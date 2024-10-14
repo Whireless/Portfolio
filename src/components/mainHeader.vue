@@ -124,7 +124,7 @@ export default {
   }
 
   @media (min-width: $laptop) {
-    line-height: 30px;
+    line-height: 31px;
     text-align: justify;
   }
 }

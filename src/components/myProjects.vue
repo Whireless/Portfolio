@@ -2,36 +2,38 @@
 <section class="projects" id="projects">
   <div class="container">
     <h2 class="projects__title">Проекты</h2>
-    <p class="projects__sub projects__sub--commercial">коммерческие</p>
-    <ul class="projects__list projects__list--commercial">
-      <li class="projects__item" v-for="li in projects.commercial" :key="li">
-        <img class="projects__img" :src="li.img.src" width="280" height="145" :alt="li.img.alt">
-        <article class="projects__info">
-          <h3 class="projects__subtitle">{{ li.name }}</h3>
-          <p class="projects__description">{{ li.description }}</p>
-          <p class="projects__year">{{ li.year }}</p>
-          <div class="projects__links">
-            <a class="projects__link" :href="li.site.link">На сайт</a>
-            <a class="projects__link" :href="li.github">Код проекта</a>
-          </div>
-        </article>
-      </li>
-    </ul>
-    <p class="projects__sub projects__sub--pets">pet-проекты</p>
-    <ul class="projects__list projects__list--pets">
-      <li class="projects__item" v-for="li in projects.pets" :key="li">
-        <img class="projects__img" :src="li.img.src" width="280" height="145" :alt="li.img.alt">
-        <article class="projects__info">
-          <h3 class="projects__subtitle">{{ li.name }}</h3>
-          <p class="projects__description">{{ li.description }}</p>
-          <p class="projects__year">{{ li.year }}</p>
-          <div class="projects__links">
-            <a class="projects__link" :href="li.site.link">На сайт</a>
-            <a class="projects__link" :href="li.github">Код проекта</a>
-          </div>
-        </article>
-      </li>
-    </ul>
+    <article class="projects__all projects__all--commercial">
+      <h3 class="projects__sub projects__sub--commercial">коммерческие</h3>
+      <ul class="projects__list projects__list--commercial">
+        <li class="projects__item" v-for="li in projects.commercial" :key="li">
+          <img class="projects__img" :src="li.img.src" width="280" height="145" :alt="li.img.alt">
+          <article class="projects__block">
+            <a class="projects__subtitle" :href="li.site.link">{{ li.site.name }}</a>
+            <p class="projects__description">{{ li.description }}</p>
+            <div class="projects__info">
+              <a class="projects__code" :href="li.github">Код проекта</a>
+              <p class="projects__year">{{ li.year }}</p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </article>
+    <article class="projects__all projects__all--pets">
+      <h3 class="projects__sub projects__sub--pets">pet-проекты</h3>
+      <ul class="projects__list projects__list--pets">
+        <li class="projects__item" v-for="li in projects.pets" :key="li">
+          <img class="projects__img" :src="li.img.src" width="280" height="145" :alt="li.img.alt">
+          <article class="projects__block">
+            <a class="projects__subtitle" :href="li.site.link">{{ li.site.name }}</a>
+            <p class="projects__description">{{ li.description }}</p>
+            <div class="projects__info">
+              <a class="projects__code" :href="li.github">Код проекта</a>
+              <p class="projects__year">{{ li.year }}</p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </article>
   </div>
 </section>
 </template>
@@ -70,17 +72,7 @@ export default {
   }
 }
 
-.projects__sub {
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1px;
-  color: $grey2;
-  width: max-content;
-  margin: 20px auto 0 auto;
-  padding: 2px 8px;
-  border-radius: 20px;
-  opacity: 0.8;
-
+.projects__all {
   &--pets {
     margin-top: 30px;
   }
@@ -92,20 +84,32 @@ export default {
   }
 
   @media (min-width: $tablet) {
-    margin-top: 15px;
-    padding: 5px 14px;
-
     &--pets {
       margin-top: 60px;
     }
   }
 
   @media (min-width: $desktop) {
-    margin-top: 35px;
-
     &--pets {
       margin-top: 90px;
     }
+  }
+}
+
+.projects__sub {
+  font-weight: 100;
+  text-align: center;
+  color: $grey2;
+  width: max-content;
+  margin: 20px auto 0 auto;
+  opacity: 0.8;
+
+  @media (min-width: $tablet) {
+    margin-top: 15px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 35px;
   }
 }
 
@@ -140,6 +144,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  // align-content: center;
+  // justify-content: center;
 
   @media (min-width: $tablet) {
     flex-direction: row;
@@ -189,7 +195,7 @@ export default {
   }
 }
 
-.projects__info {
+.projects__block {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
@@ -200,7 +206,7 @@ export default {
   }
 
   @media (min-width: $tablet) {
-    align-self: start;
+    // align-self: start;
     margin-top: 0;
     padding: 0;
     row-gap: 13px;
@@ -217,15 +223,26 @@ export default {
 }
 
 .projects__subtitle {
+  font-weight: bold;
+  // color: $green;
+  color: $grey2;
+  text-decoration: none;
   width: max-content;
-  border-bottom: 1px solid $green;
+  border-bottom: 1px solid $grey2;
+  transition: 0.4s;
+
+  &:hover {
+    // color: $black2;
+    color: $green;
+    border-bottom: 1px solid $green;
+  }
 
   @media (min-width: $tablet) {
     padding-bottom: 2px;
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 4px;
+    padding-bottom: 3px;
   }
 }
 
@@ -251,7 +268,7 @@ export default {
   }
 }
 
-.projects__links {
+.projects__info {
   display: flex;
   column-gap: 15px;
 
@@ -272,10 +289,14 @@ export default {
   }
 }
 
-.projects__link {
+.projects__year {
+  align-self: center;
+}
+
+.projects__code {
   color: $green;
   text-decoration: none;
-  transition: 0.5s;
+  transition: 0.4s;
   width: max-content;
   padding: 2px 9px;
   border: 1px solid $green;

@@ -141,14 +141,6 @@ export default {
   background-color: transparent;
   cursor: pointer;
 
-  &--theme {
-    transition: 0.4s;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
   &--menu {
     display: flex;
     flex-direction: column;

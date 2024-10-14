@@ -31,21 +31,21 @@ export const useGlobalStore = defineStore('globalStore', {
         {
           img: {
             src: 'img/projects/Maxplumber.png',
-            alt: '',
+            alt: 'Пожалуй, лучший сантехник в Ростове',
           },
           name: 'Частный сантехник',
           description: 'Ремонт сантехники в Ростове на Дону',
           year: '2024',
           site: {
-            name: '',
-            link: '',
+            name: 'сантехмаксимум.рф',
+            link: 'https://сантехмаксимум.рф',
           },
           github: 'https://github.com/Whireless/plumber',
         },
         {
           img: {
             src: 'img/projects/Avicenna.png',
-            alt: '',
+            alt: 'Тут очень хорошо лечат зубы.',
           },
           name: 'Стоматология "Авиценна"',
           description: 'Стоматологическая клиника в Таганроге',
@@ -95,7 +95,7 @@ export const useGlobalStore = defineStore('globalStore', {
           description: 'Сайт позволяющий узнать погоду в любой точке мира',
           year: '2023',
           site: {
-            name: 'easyweather',
+            name: '.easyпогода',
             link: 'https://whireless.github.io/weather/',
           },
           github: 'https://github.com/Whireless/weather',
