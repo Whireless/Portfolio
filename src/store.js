@@ -85,20 +85,15 @@ export const useGlobalStore = defineStore('globalStore', {
           github: 'https://github.com/Whireless/andrestatix',
         },
       ],
-      pets: [
+      tbots: [
         {
-          img: {
-            src: 'img/projects/Easyweather.png',
-            alt: 'Акутальная погода в любой точке мира',
-          },
-          name: '.easyпогода',
-          description: 'Сайт позволяющий узнать погоду в любой точке мира',
-          year: '2023',
-          site: {
-            name: '.easyпогода',
-            link: 'https://whireless.github.io/weather/',
-          },
-          github: 'https://github.com/Whireless/weather',
+          icon: '#bot',
+          name: 'Easyпогода',
+          description: 'Бот для получения погоды в любой точке мира по названию или геолокации. ',
+          link: {
+            a: 'https://t.me/trueetherbot',
+            b: 't.me/trueetherbot',
+          }
         },
       ],
     },

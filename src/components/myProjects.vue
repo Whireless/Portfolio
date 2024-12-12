@@ -2,12 +2,11 @@
 <section class="projects" id="projects">
   <div class="container">
     <h2 class="projects__title">Проекты</h2>
-    <article class="projects__all projects__all--commercial">
-      <h3 class="projects__sub projects__sub--commercial">коммерческие</h3>
+    <article class="projects__block projects__block--commercial">
       <ul class="projects__list projects__list--commercial">
-        <li class="projects__item" v-for="li in projects.commercial" :key="li">
-          <img class="projects__img" :src="li.img.src" width="280" height="145" :alt="li.img.alt">
-          <article class="projects__block">
+        <li class="projects__item projects__item--commercial" v-for="li in projects.commercial" :key="li">
+          <img class="projects__img" :src="li.img.src" width="280" height="140" :alt="li.img.alt">
+          <article class="projects__project">
             <a class="projects__subtitle" :href="li.site.link">{{ li.site.name }}</a>
             <p class="projects__description">{{ li.description }}</p>
             <div class="projects__info">
@@ -18,19 +17,17 @@
         </li>
       </ul>
     </article>
-    <article class="projects__all projects__all--pets">
-      <h3 class="projects__sub projects__sub--pets">pet-проекты</h3>
-      <ul class="projects__list projects__list--pets">
-        <li class="projects__item" v-for="li in projects.pets" :key="li">
-          <img class="projects__img" :src="li.img.src" width="280" height="145" :alt="li.img.alt">
-          <article class="projects__block">
-            <a class="projects__subtitle" :href="li.site.link">{{ li.site.name }}</a>
-            <p class="projects__description">{{ li.description }}</p>
-            <div class="projects__info">
-              <a class="projects__code" :href="li.github">Код проекта</a>
-              <p class="projects__year">{{ li.year }}</p>
-            </div>
+    <article class="projects__block projects__block--tbots">
+      <ul class="projects__list projects__list--tbots">
+        <li class="projects__item projects__item--tbots" v-for="li in projects.tbots" :key="li">
+          <article class="projects__bot-preview">
+            <svg class="projects__icon" width="45" height="45">
+              <use :href="li.icon"></use>
+            </svg>
+            <h3>{{ li.name }}</h3>
           </article>
+          <p class="projects__description">{{ li.description }}</p>
+          <a class="projects__link" :href="li.link.a">{{ li.link.b }}</a>
         </li>
       </ul>
     </article>
@@ -58,6 +55,7 @@ export default {
   color: $green;
   text-transform: uppercase;
   letter-spacing: 1px;
+  scroll-margin-top: 1em;
 
   @media (min-width: $tablet) {
     font-size: 19px;
@@ -72,44 +70,39 @@ export default {
   }
 }
 
-.projects__all {
-  &--pets {
-    margin-top: 30px;
+.projects__block {
+  margin-top: 30px;
+
+  &--tbots {
+    margin-top: 45px;
+    border-top: 2px solid $green;
+    padding-top: 20px;
   }
 
   @media (min-width: $smart) {
-    &--pets {
-      margin-top: 40px;
+    margin-top: 45px;
+
+    &--tbots {
+      margin-top: 55px;
     }
   }
 
   @media (min-width: $tablet) {
-    &--pets {
-      margin-top: 60px;
+    margin-top: 60px;
+
+    &--tbots {
+      margin-top: 75px;
+      padding-top: 30px;
     }
   }
 
   @media (min-width: $desktop) {
-    &--pets {
+    margin-top: 80px;
+
+    &--tbots {
       margin-top: 90px;
+      padding-top: 35px;
     }
-  }
-}
-
-.projects__sub {
-  font-weight: 100;
-  text-align: center;
-  color: $grey2;
-  width: max-content;
-  margin: 20px auto 0 auto;
-  opacity: 0.8;
-
-  @media (min-width: $tablet) {
-    margin-top: 15px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-top: 35px;
   }
 }
 
@@ -118,55 +111,96 @@ export default {
   flex-direction: column;
   align-items: center;
   row-gap: 60px;
-  margin: 25px auto 0 auto;
+  margin: 0 auto;
 
   @media (min-width: $smart) {
     row-gap: 70px;
   }
 
   @media (min-width: $tablet) {
+    flex-wrap: wrap;
     row-gap: 90px;
-    margin: 40px auto 0 auto;
+
+    &--tbots {
+      flex-direction: row;
+      justify-content: center;
+      gap: 22px;
+    }
   }
 
   @media (min-width: $desktop) {
     row-gap: 120px;
-    margin: 50px auto 0 auto;
+
+    &--tbots {
+      gap: 40px;
+    }
   }
 
   @media (min-width: $laptop) {
     row-gap: 130px;
-    margin: 80px auto 0 auto;
+
+    &--tbots {
+      gap: 45px;
+    }
   }
 }
 
 .projects__item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  // align-content: center;
-  // justify-content: center;
 
-  @media (min-width: $tablet) {
-    flex-direction: row;
-    justify-content: space-around;
-    column-gap: 40px;
-    padding: 0;
-    border-radius: 20px;
+  &--commercial {
+    align-items: center;
 
-    &:nth-child(even) {
-      .projects__img {
-        order: 1,
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      justify-content: space-around;
+      column-gap: 40px;
+      padding: 0;
+      border-radius: 20px;
+
+      &:nth-child(even) {
+        .projects__img {
+          order: 1,
+        }
       }
+    }
+
+    @media (min-width: $desktop) {
+      column-gap: 85px;
+    }
+
+    @media (min-width: $laptop) {
+      column-gap: 190px;
     }
   }
 
-  @media (min-width: $desktop) {
-    column-gap: 85px;
-  }
+  &--tbots {
+    row-gap: 10px;
 
-  @media (min-width: $laptop) {
-    column-gap: 190px;
+    padding: 5px 10px;
+    border: 1px solid $black2;
+    border-radius: 10px;
+
+    @media (min-width: $smart) {
+      width: 318px;
+      padding: 7px 15px;
+    }
+
+    @media (min-width: $tablet) {
+      row-gap: 12px;
+      width: 290px;
+    }
+
+    @media (min-width: $desktop) {
+      row-gap: 15px;
+      width: 380px;
+      padding: 8px 20px;
+    }
+
+    @media (min-width: $laptop) {
+      width: 470px;
+    }
   }
 }
 
@@ -195,7 +229,7 @@ export default {
   }
 }
 
-.projects__block {
+.projects__project {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
@@ -206,7 +240,6 @@ export default {
   }
 
   @media (min-width: $tablet) {
-    // align-self: start;
     margin-top: 0;
     padding: 0;
     row-gap: 13px;
@@ -224,7 +257,6 @@ export default {
 
 .projects__subtitle {
   font-weight: bold;
-  // color: $green;
   color: $grey2;
   text-decoration: none;
   width: max-content;
@@ -232,7 +264,6 @@ export default {
   transition: 0.4s;
 
   &:hover {
-    // color: $black2;
     color: $green;
     border-bottom: 1px solid $green;
   }
@@ -247,7 +278,7 @@ export default {
 }
 
 .projects__description {
-  text-align: justify;
+  text-align: center;
   font-weight: 100;
 }
 
@@ -321,6 +352,28 @@ export default {
 
   @media (min-width: $laptop) {
     padding: 5px 20px;
+  }
+}
+
+.projects__bot-preview {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  h3 {
+    margin-left: 20px;
+  }
+}
+
+.projects__link {
+  text-decoration: none;
+  color: $green;
+  align-self: center;
+  display: block;
+  transition: 0.4s;
+
+  &:hover {
+    color: $grey2;
   }
 }
 </style>

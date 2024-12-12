@@ -9,7 +9,7 @@ const SRC_PATH = path.resolve('src');
 const SVG_FOLDER_PATH = path.resolve(SRC_PATH, 'icons');
 
 export default defineConfig({
-  base: '/portfolio_v2', // Github
+  // base: '/portfolio_v2', // Github
   server: {
     open: true,
   },
@@ -19,7 +19,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "@/scss/variables.scss";`,
+        additionalData: `@use "@/scss/variables.scss" as *;`,
       },
     },
   },
