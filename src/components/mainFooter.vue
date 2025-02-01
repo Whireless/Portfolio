@@ -20,7 +20,7 @@ export default {};
 <style lang="scss">
 .main-footer {
   color: $whitesmoke;
-  background-color: $black2;
+  background-color: $grey3;
   transition: 0.5s;
 }
 

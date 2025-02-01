@@ -24,6 +24,17 @@ export default {
       theme,
     }
   },
+  mounted() {
+
+    // Установка темы при загрузке страницы
+
+    window.addEventListener('load', () => {
+      if (window.localStorage.getItem('theme') === 'dark') {
+        this.theme.status = true;
+        this.theme.icon = '#light-theme';
+      }
+    });
+  },
   components: {
     mainHeader,
     myProjects,

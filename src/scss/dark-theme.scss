@@ -1,32 +1,32 @@
 .dark-theme {
   color: $whitesmoke;
-  background-color: $black2;
-
-  .main-nav {
-    background-color: $black2;
-  }
-
-  .main-nav__link {
-    color: $whitesmoke;
-  }
+  background-color: $black3;
+  // background-color: $grey3;
 
   .main-header {
     background-color: $black2;
+    // background-color: $grey3;
   }
 
   .main-header__description {
     color: $whitesmoke;
   }
 
+  .main-nav {
+    background-color: $black2;
+    // background-color: $grey3;
+  }
+
+  .main-nav__link {
+    color: $whitesmoke;
+  }
+
   .contacts {
+    // background-color: $black2;
     background-color: $black2;
   }
 
   .contacts__icon {
     fill: $whitesmoke;
-  }
-
-  .main-footer {
-    background-color: $black;
   }
 }

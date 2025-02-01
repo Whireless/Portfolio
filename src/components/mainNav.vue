@@ -46,7 +46,7 @@ export default {
   display: flex;
   justify-content: space-between;
   background-color: $white;
-  padding: 12px 20px;
+  padding: 12px 15px;
   box-shadow: 0px 1px 5px $green;
   z-index: 5;
   transition: 0.5s;
@@ -85,21 +85,17 @@ export default {
     }
   }
 
-  @media (min-width: $smart) {
-    padding: 13px 35px;
-  }
-
   @media (min-width: $tablet) {
     background-color: inherit;
-    padding: 15px 45px;
+    padding: 15px 30px;
   }
 
   @media (min-width: $desktop) {
-    padding: 17px 80px;
+    padding: 17px 70px;
   }
 
   @media (min-width: $laptop) {
-    padding: 18px 120px;
+    padding: 18px 200px;
   }
 }
 
@@ -121,18 +117,18 @@ export default {
   @media (min-width: $tablet) {
     position: static;
     flex-direction: row;
-    column-gap: 50px;
+    column-gap: 60px;
     height: auto;
     transform: translateX(0);
     transition: 0s;
   }
 
   @media (min-width: $desktop) {
-    column-gap: 70px;
+    column-gap: 100px;
   }
 
   @media (min-width: $laptop) {
-    column-gap: 90px;
+    column-gap: 120px;
   }
 }
 

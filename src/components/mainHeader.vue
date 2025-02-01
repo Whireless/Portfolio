@@ -49,10 +49,6 @@ export default {
   background-color: $grey;
   transition: 0.5s;
 
-  @media (min-width: $smart) {
-    padding-top: 64px;
-  }
-
   @media (min-width: $tablet) {
     padding-top: 68px;
   }
@@ -99,7 +95,8 @@ export default {
     grid-template-columns: 600px max-content;
     justify-content: space-between;
     align-items: center;
-    grid-template-rows: 120px 150px 75px;
+    row-gap: 40px;
+    grid-template-rows: 120px 90px 60px;
   }
 
   @media (min-width: $laptop) {
@@ -161,23 +158,9 @@ export default {
 }
 
 .main-header__item {
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-  transition: 0.5s;
-
-  &:hover {
-    border-bottom: 1px solid $green;
-    transform: scale(1.15);
-  }
-
   @media (min-width: $tablet) {
     width: 55px;
     height: 55px;
-  }
-
-  @media (min-width: $desktop) {
-    width: 40px;
-    height: 40px;
   }
 
   @media (min-width: $laptop) {
@@ -204,7 +187,7 @@ export default {
   }
 
   @media (min-width: $desktop) {
-    grid-row: 1/5;
+    grid-row: 1/4;
     grid-column: 2;
     align-self: start;
     margin-top: 0;
@@ -229,8 +212,8 @@ export default {
   }
 
   @media (min-width: $desktop) {
-    width: 265px;
-    height: 265px;
+    width: 290px;
+    height: 290px;
   }
 
   @media (min-width: $laptop) {

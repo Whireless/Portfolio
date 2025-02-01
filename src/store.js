@@ -6,7 +6,7 @@ export const useGlobalStore = defineStore('globalStore', {
 
     theme: {
       status: false,
-      icon: '#theme',
+      icon: '#dark-theme',
     },
 
     // Состояние мобильного меню
@@ -119,6 +119,7 @@ export const useGlobalStore = defineStore('globalStore', {
     ],
   }),
   actions: {
+
     // Открытие/закрытие мобильного меню
 
     openMenu(navItem) {
@@ -136,16 +137,16 @@ export const useGlobalStore = defineStore('globalStore', {
 
     // Смена темы
 
-  changeTheme() {
-    if(this.theme.status === false) {
-      // localStorage.setItem('theme', 'dark');
-      // this.themeIcon = '#light-theme';
-      this.theme.status = true;
-    } else {
-      // localStorage.setItem('theme', 'light');
-      // this.themeIcon = '#dark-theme';
-      this.theme.status = false;
-    }
-  },
+    changeTheme() {
+      if(this.theme.status === false) {
+        localStorage.setItem('theme', 'dark');
+        this.theme.icon = '#light-theme';
+        this.theme.status = true;
+      } else {
+        localStorage.setItem('theme', 'light');
+        this.theme.icon = '#dark-theme';
+        this.theme.status = false;
+      }
+    },
   },
 });

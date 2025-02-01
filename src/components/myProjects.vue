@@ -5,7 +5,7 @@
     <article class="projects__block projects__block--commercial">
       <ul class="projects__list projects__list--commercial">
         <li class="projects__item projects__item--commercial" v-for="li in projects.commercial" :key="li">
-          <img class="projects__img" :src="li.img.src" width="280" height="140" :alt="li.img.alt">
+          <img class="projects__img" :src="li.img.src" width="330" height="165" :alt="li.img.alt">
           <article class="projects__project">
             <a class="projects__subtitle" :href="li.site.link">{{ li.site.name }}</a>
             <p class="projects__description">{{ li.description }}</p>
@@ -79,14 +79,6 @@ export default {
     padding-top: 20px;
   }
 
-  @media (min-width: $smart) {
-    margin-top: 45px;
-
-    &--tbots {
-      margin-top: 55px;
-    }
-  }
-
   @media (min-width: $tablet) {
     margin-top: 60px;
 
@@ -112,10 +104,6 @@ export default {
   align-items: center;
   row-gap: 60px;
   margin: 0 auto;
-
-  @media (min-width: $smart) {
-    row-gap: 70px;
-  }
 
   @media (min-width: $tablet) {
     flex-wrap: wrap;
@@ -154,8 +142,8 @@ export default {
 
     @media (min-width: $tablet) {
       flex-direction: row;
-      justify-content: space-around;
-      column-gap: 40px;
+      justify-content: space-between;
+      width: 100%;
       padding: 0;
       border-radius: 20px;
 
@@ -164,10 +152,6 @@ export default {
           order: 1,
         }
       }
-    }
-
-    @media (min-width: $desktop) {
-      column-gap: 85px;
     }
 
     @media (min-width: $laptop) {
@@ -179,13 +163,8 @@ export default {
     row-gap: 10px;
 
     padding: 5px 10px;
-    border: 1px solid $black2;
+    border: 1px solid $green;
     border-radius: 10px;
-
-    @media (min-width: $smart) {
-      width: 318px;
-      padding: 7px 15px;
-    }
 
     @media (min-width: $tablet) {
       row-gap: 12px;
@@ -195,11 +174,12 @@ export default {
     @media (min-width: $desktop) {
       row-gap: 15px;
       width: 380px;
-      padding: 8px 20px;
+      padding: 10px 20px;
     }
 
     @media (min-width: $laptop) {
       width: 470px;
+      padding: 15px 25px;
     }
   }
 }
@@ -208,24 +188,19 @@ export default {
   box-shadow: 1px 1px 3px 1px $green;
   border-radius: 15px;
 
-  @media (min-width: $smart) {
-    width: 350px;
-    height: 175px;
-  }
-
   @media (min-width: $tablet) {
-    width: 320px;
-    height: 160px;
+    width: 380px;
+    height: 190px;
   }
 
   @media (min-width: $desktop) {
-    width: 425px;
-    height: 210px;
+    width: 550px;
+    height: 270px;
   }
 
   @media (min-width: $laptop) {
-    width: 480px;
-    height: 240px;
+    width: 750px;
+    height: 370px;
   }
 }
 
@@ -235,27 +210,28 @@ export default {
   row-gap: 12px;
   margin-top: 25px;
 
-  @media (min-width: $smart) {
-    width: 100%;
-  }
+  align-self: start;
 
   @media (min-width: $tablet) {
+    row-gap: 20px;
+    width: 280px;
     margin-top: 0;
     padding: 0;
-    row-gap: 13px;
   }
 
   @media (min-width: $desktop) {
-    row-gap: 22px;
+    width: 450px;
+    row-gap: 40px;
   }
 
   @media (min-width: $laptop) {
-    width: 450px;
-    row-gap: 30px;
+    width: 570px;
+    row-gap: 60px;
   }
 }
 
 .projects__subtitle {
+  font-size: 20px;
   font-weight: bold;
   color: $grey2;
   text-decoration: none;
@@ -269,26 +245,27 @@ export default {
   }
 
   @media (min-width: $tablet) {
-    padding-bottom: 2px;
+    font-size: 22px;
+    padding-bottom: 3px;
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 3px;
+    font-size: 30px;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: $laptop) {
+    font-size: 36px;
   }
 }
 
 .projects__description {
-  text-align: center;
   font-weight: 100;
 }
 
 .projects__technologies {
   display: flex;
   column-gap: 7px;
-
-  @media (min-width: $smart) {
-    column-gap: 9px;
-  }
 
   @media (min-width: $desktop) {
     column-gap: 15px;
@@ -302,10 +279,6 @@ export default {
 .projects__info {
   display: flex;
   column-gap: 15px;
-
-  @media (min-width: $smart) {
-    column-gap: 20px;
-  }
 
   @media (min-width: $tablet) {
     column-gap: 25px;
@@ -338,20 +311,16 @@ export default {
     background-color: $green;
   }
 
-  @media (min-width: $smart) {
-    padding: 3px 11px;
-  }
-
   @media (min-width: $tablet) {
-    padding: 3px 12px;
+    padding: 5px 15px;
   }
 
   @media (min-width: $desktop) {
-    padding: 4px 15px;
+    padding: 7px 20px;
   }
 
   @media (min-width: $laptop) {
-    padding: 5px 20px;
+    padding: 10px 25px;
   }
 }
 
