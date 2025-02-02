@@ -9,7 +9,7 @@ const SRC_PATH = path.resolve('src');
 const SVG_FOLDER_PATH = path.resolve(SRC_PATH, 'icons');
 
 export default defineConfig({
-  base: '/portfolio_v2', // Github
+  base: '/Portfolio', // Github
   server: {
     open: true,
   },
